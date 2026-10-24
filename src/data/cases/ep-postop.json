@@ -1,0 +1,158 @@
+{
+  "id": "ep-postop",
+  "title": "Dyspnée après chirurgie orthopédique",
+  "source": "Ouar_cas_clinique_embolie_pulmonaire.pdf, p. 2–17",
+  "opening": "Mme N., 45 ans, arrive aux urgences pour une dyspnée depuis trois jours.",
+  "vitals": {
+    "ta": "120/60 mmHg",
+    "fc": "110/min",
+    "fr": "28/min",
+    "spo2": "96 % à air ambiant",
+    "temperature": "37 °C"
+  },
+  "qa": [
+    {
+      "id": "debut",
+      "patterns": [
+        "depuis quand",
+        "debut",
+        "commenc",
+        "duree"
+      ],
+      "answer": "Je suis essoufflée depuis trois jours.",
+      "points": 4,
+      "answer_en": "I have been short of breath for three days."
+    },
+    {
+      "id": "chirurgie",
+      "patterns": [
+        "operation",
+        "chirurgie",
+        "fracture",
+        "platre",
+        "immobilis"
+      ],
+      "answer": "On m’a opérée d’une fracture du plateau tibial il y a une semaine.",
+      "points": 6,
+      "answer_en": "I had surgery for a tibial plateau fracture a week ago."
+    },
+    {
+      "id": "douleur",
+      "patterns": [
+        "douleur",
+        "thorax",
+        "poitrine"
+      ],
+      "answer": "Je suis surtout gênée pour respirer ; le document ne précise pas de douleur.",
+      "points": 3,
+      "answer_en": "Breathing is my main concern; the original case does not specify any pain."
+    },
+    {
+      "id": "antecedents",
+      "patterns": [
+        "antecedent",
+        "maladie",
+        "traitement"
+      ],
+      "answer": "Le cas ne fournit pas d’autres antécédents médicaux.",
+      "points": 3,
+      "answer_en": "The original case provides no other medical history."
+    },
+    {
+      "id": "jambe",
+      "patterns": [
+        "mollet",
+        "jambe",
+        "phlebite",
+        "thrombose"
+      ],
+      "answer": "Les informations disponibles ne précisent pas de symptômes de phlébite.",
+      "points": 4,
+      "answer_en": "The available information does not specify symptoms of deep vein thrombosis."
+    }
+  ],
+  "exams": [
+    {
+      "id": "ecg",
+      "label": "ECG",
+      "result": "Exemple pédagogique : ECG non fourni comme résultat chiffré dans ce cas. Des anomalies peuvent être absentes ou non spécifiques.",
+      "points": 4,
+      "label_en": "ECG",
+      "result_en": "Teaching example: no numerical ECG result is supplied for this case. ECG findings may be absent or nonspecific."
+    },
+    {
+      "id": "gds",
+      "label": "Gaz du sang",
+      "result": "Gazométrie indiquée dans le parcours ; valeurs chiffrées non fournies pour cette patiente.",
+      "points": 2,
+      "label_en": "Arterial blood gas",
+      "result_en": "Arterial blood gases are included in the diagnostic approach, but no patient-specific values are available."
+    },
+    {
+      "id": "ddimer",
+      "label": "D-dimères",
+      "result": "Valeur non documentée. Leur intérêt dépend de la probabilité clinique.",
+      "points": 1,
+      "label_en": "D-dimers",
+      "result_en": "Value not documented. Interpretation depends on pretest clinical probability."
+    },
+    {
+      "id": "cta",
+      "label": "Angioscanner thoracique",
+      "result": "Résultat spécifique non communiqué dans le cas fourni ; examen indiqué pour confirmer l’EP selon le contexte.",
+      "points": 12,
+      "label_en": "CT pulmonary angiography",
+      "result_en": "The specific CT result was not provided in the source. CT pulmonary angiography may be indicated to confirm pulmonary embolism depending on the context."
+    },
+    {
+      "id": "labs",
+      "label": "NFS, créatinine, coagulation",
+      "result": "Demandes pertinentes avant traitement/produit de contraste ; résultats non fournis.",
+      "points": 3,
+      "label_en": "Full blood count, creatinine, coagulation",
+      "result_en": "Full blood count, renal function and coagulation studies may be relevant before treatment or contrast administration; results were not provided."
+    },
+    {
+      "id": "echo",
+      "label": "Échographie cardiaque",
+      "result": "Résultat non précisé dans le cas.",
+      "points": 3,
+      "label_en": "Echocardiography",
+      "result_en": "Echocardiography result is not documented in this case."
+    }
+  ],
+  "diagnosis": "Embolie pulmonaire",
+  "risk": "Patiente hémodynamiquement stable au moment de l’examen (120/60 mmHg), suspicion EP après chirurgie orthopédique; probabilité prétest à évaluer.",
+  "rule": {
+    "triage": [
+      "evaluer_hemodynamique",
+      "calculer_wells"
+    ],
+    "actions": [
+      "anticoagulation",
+      "surveillance"
+    ]
+  },
+  "goals": [
+    "Antécédent de chirurgie récente majeur",
+    "Ne pas inventer un angioscanner positif"
+  ],
+  "notes": "Le support présente surtout la démarche diagnostique, sans résultat complet pour cette patiente.",
+  "source_guideline": "https://professional.heart.org/en/science-news/2026-guideline-for-the-evaluation-and-management-of-acute-pulmonary-embolism-in-adults",
+  "clinical_reference_2026": {
+    "title": "Ouellette DR et al. Pulmonary Embolism (PE), Medscape, updated 27 Aug 2026",
+    "url": "https://emedicine.medscape.com/article/300901-overview",
+    "role": "Référentiel général pour démarche diagnostique et risque; ne remplace pas données du cas source."
+  },
+  "version": "1.5",
+  "educational_disclaimer": "Simulation pédagogique. Informations non documentées non inventées. Cas historiques conservés; stratégie revue en 2026.",
+  "title_en": "Shortness of breath after orthopaedic surgery",
+  "opening_en": "Ms N., 45, presents to the emergency department with shortness of breath for three days.",
+  "diagnosis_en": "Pulmonary embolism",
+  "risk_en": "The patient is haemodynamically stable at the time of assessment.",
+  "goals_en": [
+    "Recent major surgery is an important risk factor",
+    "Do not invent a positive CT pulmonary angiography result"
+  ],
+  "notes_en": "The source mainly describes diagnostic reasoning without a complete workup for this patient."
+}

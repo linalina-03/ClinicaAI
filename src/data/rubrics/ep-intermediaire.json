@@ -1,0 +1,164 @@
+{
+  "id": "ep-intermediaire",
+  "triage": [
+    {
+      "id": "stability",
+      "label": "Vérifier tension, perfusion et absence de choc",
+      "points": 10,
+      "groups": [
+        [
+          "hemodynamique"
+        ],
+        [
+          "pression",
+          "arterielle"
+        ],
+        [
+          "normotendu"
+        ],
+        [
+          "pas",
+          "de",
+          "choc"
+        ],
+        [
+          "stable"
+        ]
+      ],
+      "label_en": "Check blood pressure, perfusion and absence of shock"
+    },
+    {
+      "id": "risk",
+      "label": "Identifier le retentissement VD et les marqueurs de risque",
+      "points": 10,
+      "groups": [
+        [
+          "ventricule",
+          "droit"
+        ],
+        [
+          "dysfonction",
+          "vd"
+        ],
+        [
+          "troponine"
+        ],
+        [
+          "biomarqueurs"
+        ],
+        [
+          "categorie",
+          "c3"
+        ]
+      ],
+      "label_en": "Identify right ventricular involvement and risk biomarkers"
+    }
+  ],
+  "diagnosis": [
+    {
+      "id": "pe",
+      "label": "Diagnostiquer une embolie pulmonaire",
+      "points": 10,
+      "groups": [
+        [
+          "embolie",
+          "pulmonaire"
+        ],
+        [
+          "thromboembolie",
+          "pulmonaire"
+        ]
+      ],
+      "label_en": "Diagnose pulmonary embolism"
+    },
+    {
+      "id": "stratify",
+      "label": "Distinguer un risque intermédiaire d’une EP avec choc",
+      "points": 5,
+      "groups": [
+        [
+          "intermediaire"
+        ],
+        [
+          "categorie",
+          "c3"
+        ],
+        [
+          "sans",
+          "choc"
+        ],
+        [
+          "normotendu"
+        ]
+      ],
+      "label_en": "Distinguish intermediate risk from PE with shock"
+    }
+  ],
+  "management": [
+    {
+      "id": "anti",
+      "label": "Anticoagulation curative après contrôle des contre-indications",
+      "points": 12,
+      "groups": [
+        [
+          "anticoagulation"
+        ],
+        [
+          "anticoagulant"
+        ],
+        [
+          "apixaban"
+        ],
+        [
+          "rivaroxaban"
+        ],
+        [
+          "heparine"
+        ]
+      ],
+      "label_en": "Therapeutic anticoagulation after reviewing contraindications"
+    },
+    {
+      "id": "monitor",
+      "label": "Surveillance/stratification et réévaluation rapprochée",
+      "points": 8,
+      "groups": [
+        [
+          "surveillance"
+        ],
+        [
+          "monitorage"
+        ],
+        [
+          "reevaluation"
+        ],
+        [
+          "hospitalisation"
+        ]
+      ],
+      "label_en": "Monitoring, risk stratification and early reassessment"
+    }
+  ],
+  "warnings": {
+    "unjustified_lysis": {
+      "points": 15,
+      "patterns": [
+        "thrombolyse",
+        "fibrinolyse",
+        "thrombolyser",
+        "reperfusion systematique"
+      ],
+      "message": "Thrombolyse systématique non indiquée chez ce patient normotendu sans dégradation."
+    },
+    "delay": {
+      "points": 8,
+      "patterns": [
+        "aucun traitement necessaire",
+        "pas besoin anticoagulation"
+      ],
+      "message": "Absence d’anticoagulation malgré une EP confirmée."
+    }
+  },
+  "reference_2026": "Medscape, updated Aug 27 2026",
+  "validation_status": "Prototype pédagogique non validé"
+}

@@ -1,0 +1,194 @@
+{
+  "id": "ep-grossesse",
+  "title": "Embolie pulmonaire grave pendant la grossesse (29 SA)",
+  "source": "Ferreira dos Santos et al., Pregnancy and acute pulmonary embolism: A case report, Rev Port Cardiol 2012;31(5):389-394, pages 2–3. Données du cas publiées, anonymisées par les auteurs. Références de traitement historiques : à actualiser.",
+  "opening": "Une femme de 37 ans, enceinte de 29 semaines (G2P1), est admise après une syncope avec dyspnée intense et douleur thoracique oppressive.",
+  "vitals": {
+    "ta": "73/35 mmHg",
+    "fc": "115/min",
+    "fr": "50/min",
+    "spo2": "80 % à l’air ambiant",
+    "temperature": "Non documentée"
+  },
+  "qa": [
+    {
+      "id": "debut",
+      "patterns": [
+        "depuis quand",
+        "debut",
+        "commenc",
+        "duree",
+        "evolution"
+      ],
+      "answer": "Il y a neuf jours, après un vol d’environ trois heures, j’ai commencé à avoir mal à la cuisse gauche. Puis j’ai été de plus en plus essoufflée. Aujourd’hui, j’ai perdu connaissance brièvement.",
+      "points": 4,
+      "answer_en": "Nine days ago, after a flight of about three hours, I developed pain in my left thigh. My breathlessness gradually worsened. Today I briefly passed out."
+    },
+    {
+      "id": "grossesse",
+      "patterns": [
+        "enceinte",
+        "grossesse",
+        "semaine",
+        "amenorrhee",
+        "terme",
+        "foetus",
+        "bebe",
+        "obstetric"
+      ],
+      "answer": "Je suis enceinte de 29 semaines. C’est ma deuxième grossesse et j’ai déjà eu un accouchement.",
+      "points": 4,
+      "answer_en": "I am 29 weeks pregnant. This is my second pregnancy and I have given birth once before."
+    },
+    {
+      "id": "jambe",
+      "patterns": [
+        "mollet",
+        "cuisse",
+        "jambe",
+        "sciatique",
+        "phlebite",
+        "thrombose"
+      ],
+      "answer": "J’ai commencé par avoir une douleur sur le côté et derrière la cuisse gauche après mon voyage. On m’a parlé d’une possible sciatique.",
+      "points": 5,
+      "answer_en": "I started having pain along the side and back of my left thigh after travelling. I was told it might be sciatica."
+    },
+    {
+      "id": "syncope",
+      "patterns": [
+        "syncope",
+        "perte de connaissance",
+        "evanou",
+        "malaise"
+      ],
+      "answer": "J’ai perdu connaissance brièvement aujourd’hui, à la maison.",
+      "points": 3,
+      "answer_en": "I briefly lost consciousness today at home."
+    },
+    {
+      "id": "douleur",
+      "patterns": [
+        "thorac",
+        "poitrine",
+        "oppress",
+        "douleur"
+      ],
+      "answer": "Aujourd’hui, j’ai eu une douleur oppressante dans la poitrine.",
+      "points": 2,
+      "answer_en": "Today I felt an oppressive pain in my chest."
+    },
+    {
+      "id": "antecedents",
+      "patterns": [
+        "antecedent",
+        "maladie",
+        "traitement",
+        "medicament",
+        "famille",
+        "surpoids"
+      ],
+      "answer": "Je suis en surpoids. Je n’ai pas d’antécédent familial pertinent rapporté et je ne prends pas de traitement régulier.",
+      "points": 2,
+      "answer_en": "I am overweight. No relevant family history was reported and I do not take regular medication."
+    }
+  ],
+  "exams": [
+    {
+      "id": "ecg",
+      "label": "ECG 12 dérivations",
+      "result": "Tachycardie sinusale avec S1Q3T3 et inversions des ondes T en V1–V4 (figure 1 de l’article).",
+      "points": 3,
+      "label_en": "12-lead ECG",
+      "result_en": "Sinus tachycardia with S1Q3T3 and T-wave inversion in V1–V4 (Figure 1 in the article)."
+    },
+    {
+      "id": "echo",
+      "label": "Échocardiographie transthoracique",
+      "result": "Dilatation du ventricule droit, mouvement septal paradoxal, PAP systolique estimée à 65 mmHg ; TAPSE 23 mm.",
+      "points": 7,
+      "label_en": "Transthoracic echocardiography",
+      "result_en": "Right ventricular dilatation, paradoxical septal movement, estimated systolic pulmonary artery pressure 65 mmHg; TAPSE 23 mm."
+    },
+    {
+      "id": "cta",
+      "label": "Angioscanner thoracique",
+      "result": "Embolie pulmonaire bilatérale aiguë confirmée. Thrombus occlusif dans l’artère pulmonaire droite et plusieurs branches gauches.",
+      "points": 8,
+      "label_en": "CT pulmonary angiography",
+      "result_en": "Acute bilateral pulmonary embolism confirmed. Occlusive thrombus in the right pulmonary artery and several left branches."
+    },
+    {
+      "id": "doppler",
+      "label": "Échodoppler des membres inférieurs",
+      "result": "Pas de thrombose veineuse profonde objectivée à l’échodoppler.",
+      "points": 2,
+      "label_en": "Lower-limb Doppler ultrasound",
+      "result_en": "No deep venous thrombosis demonstrated by Doppler ultrasound."
+    },
+    {
+      "id": "gds",
+      "label": "Gaz du sang sous O₂ à 5 L/min",
+      "result": "pH 7,49 ; PaO₂ 105 mmHg ; PaCO₂ 28 mmHg ; HCO₃⁻ 20,9 mmol/L ; saturation 98 %.",
+      "points": 2,
+      "label_en": "Blood gas on oxygen at 5 L/min",
+      "result_en": "On 5 L/min oxygen: pH 7.49; PaO₂ 105 mmHg; PaCO₂ 28 mmHg; HCO₃⁻ 20.9 mmol/L; oxygen saturation 98%."
+    },
+    {
+      "id": "labs",
+      "label": "Biologie (NFS, D-dimères, troponine)",
+      "result": "Hb 12,3 g/dL ; plaquettes 170 G/L ; D-dimères 2 962 ng/mL ; troponine I 0,43 ng/mL (référence de l’article < 1,50 ng/mL).",
+      "points": 2,
+      "label_en": "Laboratory panel (CBC, D-dimer, troponin)",
+      "result_en": "Haemoglobin 12.3 g/dL; platelets 170 G/L; D-dimer 2962 ng/mL; troponin I 0.43 ng/mL (article reference range < 1.50 ng/mL)."
+    },
+    {
+      "id": "fetal",
+      "label": "Évaluation obstétricale et fœtale",
+      "result": "Fœtus en position transverse, signes vitaux satisfaisants, cardiotocographie réactive ; pas de contractions utérines, croissance concordante.",
+      "points": 3,
+      "label_en": "Obstetric and fetal assessment",
+      "result_en": "Fetus in transverse position with reassuring vital signs and a reactive cardiotocogram; no uterine contractions; growth appropriate for gestation."
+    },
+    {
+      "id": "ddimer",
+      "label": "D-dimères seuls",
+      "result": "2 962 ng/mL dans l’article. Chez cette patiente en état de choc, ne pas retarder la prise en charge pour attendre ce résultat.",
+      "points": 0,
+      "label_en": "D-dimers alone",
+      "result_en": "2962 ng/mL in the article. In a patient with shock, do not delay urgent treatment while waiting for this result."
+    }
+  ],
+  "diagnosis": "Embolie pulmonaire bilatérale aiguë pendant la grossesse",
+  "risk": "EP bilatérale avec hypotension profonde : défaillance cardiopulmonaire, catégorie E (classification adulte 2026, application en grossesse à interpréter avec prudence).",
+  "rule": {
+    "triage": [
+      "reconnaitre_choc",
+      "surveillance_urgence"
+    ],
+    "actions": [
+      "anticoagulation",
+      "reperfusion"
+    ]
+  },
+  "provenance": {
+    "article_year": 2012,
+    "source_pages": [
+      2,
+      3
+    ],
+    "patient_data": "données d’un cas publié",
+    "therapy_note": "Dans l’article : énoxaparine initiale, puis ténectéplase après hypotension persistante ; les choix et doses historiques ne constituent pas la correction thérapeutique moderne."
+  },
+  "clinical_reference_2026": {
+    "title": "Ouellette DR et al. Pulmonary Embolism (PE), Medscape, updated 27 Aug 2026",
+    "url": "https://emedicine.medscape.com/article/300901-overview",
+    "role": "Référentiel général pour démarche diagnostique et risque; ne remplace pas données du cas source."
+  },
+  "version": "1.5",
+  "educational_disclaimer": "Simulation pédagogique. Informations non documentées non inventées. Cas historiques conservés; stratégie revue en 2026.",
+  "title_en": "Severe pulmonary embolism during pregnancy (29 weeks)",
+  "opening_en": "A 37-year-old woman at 29 weeks of pregnancy (G2P1) is admitted after fainting, severe breathlessness and oppressive chest pain.",
+  "diagnosis_en": "Acute bilateral pulmonary embolism during pregnancy",
+  "risk_en": "Bilateral pulmonary embolism with profound hypotension and circulatory compromise."
+}

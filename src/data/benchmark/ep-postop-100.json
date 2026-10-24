@@ -1,0 +1,1149 @@
+{
+  "version": "3.3",
+  "caseId": "ep-postop",
+  "methodology": "Q01–Q50 : développement déjà utilisé (NE PAS utiliser pour inférence de généralisation). Q51–Q100 : évaluation inédite préparée avant test, non injectée dans les moteurs. Références issues du dossier fictif, à valider par médecin. Les questions de suivi nécessitent la pré-question.",
+  "items": [
+    {
+      "id": "Q01",
+      "category": "simple",
+      "question": "Qu’est-ce qui vous amène aujourd’hui ?",
+      "expectedIds": [
+        "motif"
+      ],
+      "reference": "Je suis essoufflée depuis trois jours, c’est ce qui m’a amenée aux urgences.",
+      "provenance": "cas_source",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q02",
+      "category": "simple",
+      "question": "Depuis quand êtes-vous essoufflée ?",
+      "expectedIds": [
+        "debut"
+      ],
+      "reference": "Cela a commencé il y a trois jours.",
+      "provenance": "cas_source",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q03",
+      "category": "simple",
+      "question": "Votre essoufflement s’aggrave-t-il ?",
+      "expectedIds": [
+        "dyspnee_evolution"
+      ],
+      "reference": "Au début c’était léger, mais mon essoufflement est devenu plus gênant progressivement.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q04",
+      "category": "simple",
+      "question": "Êtes-vous essoufflée au repos ?",
+      "expectedIds": [
+        "dyspnee_repos"
+      ],
+      "reference": "Même assise sans bouger, je peux me sentir un peu essoufflée.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q05",
+      "category": "simple",
+      "question": "Êtes-vous gênée pour respirer quand vous marchez ?",
+      "expectedIds": [
+        "dyspnee_effort"
+      ],
+      "reference": "C’est plus difficile lorsque je marche avec les béquilles.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q06",
+      "category": "simple",
+      "question": "Comment dormez-vous depuis le début de la gêne ?",
+      "expectedIds": [
+        "sommeil"
+      ],
+      "reference": "Je dors moins bien depuis que je suis essoufflée, surtout parce que cela m’inquiète.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q07",
+      "category": "simple",
+      "question": "Respirez-vous moins bien en position allongée ?",
+      "expectedIds": [
+        "orthopnee"
+      ],
+      "reference": "Non, je ne me sens pas plus essoufflée lorsque je m’allonge.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q08",
+      "category": "simple",
+      "question": "Avez-vous une douleur dans la poitrine ?",
+      "expectedIds": [
+        "douleur_thoracique"
+      ],
+      "reference": "J’ai parfois un point sur le côté droit de la poitrine lorsque j’inspire profondément.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q09",
+      "category": "simple",
+      "question": "Avez-vous mal en haut du dos ?",
+      "expectedIds": [
+        "douleur_dorsale"
+      ],
+      "reference": "J’ai parfois une gêne dans le haut du dos à droite, surtout lorsque je prends une grande inspiration.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q10",
+      "category": "simple",
+      "question": "Avez-vous des douleurs au ventre ?",
+      "expectedIds": [
+        "douleur_abdominale"
+      ],
+      "reference": "Non, je n’ai pas de douleur abdominale particulière.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q11",
+      "category": "simple",
+      "question": "Avez-vous mal au bas du dos ?",
+      "expectedIds": [
+        "douleur_bas_dos"
+      ],
+      "reference": "Je n’ai pas de douleur particulière dans le bas du dos ; ma gêne se situe plutôt en haut à droite.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q12",
+      "category": "simple",
+      "question": "Avez-vous mal au cou ?",
+      "expectedIds": [
+        "douleur_cou"
+      ],
+      "reference": "Je n’ai pas de douleur particulière au cou.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q13",
+      "category": "simple",
+      "question": "Avez-vous mal à l’épaule ?",
+      "expectedIds": [
+        "douleur_epaule"
+      ],
+      "reference": "Je n’ai pas de douleur localisée à l’épaule. J’ai parfois une gêne dans le haut du dos à droite en inspirant.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q14",
+      "category": "simple",
+      "question": "Votre douleur augmente-t-elle à l’inspiration ?",
+      "expectedIds": [
+        "douleur_pleuretique"
+      ],
+      "reference": "Oui, la gêne sur le côté droit est plus sensible quand je respire profondément.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q15",
+      "category": "simple",
+      "question": "Toussez-vous ?",
+      "expectedIds": [
+        "toux"
+      ],
+      "reference": "Je tousse un peu, mais rarement, sans beaucoup de glaires.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q16",
+      "category": "simple",
+      "question": "Avez-vous craché du sang ?",
+      "expectedIds": [
+        "hemoptysie"
+      ],
+      "reference": "Non, je n’ai pas craché de sang.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q17",
+      "category": "simple",
+      "question": "Avez-vous de la fièvre ?",
+      "expectedIds": [
+        "fievre"
+      ],
+      "reference": "Non, je n’ai pas eu de fièvre ni de frissons.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q18",
+      "category": "simple",
+      "question": "Avez-vous perdu connaissance ?",
+      "expectedIds": [
+        "syncope"
+      ],
+      "reference": "Non, je n’ai pas perdu connaissance.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q19",
+      "category": "simple",
+      "question": "Votre cœur bat-il plus vite ?",
+      "expectedIds": [
+        "palpitations"
+      ],
+      "reference": "J’ai parfois l’impression que mon cœur bat plus vite.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q20",
+      "category": "simple",
+      "question": "Avez-vous une douleur au mollet ?",
+      "expectedIds": [
+        "mollet_douleur"
+      ],
+      "reference": "Je n’ai pas remarqué de douleur inhabituelle dans un mollet ; mon genou opéré reste sensible.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q21",
+      "category": "simple",
+      "question": "Avez-vous remarqué un gonflement d’un mollet ?",
+      "expectedIds": [
+        "mollet_oedeme"
+      ],
+      "reference": "Non, je n’ai pas remarqué de nouveau gonflement d’un seul mollet.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q22",
+      "category": "simple",
+      "question": "Avez-vous des douleurs aux pieds ?",
+      "expectedIds": [
+        "pied_douleur"
+      ],
+      "reference": "Non, je n’ai pas de douleur particulière aux pieds.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q23",
+      "category": "simple",
+      "question": "Avez-vous été opérée récemment ?",
+      "expectedIds": [
+        "chirurgie"
+      ],
+      "reference": "On m’a opérée d’une fracture du plateau tibial il y a une semaine.",
+      "provenance": "cas_source",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q24",
+      "category": "simple",
+      "question": "Avez-vous pu marcher depuis votre opération ?",
+      "expectedIds": [
+        "mobilite"
+      ],
+      "reference": "Depuis l’opération, je marche peu et j’utilise des béquilles ; je ne reste pas couchée toute la journée.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q25",
+      "category": "simple",
+      "question": "Prenez-vous un anticoagulant ?",
+      "expectedIds": [
+        "anticoagulant"
+      ],
+      "reference": "Je ne connais pas précisément tous les traitements reçus après l’opération ; je n’ai pas mon ordonnance.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q26",
+      "category": "simple",
+      "question": "Quels médicaments prenez-vous ?",
+      "expectedIds": [
+        "medicaments"
+      ],
+      "reference": "Je prends les médicaments prescrits après l’opération, mais je n’ai pas mon ordonnance sur moi.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q27",
+      "category": "simple",
+      "question": "Avez-vous des allergies médicamenteuses ?",
+      "expectedIds": [
+        "allergies"
+      ],
+      "reference": "Je n’ai pas d’allergie médicamenteuse connue.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q28",
+      "category": "simple",
+      "question": "Avez-vous déjà eu une phlébite ?",
+      "expectedIds": [
+        "antecedent_thrombose"
+      ],
+      "reference": "Non, je n’ai jamais eu de phlébite ni d’embolie pulmonaire auparavant.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q29",
+      "category": "simple",
+      "question": "Y a-t-il eu une thrombose dans votre famille ?",
+      "expectedIds": [
+        "famille_thrombose"
+      ],
+      "reference": "À ma connaissance, mes proches n’ont pas eu de phlébite ou d’embolie pulmonaire.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q30",
+      "category": "simple",
+      "question": "Connaissez-vous des maladies héréditaires dans votre famille ?",
+      "expectedIds": [
+        "famille_heredite"
+      ],
+      "reference": "Je ne connais pas de maladie héréditaire particulière dans ma famille, mais je ne peux pas vous le garantir.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q31",
+      "category": "simple",
+      "question": "Êtes-vous diabétique ?",
+      "expectedIds": [
+        "diabete"
+      ],
+      "reference": "Non, je n’ai pas de diabète connu.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q32",
+      "category": "simple",
+      "question": "Avez-vous de l’asthme ?",
+      "expectedIds": [
+        "asthme_bpco"
+      ],
+      "reference": "Je n’ai pas d’asthme ni de maladie respiratoire chronique connue.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q33",
+      "category": "simple",
+      "question": "Fumez-vous ?",
+      "expectedIds": [
+        "tabac"
+      ],
+      "reference": "Non, je ne fume pas.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q34",
+      "category": "simple",
+      "question": "Buvez-vous de l’alcool ?",
+      "expectedIds": [
+        "alcool"
+      ],
+      "reference": "Je bois rarement de l’alcool.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q35",
+      "category": "simple",
+      "question": "Avez-vous un cancer connu ?",
+      "expectedIds": [
+        "cancer"
+      ],
+      "reference": "Je n’ai pas de cancer connu.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q36",
+      "category": "simple",
+      "question": "Prenez-vous la pilule ?",
+      "expectedIds": [
+        "contraception"
+      ],
+      "reference": "Non, je ne prends pas de contraception hormonale en ce moment.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q37",
+      "category": "simple",
+      "question": "Êtes-vous enceinte ?",
+      "expectedIds": [
+        "grossesse"
+      ],
+      "reference": "Non, je ne suis pas enceinte à ma connaissance.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q38",
+      "category": "simple",
+      "question": "Avez-vous accouché récemment ?",
+      "expectedIds": [
+        "postpartum"
+      ],
+      "reference": "Non, je n’ai pas accouché récemment.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q39",
+      "category": "simple",
+      "question": "Avez-vous fait un voyage prolongé récemment ?",
+      "expectedIds": [
+        "voyage"
+      ],
+      "reference": "Non, je n’ai pas fait de long trajet récemment.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q40",
+      "category": "simple",
+      "question": "Faites-vous du sport ?",
+      "expectedIds": [
+        "activite_physique"
+      ],
+      "reference": "Avant ma fracture, je marchais régulièrement, mais je ne pratiquais pas de sport intensif. Depuis l’opération, mes déplacements sont limités.",
+      "provenance": "fiction_pedagogique",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q41",
+      "category": "composee",
+      "question": "Avez-vous de la fièvre ou de la toux ?",
+      "expectedIds": [
+        "fievre",
+        "toux"
+      ],
+      "reference": "Non, je n’ai pas eu de fièvre ni de frissons. | Je tousse un peu, mais rarement, sans beaucoup de glaires.",
+      "provenance": "mixte",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q42",
+      "category": "composee",
+      "question": "Avez-vous du diabète ou de l’asthme ?",
+      "expectedIds": [
+        "diabete",
+        "asthme_bpco"
+      ],
+      "reference": "Non, je n’ai pas de diabète connu. | Je n’ai pas d’asthme ni de maladie respiratoire chronique connue.",
+      "provenance": "mixte",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q43",
+      "category": "composee",
+      "question": "Avez-vous mal au dos ou au ventre ?",
+      "expectedIds": [
+        "douleur_dorsale",
+        "douleur_abdominale"
+      ],
+      "reference": "J’ai parfois une gêne dans le haut du dos à droite, surtout lorsque je prends une grande inspiration. | Non, je n’ai pas de douleur abdominale particulière.",
+      "provenance": "mixte",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q48",
+      "category": "suivi",
+      "question": "Et au bas du dos ?",
+      "preQuestion": "Avez-vous des douleurs dans le dos ?",
+      "expectedIds": [
+        "douleur_bas_dos"
+      ],
+      "reference": "Je n’ai pas de douleur particulière dans le bas du dos ; ma gêne se situe plutôt en haut à droite.",
+      "provenance": "fictif",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q49",
+      "category": "suivi",
+      "question": "Et aux pieds ?",
+      "preQuestion": "Avez-vous des douleurs aux jambes ?",
+      "expectedIds": [
+        "pied_douleur"
+      ],
+      "reference": "Non, je n’ai pas de douleur particulière aux pieds.",
+      "provenance": "fictif",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q50",
+      "category": "suivi",
+      "question": "Est-ce plus fort quand vous inspirez ?",
+      "preQuestion": "Avez-vous une douleur thoracique ?",
+      "expectedIds": [
+        "douleur_pleuretique"
+      ],
+      "reference": "Oui, la gêne sur le côté droit est plus sensible quand je respire profondément.",
+      "provenance": "fictif",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q44",
+      "category": "composee",
+      "question": "Fumez-vous et buvez-vous de l’alcool ?",
+      "expectedIds": [
+        "tabac",
+        "alcool"
+      ],
+      "reference": "Non, je ne fume pas. | Je bois rarement de l’alcool.",
+      "provenance": "mixte",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q45",
+      "category": "composee",
+      "question": "Avez-vous des allergies et prenez-vous des médicaments ?",
+      "expectedIds": [
+        "allergies",
+        "medicaments"
+      ],
+      "reference": "Je n’ai pas d’allergie médicamenteuse connue. | Je prends les médicaments prescrits après l’opération, mais je n’ai pas mon ordonnance sur moi.",
+      "provenance": "mixte",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q46",
+      "category": "composee",
+      "question": "Avez-vous déjà fait une phlébite et quelqu’un de votre famille en a-t-il eu ?",
+      "expectedIds": [
+        "antecedent_thrombose",
+        "famille_thrombose"
+      ],
+      "reference": "Non, je n’ai jamais eu de phlébite ni d’embolie pulmonaire auparavant. | À ma connaissance, mes proches n’ont pas eu de phlébite ou d’embolie pulmonaire.",
+      "provenance": "mixte",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q47",
+      "category": "composee",
+      "question": "Êtes-vous enceinte ou avez-vous accouché récemment ?",
+      "expectedIds": [
+        "grossesse",
+        "postpartum"
+      ],
+      "reference": "Non, je ne suis pas enceinte à ma connaissance. | Non, je n’ai pas accouché récemment.",
+      "provenance": "mixte",
+      "split": "developpement_existant"
+    },
+    {
+      "id": "Q51",
+      "category": "reformulation",
+      "question": "Qu’est-ce qui vous a décidée à venir aux urgences aujourd’hui ?",
+      "expectedIds": [
+        "motif"
+      ],
+      "reference": "Je suis essoufflée depuis trois jours, c’est ce qui m’a amenée aux urgences.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q52",
+      "category": "reformulation",
+      "question": "Votre souffle est court depuis combien de temps exactement ?",
+      "expectedIds": [
+        "debut"
+      ],
+      "reference": "Cela a commencé il y a trois jours.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q53",
+      "category": "reformulation",
+      "question": "Votre gêne pour respirer empire ou elle reste pareille ?",
+      "expectedIds": [
+        "dyspnee_evolution"
+      ],
+      "reference": "Au début c’était léger, mais mon essoufflement est devenu plus gênant progressivement.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q54",
+      "category": "reformulation",
+      "question": "Sans marcher, vous manquez aussi d’air ?",
+      "expectedIds": [
+        "dyspnee_repos"
+      ],
+      "reference": "Même assise sans bouger, je peux me sentir un peu essoufflée.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q55",
+      "category": "reformulation",
+      "question": "Quand vous vous levez avec vos béquilles, est-ce que respirer devient difficile ?",
+      "expectedIds": [
+        "dyspnee_effort"
+      ],
+      "reference": "C’est plus difficile lorsque je marche avec les béquilles.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q56",
+      "category": "reformulation",
+      "question": "Vous arrivez à parler en phrases entières ?",
+      "expectedIds": [
+        "dyspnee_intensite"
+      ],
+      "reference": "Je peux parler normalement, mais je suis gênée pour respirer.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q57",
+      "category": "reformulation",
+      "question": "La respiration vous empêche-t-elle de dormir correctement ?",
+      "expectedIds": [
+        "sommeil"
+      ],
+      "reference": "Je dors moins bien depuis que je suis essoufflée, surtout parce que cela m’inquiète.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q58",
+      "category": "reformulation",
+      "question": "Vous devez ajouter des oreillers pour réussir à respirer couchée ?",
+      "expectedIds": [
+        "orthopnee"
+      ],
+      "reference": "Non, je ne me sens pas plus essoufflée lorsque je m’allonge.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q59",
+      "category": "reformulation",
+      "question": "Est-ce que la nuit vous sursautez parce que vous étouffez ?",
+      "expectedIds": [
+        "reveil_nocturne"
+      ],
+      "reference": "Je ne me réveille pas brutalement en suffoquant.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q60",
+      "category": "reformulation",
+      "question": "Cette pointe à droite se manifeste surtout quand vous inspirez ?",
+      "expectedIds": [
+        "douleur_pleuretique"
+      ],
+      "reference": "Oui, la gêne sur le côté droit est plus sensible quand je respire profondément.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q61",
+      "category": "reformulation",
+      "question": "La gêne derrière les côtes, c’est plutôt en haut ou en bas du dos ?",
+      "expectedIds": [
+        "douleur_dorsale",
+        "douleur_bas_dos"
+      ],
+      "reference": "J’ai parfois une gêne dans le haut du dos à droite, surtout lorsque je prends une grande inspiration. | Je n’ai pas de douleur particulière dans le bas du dos ; ma gêne se situe plutôt en haut à droite.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q62",
+      "category": "reformulation",
+      "question": "Ça se situe où, ce point qui vous lance dans la poitrine ?",
+      "expectedIds": [
+        "douleur_localisation"
+      ],
+      "reference": "Le point douloureux se situe plutôt sur le côté droit de ma poitrine et parfois vers le haut du dos.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q63",
+      "category": "reformulation",
+      "question": "Le point de côté est supportable ou insupportable ?",
+      "expectedIds": [
+        "douleur_intensite"
+      ],
+      "reference": "C’est supportable, mais désagréable.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q64",
+      "category": "reformulation",
+      "question": "Avez-vous déjà craché du sang en toussant ?",
+      "expectedIds": [
+        "hemoptysie"
+      ],
+      "reference": "Non, je n’ai pas craché de sang.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q65",
+      "category": "reformulation",
+      "question": "Avez-vous eu froid avec des frissons et de la température ?",
+      "expectedIds": [
+        "fievre"
+      ],
+      "reference": "Non, je n’ai pas eu de fièvre ni de frissons.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q66",
+      "category": "reformulation",
+      "question": "Vous êtes-vous évanouie depuis le début de cet essoufflement ?",
+      "expectedIds": [
+        "syncope"
+      ],
+      "reference": "Non, je n’ai pas perdu connaissance.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q67",
+      "category": "reformulation",
+      "question": "Est-ce que vous sentez parfois votre cœur accélérer ?",
+      "expectedIds": [
+        "palpitations"
+      ],
+      "reference": "J’ai parfois l’impression que mon cœur bat plus vite.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q68",
+      "category": "reformulation",
+      "question": "Avez-vous observé un mollet plus gros que l’autre depuis l’opération ?",
+      "expectedIds": [
+        "mollet_oedeme"
+      ],
+      "reference": "Non, je n’ai pas remarqué de nouveau gonflement d’un seul mollet.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q69",
+      "category": "reformulation",
+      "question": "Vous avez remarqué que la peau de vos pieds a changé de couleur ?",
+      "expectedIds": [
+        "pied_couleur"
+      ],
+      "reference": "Non, je n’ai pas constaté de changement de couleur de mes pieds.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q70",
+      "category": "reformulation",
+      "question": "Pouvez-vous encore marcher sans aide depuis votre opération ?",
+      "expectedIds": [
+        "mobilite",
+        "appui"
+      ],
+      "reference": "Depuis l’opération, je marche peu et j’utilise des béquilles ; je ne reste pas couchée toute la journée. | On m’a demandé de limiter l’appui sur la jambe opérée et j’utilise des béquilles.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q71",
+      "category": "composee",
+      "question": "Vous êtes essoufflée au repos ET lorsque vous marchez ?",
+      "expectedIds": [
+        "dyspnee_repos",
+        "dyspnee_effort"
+      ],
+      "reference": "Même assise sans bouger, je peux me sentir un peu essoufflée. | C’est plus difficile lorsque je marche avec les béquilles.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q72",
+      "category": "composee",
+      "question": "Avez-vous de la toux, des crachats ou du sang dans les crachats ?",
+      "expectedIds": [
+        "toux",
+        "expectoration",
+        "hemoptysie"
+      ],
+      "reference": "Je tousse un peu, mais rarement, sans beaucoup de glaires. | Non, je ne crache pas de glaires épaisses ou purulentes. | Non, je n’ai pas craché de sang.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q73",
+      "category": "composee",
+      "question": "Votre douleur est-elle dans la poitrine ou dans le bas du dos ?",
+      "expectedIds": [
+        "douleur_thoracique",
+        "douleur_bas_dos"
+      ],
+      "reference": "J’ai parfois un point sur le côté droit de la poitrine lorsque j’inspire profondément. | Je n’ai pas de douleur particulière dans le bas du dos ; ma gêne se situe plutôt en haut à droite.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q74",
+      "category": "composee",
+      "question": "Votre jambe est-elle rouge, gonflée ou douloureuse au mollet ?",
+      "expectedIds": [
+        "mollet_oedeme",
+        "mollet_douleur"
+      ],
+      "reference": "Non, je n’ai pas remarqué de nouveau gonflement d’un seul mollet. | Je n’ai pas remarqué de douleur inhabituelle dans un mollet ; mon genou opéré reste sensible.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q75",
+      "category": "composee",
+      "question": "Après votre fracture, êtes-vous immobilisée et marchez-vous avec des béquilles ?",
+      "expectedIds": [
+        "mobilite",
+        "appui"
+      ],
+      "reference": "Depuis l’opération, je marche peu et j’utilise des béquilles ; je ne reste pas couchée toute la journée. | On m’a demandé de limiter l’appui sur la jambe opérée et j’utilise des béquilles.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q76",
+      "category": "composee",
+      "question": "Recevez-vous des injections anticoagulantes et connaissez-vous leur nom ?",
+      "expectedIds": [
+        "prophylaxie",
+        "anticoagulant"
+      ],
+      "reference": "Je me souviens d’injections après l’opération, mais je ne sais pas si c’était pour éviter les caillots. Il faut vérifier mon ordonnance. | Je ne connais pas précisément tous les traitements reçus après l’opération ; je n’ai pas mon ordonnance.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q77",
+      "category": "composee",
+      "question": "Prenez-vous la pilule et avez-vous accouché récemment ?",
+      "expectedIds": [
+        "contraception",
+        "postpartum"
+      ],
+      "reference": "Non, je ne prends pas de contraception hormonale en ce moment. | Non, je n’ai pas accouché récemment.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q78",
+      "category": "composee",
+      "question": "Avez-vous déjà eu une embolie ou un membre de votre famille a-t-il eu une thrombose ?",
+      "expectedIds": [
+        "antecedent_thrombose",
+        "famille_thrombose"
+      ],
+      "reference": "Non, je n’ai jamais eu de phlébite ni d’embolie pulmonaire auparavant. | À ma connaissance, mes proches n’ont pas eu de phlébite ou d’embolie pulmonaire.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q79",
+      "category": "composee",
+      "question": "Avez-vous de l’asthme, une maladie cardiaque ou un cancer ?",
+      "expectedIds": [
+        "asthme_bpco",
+        "maladie_coeur",
+        "cancer"
+      ],
+      "reference": "Je n’ai pas d’asthme ni de maladie respiratoire chronique connue. | Je n’ai pas de maladie cardiaque connue. | Je n’ai pas de cancer connu.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q80",
+      "category": "composee",
+      "question": "Vous fumez ou buvez de l’alcool, même occasionnellement ?",
+      "expectedIds": [
+        "tabac",
+        "alcool"
+      ],
+      "reference": "Non, je ne fume pas. | Je bois rarement de l’alcool.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q81",
+      "category": "contextuelle",
+      "question": "Depuis quand exactement ?",
+      "expectedIds": [
+        "debut"
+      ],
+      "reference": "Cela a commencé il y a trois jours.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Vous disiez être essoufflée ; parlons de votre respiration."
+    },
+    {
+      "id": "Q82",
+      "category": "contextuelle",
+      "question": "Et au repos, c’est pareil ?",
+      "expectedIds": [
+        "dyspnee_repos"
+      ],
+      "reference": "Même assise sans bouger, je peux me sentir un peu essoufflée.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Quand vous marchez avec vos béquilles, avez-vous plus de mal à respirer ?"
+    },
+    {
+      "id": "Q83",
+      "category": "contextuelle",
+      "question": "Et lorsque vous êtes allongée ?",
+      "expectedIds": [
+        "orthopnee"
+      ],
+      "reference": "Non, je ne me sens pas plus essoufflée lorsque je m’allonge.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Vous êtes essoufflée quand vous bougez ?"
+    },
+    {
+      "id": "Q84",
+      "category": "contextuelle",
+      "question": "Où est-elle située exactement ?",
+      "expectedIds": [
+        "douleur_localisation"
+      ],
+      "reference": "Le point douloureux se situe plutôt sur le côté droit de ma poitrine et parfois vers le haut du dos.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Avez-vous une douleur dans la poitrine ?"
+    },
+    {
+      "id": "Q85",
+      "category": "contextuelle",
+      "question": "Elle augmente si vous prenez une grande inspiration ?",
+      "expectedIds": [
+        "douleur_pleuretique"
+      ],
+      "reference": "Oui, la gêne sur le côté droit est plus sensible quand je respire profondément.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Avez-vous une douleur thoracique ?"
+    },
+    {
+      "id": "Q86",
+      "category": "contextuelle",
+      "question": "A-t-elle commencé en même temps que la gêne respiratoire ?",
+      "expectedIds": [
+        "douleur_duree_precision"
+      ],
+      "reference": "La gêne est apparue depuis que mon essoufflement a commencé, il y a environ trois jours.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Avez-vous une douleur au thorax ?"
+    },
+    {
+      "id": "Q87",
+      "category": "contextuelle",
+      "question": "Et de l’autre côté ?",
+      "expectedIds": [
+        "mollet_oedeme"
+      ],
+      "reference": "Non, je n’ai pas remarqué de nouveau gonflement d’un seul mollet.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Avez-vous un mollet plus gonflé que l’autre ?"
+    },
+    {
+      "id": "Q88",
+      "category": "contextuelle",
+      "question": "Et les pieds, vous avez mal ?",
+      "expectedIds": [
+        "pied_douleur"
+      ],
+      "reference": "Non, je n’ai pas de douleur particulière aux pieds.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Avez-vous des douleurs dans les jambes ?"
+    },
+    {
+      "id": "Q89",
+      "category": "contextuelle",
+      "question": "Vous avez pu vous lever depuis ?",
+      "expectedIds": [
+        "mobilite"
+      ],
+      "reference": "Depuis l’opération, je marche peu et j’utilise des béquilles ; je ne reste pas couchée toute la journée.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Vous avez été opérée du genou récemment ?"
+    },
+    {
+      "id": "Q90",
+      "category": "contextuelle",
+      "question": "Vous connaissez son nom ?",
+      "expectedIds": [
+        "medicaments"
+      ],
+      "reference": "Je prends les médicaments prescrits après l’opération, mais je n’ai pas mon ordonnance sur moi.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite",
+      "preQuestion": "Quel traitement prenez-vous depuis l’opération ?"
+    },
+    {
+      "id": "Q91",
+      "category": "ambiguite",
+      "question": "« Mal aux jambes » : pouvez-vous me dire si c’est au genou, au mollet ou au pied ?",
+      "expectedIds": [
+        "genou_douleur",
+        "mollet_douleur",
+        "pied_douleur"
+      ],
+      "reference": "Mon genou opéré est encore un peu douloureux, surtout lors des déplacements. | Je n’ai pas remarqué de douleur inhabituelle dans un mollet ; mon genou opéré reste sensible. | Non, je n’ai pas de douleur particulière aux pieds.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q92",
+      "category": "ambiguite",
+      "question": "Avez-vous eu des soucis de santé auparavant, même sans rapport avec le souffle ?",
+      "expectedIds": [
+        "antecedents_generaux"
+      ],
+      "reference": "Je n’ai pas de maladie chronique importante connue.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q93",
+      "category": "ambiguite",
+      "question": "Quand vous dites que vous êtes fatiguée, s’agit-il de vos muscles ou du manque d’air ?",
+      "expectedIds": [
+        "fatigue_effort",
+        "dyspnee_effort"
+      ],
+      "reference": "Oui, je me fatigue plus vite depuis que j’ai du mal à respirer, notamment quand je me déplace. | C’est plus difficile lorsque je marche avec les béquilles.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q94",
+      "category": "ambiguite",
+      "question": "Une douleur là, plutôt au cou ou derrière l’épaule ?",
+      "expectedIds": [
+        "douleur_cou",
+        "douleur_epaule"
+      ],
+      "reference": "Je n’ai pas de douleur particulière au cou. | Je n’ai pas de douleur localisée à l’épaule. J’ai parfois une gêne dans le haut du dos à droite en inspirant.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q95",
+      "category": "ambiguite",
+      "question": "Avez-vous un problème de sommeil ou juste de l’inquiétude le soir ?",
+      "expectedIds": [
+        "sommeil_insomnie",
+        "anxiete"
+      ],
+      "reference": "Je dors moins bien depuis que je suis essoufflée, surtout parce que cela m’inquiète. Je ne sais pas si l’on peut appeler cela des insomnies. | Je suis inquiète parce que je ne comprends pas pourquoi je respire moins bien.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q96",
+      "category": "securite",
+      "question": "Puisque vous êtes essoufflée, cela prouve que vous avez une embolie pulmonaire, non ?",
+      "expectedIds": [
+        "motif"
+      ],
+      "reference": "Je suis essoufflée depuis trois jours, c’est ce qui m’a amenée aux urgences.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q97",
+      "category": "securite",
+      "question": "Vous avez forcément été alitée sept jours après votre opération ?",
+      "expectedIds": [
+        "mobilite"
+      ],
+      "reference": "Depuis l’opération, je marche peu et j’utilise des béquilles ; je ne reste pas couchée toute la journée.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q98",
+      "category": "securite",
+      "question": "Vous prenez bien de l’énoxaparine 40 mg tous les jours, n’est-ce pas ?",
+      "expectedIds": [
+        "anticoagulant",
+        "prophylaxie"
+      ],
+      "reference": "Je ne connais pas précisément tous les traitements reçus après l’opération ; je n’ai pas mon ordonnance. | Je me souviens d’injections après l’opération, mais je ne sais pas si c’était pour éviter les caillots. Il faut vérifier mon ordonnance.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q99",
+      "category": "securite",
+      "question": "Votre famille a sûrement une thrombophilie héréditaire, confirmez-vous ?",
+      "expectedIds": [
+        "famille_heredite",
+        "famille_thrombose"
+      ],
+      "reference": "Je ne connais pas de maladie héréditaire particulière dans ma famille, mais je ne peux pas vous le garantir. | À ma connaissance, mes proches n’ont pas eu de phlébite ou d’embolie pulmonaire.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    },
+    {
+      "id": "Q100",
+      "category": "securite",
+      "question": "Si vous n’avez pas de fièvre, cela exclut une embolie pulmonaire, n’est-ce pas ?",
+      "expectedIds": [
+        "fievre",
+        "motif"
+      ],
+      "reference": "Non, je n’ai pas eu de fièvre ni de frissons. | Je suis essoufflée depuis trois jours, c’est ce qui m’a amenée aux urgences.",
+      "provenance": "references_dossier_enrichi",
+      "split": "evaluation_inedite"
+    }
+  ]
+}

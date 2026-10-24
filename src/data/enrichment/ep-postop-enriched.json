@@ -1,0 +1,1551 @@
+{
+  "caseId": "ep-postop",
+  "edition": "V2.3.4 — suivi contextuel et anatomie précise",
+  "disclaimer": "Scénario pédagogique synthétique. Les seules données sources reprises explicitement sont âge 45 ans, dyspnée depuis 3 jours, chirurgie du plateau tibial une semaine auparavant. Tous les autres renseignements d’interrogatoire sont fictifs et demandent validation médicale; le barème historique est inchangé.",
+  "entries": [
+    {
+      "id": "debut",
+      "answer": "Cela a commencé il y a trois jours.",
+      "teaching": "Préciser le début des symptômes.",
+      "variants": [
+        "depuis quand",
+        "quand a commencé",
+        "quand est apparu",
+        "il y a combien de temps",
+        "date de début",
+        "depuis combien de jours"
+      ],
+      "provenance": "cas_source",
+      "scoringId": "debut",
+      "followUp": null,
+      "answer_en": "It started three days ago.",
+      "teaching_en": "Clarify the onset of symptoms."
+    },
+    {
+      "id": "chirurgie",
+      "answer": "On m’a opérée d’une fracture du plateau tibial il y a une semaine.",
+      "teaching": "La chirurgie orthopédique récente est un facteur de risque thromboembolique majeur.",
+      "variants": [
+        "avez vous été opérée",
+        "une opération récemment",
+        "opération",
+        "chirurgie",
+        "intervention chirurgicale",
+        "bloc opératoire",
+        "hospitalisée pour une intervention",
+        "hospitalisation récente",
+        "passée au bloc",
+        "fracture du plateau tibial",
+        "opérée de quoi"
+      ],
+      "provenance": "cas_source",
+      "scoringId": "chirurgie",
+      "followUp": null,
+      "answer_en": "I had surgery for a tibial plateau fracture one week ago.",
+      "teaching_en": "Recent orthopaedic surgery is a major risk factor for thromboembolism."
+    },
+    {
+      "id": "motif",
+      "answer": "Je suis essoufflée depuis trois jours, c’est ce qui m’a amenée aux urgences.",
+      "teaching": "Débuter par une question ouverte est une bonne pratique.",
+      "variants": [
+        "qu est ce qui vous amène",
+        "pourquoi êtes vous venue",
+        "motif de consultation",
+        "qu est ce qui vous arrive",
+        "quel est votre problème",
+        "quels sont vos symptômes"
+      ],
+      "provenance": "cas_source",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I have been short of breath for three days; that is why I came to the emergency department.",
+      "teaching_en": "Starting with an open question supports patient-centred history taking."
+    },
+    {
+      "id": "dyspnee_evolution",
+      "answer": "Au début c’était léger, mais mon essoufflement est devenu plus gênant progressivement.",
+      "teaching": "Caractériser la chronologie et la progression.",
+      "variants": [
+        "aggravée depuis",
+        "cela empire",
+        "ça s aggrave",
+        "comment cela a évolué",
+        "évolution des symptômes",
+        "de plus en plus essoufflée",
+        "progressivement",
+        "s est aggravé"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "At first it was mild, but my shortness of breath gradually got worse.",
+      "teaching_en": "Characterise symptom onset and progression."
+    },
+    {
+      "id": "dyspnee_brutale",
+      "answer": "Cela s’est installé au cours des derniers jours, pas en une seconde.",
+      "teaching": "Distinguer début brutal et progressif sans exclure une EP.",
+      "variants": [
+        "brutalement",
+        "d un seul coup",
+        "soudainement",
+        "apparition brutale",
+        "installation brutale",
+        "début soudain"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "It developed over the last few days, not all at once.",
+      "teaching_en": "Distinguish sudden from progressive onset; neither alone rules out pulmonary embolism."
+    },
+    {
+      "id": "dyspnee_repos",
+      "answer": "Même assise sans bouger, je peux me sentir un peu essoufflée.",
+      "teaching": "La dyspnée au repos permet de qualifier le retentissement.",
+      "variants": [
+        "au repos",
+        "quand vous ne faites rien",
+        "sans effort",
+        "assise sans bouger",
+        "immobile est ce gênant"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I sometimes feel a little short of breath even when sitting still.",
+      "teaching_en": "Shortness of breath at rest helps assess functional impact."
+    },
+    {
+      "id": "dyspnee_effort",
+      "answer": "C’est plus difficile lorsque je marche avec les béquilles.",
+      "teaching": "Comparer effort et repos.",
+      "variants": [
+        "à l effort",
+        "pendant un effort",
+        "quand vous marchez",
+        "en marchant",
+        "montez les escaliers",
+        "escaliers",
+        "quand vous bougez",
+        "en vous déplaçant",
+        "à la marche"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "It is harder when I walk with crutches.",
+      "teaching_en": "Compare breathlessness at rest and during exertion."
+    },
+    {
+      "id": "dyspnee_intensite",
+      "answer": "Je peux parler normalement, mais je suis gênée pour respirer.",
+      "teaching": "Retentissement fonctionnel ; les paramètres objectifs restent prioritaires.",
+      "variants": [
+        "sur une échelle",
+        "intensité de la gêne",
+        "à quel point êtes vous essoufflée",
+        "parler en phrases",
+        "difficulté à parler",
+        "gravité de l essoufflement"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I can speak normally, but breathing feels uncomfortable.",
+      "teaching_en": "Assess impact on daily activities; objective observations are still important."
+    },
+    {
+      "id": "sommeil",
+      "answer": "Je dors moins bien depuis que je suis essoufflée, surtout parce que cela m’inquiète.",
+      "teaching": "Le sommeil peut être perturbé sans véritable orthopnée.",
+      "variants": [
+        "dormir",
+        "dormez",
+        "dors",
+        "sommeil",
+        "insomnie",
+        "trouble du sommeil",
+        "bien dormi",
+        "la nuit vous dormez",
+        "passer la nuit",
+        "nuits difficiles"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I have been sleeping less well since I became breathless, mostly because I am worried.",
+      "teaching_en": "Sleep may be disturbed without true orthopnoea."
+    },
+    {
+      "id": "orthopnee",
+      "answer": "Non, je ne me sens pas plus essoufflée lorsque je m’allonge.",
+      "teaching": "L’orthopnée oriente notamment vers une cause cardiaque.",
+      "variants": [
+        "en position allongée",
+        "lorsque vous êtes allongée",
+        "quand vous vous couchez",
+        "quand vous êtes couchée",
+        "allongée",
+        "couchée",
+        "orthopnée",
+        "combien d oreillers",
+        "plusieurs oreillers",
+        "rester assise pour respirer"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I do not feel more short of breath when I lie down.",
+      "teaching_en": "Orthopnoea can suggest a cardiac cause."
+    },
+    {
+      "id": "reveil_nocturne",
+      "answer": "Je ne me réveille pas brutalement en suffoquant.",
+      "teaching": "Différencier dyspnée paroxystique nocturne et mauvais sommeil.",
+      "variants": [
+        "réveillée en suffoquant",
+        "réveillée en étouffant",
+        "réveil en suffoquant",
+        "crises nocturnes",
+        "dyspnée paroxystique nocturne",
+        "réveille avec manque d air",
+        "réveils à cause du souffle"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I do not wake up suddenly gasping for air.",
+      "teaching_en": "Distinguish nocturnal breathing attacks from poor sleep."
+    },
+    {
+      "id": "douleur_dorsale",
+      "answer": "J’ai parfois une gêne dans le haut du dos à droite, surtout lorsque je prends une grande inspiration.",
+      "teaching": "Douleur dorsale postérieure : préciser localisation et caractère pleurétique. Ne pas assimiler au mollet.",
+      "variants": [
+        "douleur dans le dos",
+        "douleurs dans le dos",
+        "mal au dos",
+        "douleur dorsale",
+        "douleur au dos",
+        "derrière dans le dos",
+        "omoplate",
+        "entre les omoplates",
+        "haut du dos",
+        "bas du dos",
+        "lombaire",
+        "douleur derrière le thorax",
+        "douleur entre les épaules",
+        "votre dos il vous fait mal",
+        "le dos il vous fait mal",
+        "et votre dos il vous fait mal",
+        "vous avez mal dans le dos",
+        "au niveau du dos"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I sometimes feel discomfort in the upper right side of my back, particularly when I breathe in deeply.",
+      "teaching_en": "Clarify posterior back pain, anatomical location and pleuritic features; do not mistake it for calf pain."
+    },
+    {
+      "id": "douleur_thoracique",
+      "answer": "J’ai parfois un point sur le côté droit de la poitrine lorsque j’inspire profondément.",
+      "teaching": "Douleur thoracique pleurétique possible, non spécifique d’EP.",
+      "variants": [
+        "douleur dans la poitrine",
+        "douleurs dans la poitrine",
+        "mal à la poitrine",
+        "douleurs thoraciques",
+        "douleur thoracique",
+        "point de côté",
+        "douleur au thorax",
+        "serrement thoracique",
+        "oppression thoracique",
+        "douleur quand vous respirez",
+        "douleur à l inspiration",
+        "quand vous inspirez profondément",
+        "point dans la poitrine"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I sometimes feel a sharp pain on the right side of my chest when I take a deep breath.",
+      "teaching_en": "Pleuritic chest pain is possible but not specific for pulmonary embolism."
+    },
+    {
+      "id": "douleur_localisation",
+      "answer": "Le point douloureux se situe plutôt sur le côté droit de ma poitrine et parfois vers le haut du dos.",
+      "teaching": "Clarifier le siège d’une douleur déjà évoquée.",
+      "variants": [
+        "où avez vous mal",
+        "où se situe la douleur",
+        "où est la douleur",
+        "quel endroit fait mal",
+        "localisation de la douleur",
+        "douleur à quel endroit"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "The pain is mainly on the right side of my chest and sometimes toward my upper back.",
+      "teaching_en": "Clarify the location of a previously reported pain."
+    },
+    {
+      "id": "douleur_duree",
+      "answer": "Cela vient par moments et dure surtout pendant les inspirations profondes.",
+      "teaching": "Rechercher durée et rythme de la douleur.",
+      "variants": [
+        "combien de temps dure la douleur",
+        "douleur constante",
+        "douleur continue",
+        "douleur intermittente",
+        "combien de minutes dure",
+        "ça dure combien de temps"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "It comes and goes, especially with deep breaths.",
+      "teaching_en": "Ask about duration and pattern of pain."
+    },
+    {
+      "id": "douleur_pleuretique",
+      "answer": "Oui, la gêne sur le côté droit est plus sensible quand je respire profondément.",
+      "teaching": "La douleur majorée à l’inspiration est pleurétique, non spécifique.",
+      "variants": [
+        "augmentée par la respiration",
+        "majorée à l inspiration",
+        "quand vous inspirez",
+        "à l inspiration profonde",
+        "respirez profondément",
+        "douleur pleurétique",
+        "la douleur augmente quand"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "Yes, the discomfort on my right side is more noticeable when I take a deep breath.",
+      "teaching_en": "Pain worsened by inspiration is pleuritic, but nonspecific."
+    },
+    {
+      "id": "douleur_intensite",
+      "answer": "C’est supportable, mais désagréable.",
+      "teaching": "La qualification subjective de la douleur peut être pertinente.",
+      "variants": [
+        "douleur sur dix",
+        "douleur de 0 à 10",
+        "douleur forte",
+        "douleur intense",
+        "douleur supportable",
+        "intensité de la douleur"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "It is bearable, but unpleasant.",
+      "teaching_en": "Patient-reported pain intensity is useful."
+    },
+    {
+      "id": "toux",
+      "answer": "Je tousse un peu, mais rarement, sans beaucoup de glaires.",
+      "teaching": "La toux est non spécifique.",
+      "variants": [
+        "toux",
+        "toussez",
+        "tousser",
+        "tousse",
+        "toussiez",
+        "quinte de toux"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I cough a little, but rarely, and do not bring up much mucus.",
+      "teaching_en": "Cough is nonspecific."
+    },
+    {
+      "id": "expectoration",
+      "answer": "Non, je ne crache pas de glaires épaisses ou purulentes.",
+      "teaching": "L’expectoration peut orienter le diagnostic différentiel.",
+      "variants": [
+        "glaires",
+        "crachats",
+        "expectoration",
+        "mucosités",
+        "cracher du mucus",
+        "sécrétions bronchiques"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I am not coughing up thick or purulent sputum.",
+      "teaching_en": "Sputum can help assess alternative diagnoses."
+    },
+    {
+      "id": "hemoptysie",
+      "answer": "Non, je n’ai pas craché de sang.",
+      "teaching": "L’hémoptysie est possible mais inconstante dans l’EP.",
+      "variants": [
+        "craché du sang",
+        "cracher du sang",
+        "sang dans les crachats",
+        "hémoptysie",
+        "crachats sanglants",
+        "du sang en toussant"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not coughed up blood.",
+      "teaching_en": "Haemoptysis can occur in pulmonary embolism but is not always present."
+    },
+    {
+      "id": "fievre",
+      "answer": "Non, je n’ai pas eu de fièvre ni de frissons.",
+      "teaching": "Rechercher une cause infectieuse alternative ou associée.",
+      "variants": [
+        "fièvre",
+        "température élevée",
+        "frissons",
+        "avez vous chaud",
+        "syndrome fébrile"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not had fever or chills.",
+      "teaching_en": "Consider an alternative or concurrent infectious cause."
+    },
+    {
+      "id": "syncope",
+      "answer": "Non, je n’ai pas perdu connaissance.",
+      "teaching": "Syncope ou collapsus peuvent alerter sur la gravité.",
+      "variants": [
+        "syncope",
+        "perdu connaissance",
+        "perte de connaissance",
+        "évanouie",
+        "tombée dans les pommes",
+        "évanouissement"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not lost consciousness.",
+      "teaching_en": "Syncope or collapse may indicate a severe presentation."
+    },
+    {
+      "id": "malaise",
+      "answer": "Je me sens un peu faible, mais je n’ai pas fait de gros malaise.",
+      "teaching": "Chercher symptômes de gravité et hémodynamique.",
+      "variants": [
+        "malaise",
+        "étourdissements",
+        "vertiges",
+        "tête qui tourne",
+        "faiblesse soudaine",
+        "près de tomber"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I feel a little weak, but I have not had a major fainting episode.",
+      "teaching_en": "Look for signs of severity and haemodynamic compromise."
+    },
+    {
+      "id": "palpitations",
+      "answer": "J’ai parfois l’impression que mon cœur bat plus vite.",
+      "teaching": "Non spécifique, comparer aux constantes.",
+      "variants": [
+        "palpitations",
+        "coeur bat vite",
+        "cœur bat vite",
+        "accélération du cœur",
+        "rythme cardiaque rapide",
+        "battements du coeur"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I sometimes feel as if my heart is beating faster.",
+      "teaching_en": "Palpitations are nonspecific; compare with measured vital signs."
+    },
+    {
+      "id": "cyanose",
+      "answer": "Non, je n’ai pas remarqué que mes lèvres ou mes doigts deviennent bleus.",
+      "teaching": "Une cyanose n’est ni nécessaire ni suffisante pour évaluer la gravité.",
+      "variants": [
+        "lèvres bleues",
+        "doigts bleus",
+        "cyanose",
+        "devient bleue",
+        "couleur des lèvres"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not noticed my lips or fingers turning blue.",
+      "teaching_en": "Cyanosis is neither necessary nor sufficient to determine severity."
+    },
+    {
+      "id": "sueurs",
+      "answer": "J’ai parfois des sueurs quand la respiration me gêne.",
+      "teaching": "Signe non spécifique de stress ou de gravité.",
+      "variants": [
+        "sueurs",
+        "transpiration",
+        "sueurs froides",
+        "transpirez"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I sometimes sweat when breathing becomes uncomfortable.",
+      "teaching_en": "Sweating is a nonspecific sign of distress."
+    },
+    {
+      "id": "sifflement",
+      "answer": "Non, je n’ai pas entendu de sifflements dans ma poitrine.",
+      "teaching": "Recherche de bronchospasme, sans l’exclure formellement.",
+      "variants": [
+        "sifflements",
+        "respiration sifflante",
+        "wheezing",
+        "siffle quand"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not noticed any wheezing in my chest.",
+      "teaching_en": "Consider bronchospasm without assuming it is present or absent."
+    },
+    {
+      "id": "infection_recente",
+      "answer": "Non, je n’ai pas eu de rhume ou d’infection respiratoire récente à ma connaissance.",
+      "teaching": "Diagnostic différentiel infectieux.",
+      "variants": [
+        "infection récente",
+        "infection respiratoire",
+        "rhume",
+        "pneumonie récente",
+        "grippe récemment"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, as far as I know, I have not had a recent cold or respiratory infection.",
+      "teaching_en": "Consider a recent respiratory infection in the differential diagnosis."
+    },
+    {
+      "id": "mollet_douleur",
+      "answer": "Je n’ai pas remarqué de douleur inhabituelle dans un mollet ; mon genou opéré reste sensible.",
+      "teaching": "Différencier douleur postopératoire et signes de TVP.",
+      "variants": [
+        "douleur au mollet",
+        "douleurs au mollet",
+        "mal au mollet",
+        "mollet douloureux",
+        "mollets douloureux",
+        "une douleur dans la jambe",
+        "douleur dans une jambe",
+        "phlébite douloureuse",
+        "douleur le long du mollet"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I have not noticed unusual pain in either calf; my operated knee is still tender.",
+      "teaching_en": "Distinguish postoperative pain from signs of DVT."
+    },
+    {
+      "id": "mollet_oedeme",
+      "answer": "Non, je n’ai pas remarqué de nouveau gonflement d’un seul mollet.",
+      "teaching": "Rechercher asymétrie et œdème veineux.",
+      "variants": [
+        "gonflement du mollet",
+        "mollet gonflé",
+        "mollets gonflés",
+        "jambe gonflée",
+        "jambes gonflées",
+        "œdème de la jambe",
+        "oedème des jambes",
+        "gonflé au niveau du mollet",
+        "une jambe plus grosse"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not noticed any new swelling in just one calf.",
+      "teaching_en": "Ask about asymmetry and venous swelling."
+    },
+    {
+      "id": "pied_modification",
+      "answer": "Vous voulez parler d’un gonflement, d’une douleur ou d’un changement de couleur de mes pieds ?",
+      "teaching": "Question anatomiquement localisée mais vague : demander à l’étudiant de préciser le signe.",
+      "variants": [
+        "changement au niveau des pieds",
+        "changement des pieds",
+        "quelque chose de différent dans les pieds",
+        "modification des pieds",
+        "anomalie des pieds",
+        "problème avec vos pieds",
+        "au niveau de vos pieds",
+        "changement au niveau du pied"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "Do you mean swelling, pain, or a change in the colour of my feet?",
+      "teaching_en": "This is an anatomically specific but vague question; clarify the sign in question."
+    },
+    {
+      "id": "pied_oedeme",
+      "answer": "Non, je n’ai pas constaté de gonflement nouveau des pieds.",
+      "teaching": "Préciser si l’œdème est unilatéral, bilatéral et son évolution.",
+      "variants": [
+        "pieds gonflés",
+        "gonflement des pieds",
+        "oedème aux pieds",
+        "œdème des pieds",
+        "chevilles gonflées",
+        "gonflement des chevilles"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not noticed any new swelling of my feet.",
+      "teaching_en": "Clarify whether swelling is one-sided or bilateral and how it evolved."
+    },
+    {
+      "id": "pied_couleur",
+      "answer": "Non, je n’ai pas constaté de changement de couleur de mes pieds.",
+      "teaching": "Une modification de couleur nécessite caractérisation, sans l’assimiler automatiquement à une TVP.",
+      "variants": [
+        "couleur des pieds",
+        "changé de couleur",
+        "changement de couleur des pieds",
+        "pieds bleus",
+        "pieds rouges",
+        "pieds pâles",
+        "décoloration des pieds",
+        "changement de coloration",
+        "pieds violacés"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not noticed my feet changing colour.",
+      "teaching_en": "Characterise changes in colour rather than attributing them automatically to DVT."
+    },
+    {
+      "id": "pied_douleur",
+      "answer": "Non, je n’ai pas de douleur particulière aux pieds.",
+      "teaching": "Distinguer douleur du pied, du mollet et douleur du genou opéré.",
+      "variants": [
+        "douleur aux pieds",
+        "mal aux pieds",
+        "douleur au pied",
+        "mal au pied",
+        "pied douloureux",
+        "pieds douloureux",
+        "au niveau des pieds vous avez des douleurs",
+        "douleurs au niveau des pieds",
+        "douleur dans les pieds"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I do not have any particular foot pain.",
+      "teaching_en": "Distinguish foot pain from calf and postoperative knee pain."
+    },
+    {
+      "id": "genou_douleur",
+      "answer": "Mon genou opéré est encore un peu douloureux, surtout lors des déplacements.",
+      "teaching": "Douleur locale postopératoire à distinguer d’une douleur veineuse.",
+      "variants": [
+        "douleur au genou",
+        "mal au genou",
+        "genou douloureux",
+        "plateau tibial douloureux",
+        "cicatrice douloureuse"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "My operated knee is still somewhat painful, especially when I move around.",
+      "teaching_en": "Distinguish local postoperative pain from venous pain."
+    },
+    {
+      "id": "genou_plaie",
+      "answer": "Le pansement est en place, et je n’ai pas remarqué d’écoulement anormal.",
+      "teaching": "Rechercher les signes d’infection postopératoire.",
+      "variants": [
+        "cicatrice",
+        "plaie opératoire",
+        "pansement",
+        "écoulement de la plaie",
+        "rougeur du genou",
+        "infection de la plaie"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "The dressing is in place, and I have not noticed any unusual discharge.",
+      "teaching_en": "Check for postoperative wound infection."
+    },
+    {
+      "id": "mobilite",
+      "answer": "Depuis l’opération, je marche peu et j’utilise des béquilles ; je ne reste pas couchée toute la journée.",
+      "teaching": "Mobilité diminuée : donnée ajoutée à la fiction, à prendre en compte pour les risques.",
+      "variants": [
+        "immobilisée",
+        "immobilisation",
+        "alitée",
+        "alitement",
+        "restée au lit",
+        "rester au lit",
+        "mobilité réduite",
+        "mobilité a été limitée",
+        "votre mobilité a été limitée",
+        "mobilité limitée",
+        "limitée pour marcher",
+        "difficulté pour marcher",
+        "bouger la jambe",
+        "déplacements limités",
+        "marche limitée",
+        "avec des béquilles",
+        "avec les béquilles",
+        "avec béquilles"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "Since the operation, I have been walking very little and use crutches; I am not in bed all day.",
+      "teaching_en": "Reduced mobility is a fictional addition and relevant to risk assessment."
+    },
+    {
+      "id": "appui",
+      "answer": "On m’a demandé de limiter l’appui sur la jambe opérée et j’utilise des béquilles.",
+      "teaching": "L’appui postopératoire dépend des instructions orthopédiques, fictives ici.",
+      "variants": [
+        "appui autorisé",
+        "appui sur la jambe",
+        "posez vous le pied",
+        "poser le pied au sol",
+        "charge sur la jambe",
+        "marchez vous normalement"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I was told to limit weight-bearing on my operated leg, so I use crutches.",
+      "teaching_en": "Weight-bearing depends on the fictional orthopaedic instructions."
+    },
+    {
+      "id": "operation_date",
+      "answer": "L’intervention a eu lieu il y a environ une semaine.",
+      "teaching": "Fait original du scénario.",
+      "variants": [
+        "quand avez vous été opérée",
+        "date de l opération",
+        "combien de jours depuis votre chirurgie",
+        "date de chirurgie"
+      ],
+      "provenance": "cas_source",
+      "scoringId": "chirurgie",
+      "followUp": null,
+      "answer_en": "The operation took place about one week ago.",
+      "teaching_en": "This timing is stated in the original scenario."
+    },
+    {
+      "id": "anesthesie",
+      "answer": "Je ne connais pas exactement le type d’anesthésie utilisé ; il faudrait consulter le compte rendu opératoire.",
+      "teaching": "Ne pas affirmer une anesthésie non documentée.",
+      "variants": [
+        "anesthésie",
+        "anesthésiée",
+        "endormie",
+        "anesthésie générale",
+        "rachianesthésie",
+        "péridurale"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I do not know exactly which anaesthetic I was given; you would need to check the operative report.",
+      "teaching_en": "Do not assume the type of anaesthetic when it is undocumented."
+    },
+    {
+      "id": "prophylaxie",
+      "answer": "Je me souviens d’injections après l’opération, mais je ne sais pas si c’était pour éviter les caillots. Il faut vérifier mon ordonnance.",
+      "teaching": "La prophylaxie n’est pas établie par le dossier source.",
+      "variants": [
+        "prévention des caillots",
+        "prévention de phlébite",
+        "injection pour le sang",
+        "injections après l opération",
+        "anticoagulant préventif",
+        "thromboprophylaxie"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I remember having injections after the operation, but I am not sure if they were to prevent blood clots. Please check my prescription.",
+      "teaching_en": "Thromboprophylaxis was not established in the original source."
+    },
+    {
+      "id": "anticoagulant",
+      "answer": "Je ne connais pas précisément tous les traitements reçus après l’opération ; je n’ai pas mon ordonnance.",
+      "teaching": "Ne pas inventer de molécule ou de dose.",
+      "variants": [
+        "anticoagulant",
+        "héparine",
+        "enoxaparine",
+        "lovenox",
+        "xarelto",
+        "eliquis",
+        "fluidifiant du sang",
+        "traitement pour fluidifier"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I do not know exactly which medications I was given after the operation; I do not have my prescription.",
+      "teaching_en": "Do not invent the drug name or dose."
+    },
+    {
+      "id": "medicaments",
+      "answer": "Je prends les médicaments prescrits après l’opération, mais je n’ai pas mon ordonnance sur moi.",
+      "teaching": "Une conciliation médicamenteuse est nécessaire.",
+      "variants": [
+        "médicaments",
+        "traitements habituels",
+        "quel traitement",
+        "vos traitements",
+        "ordonnance",
+        "comprimés",
+        "antalgiques",
+        "antidouleurs"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I take medications prescribed after the operation, but I do not have the prescription with me.",
+      "teaching_en": "Medication reconciliation is needed."
+    },
+    {
+      "id": "allergies",
+      "answer": "Je n’ai pas d’allergie médicamenteuse connue.",
+      "teaching": "Information fictive ; allergies pertinentes avant examens et traitement.",
+      "variants": [
+        "allergies",
+        "allergique",
+        "allergie médicamenteuse",
+        "allergie au produit de contraste",
+        "réaction allergique"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I have no known medication allergies.",
+      "teaching_en": "Allergy information is fictional but relevant before investigation and treatment."
+    },
+    {
+      "id": "antecedent_thrombose",
+      "answer": "Non, je n’ai jamais eu de phlébite ni d’embolie pulmonaire auparavant.",
+      "teaching": "Antécédent personnel de MTEV : facteur de risque.",
+      "variants": [
+        "déjà eu une phlébite",
+        "déjà eu une embolie",
+        "antécédents de thrombose",
+        "antécédent de phlébite",
+        "ancienne thrombose",
+        "embolie auparavant",
+        "thrombose auparavant"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have never had deep vein thrombosis or pulmonary embolism before.",
+      "teaching_en": "Previous VTE is a risk factor."
+    },
+    {
+      "id": "famille_thrombose",
+      "answer": "À ma connaissance, mes proches n’ont pas eu de phlébite ou d’embolie pulmonaire.",
+      "teaching": "Rechercher une prédisposition familiale, sans surinterprétation.",
+      "variants": [
+        "famille a eu une phlébite",
+        "antécédents familiaux de thrombose",
+        "famille avec embolie",
+        "caillot dans la famille",
+        "parents ont eu une thrombose"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "As far as I know, none of my close relatives have had deep vein thrombosis or pulmonary embolism.",
+      "teaching_en": "Assess family predisposition without overinterpreting it."
+    },
+    {
+      "id": "contraception",
+      "answer": "Non, je ne prends pas de contraception hormonale en ce moment.",
+      "teaching": "Les œstrogènes peuvent majorer le risque thromboembolique.",
+      "variants": [
+        "pilule",
+        "contraception",
+        "contraceptif",
+        "oestroprogestatif",
+        "œstrogènes",
+        "stérilet hormonal"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I am not currently taking hormonal contraception.",
+      "teaching_en": "Oestrogen exposure may increase thromboembolic risk."
+    },
+    {
+      "id": "grossesse",
+      "answer": "Non, je ne suis pas enceinte à ma connaissance.",
+      "teaching": "Information déclarative fictive, non équivalente à un test.",
+      "variants": [
+        "enceinte",
+        "grossesse",
+        "possibilité de grossesse",
+        "retard de règles",
+        "règles en retard"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "As far as I know, I am not pregnant.",
+      "teaching_en": "This is fictional self-reported information, not an objective pregnancy test."
+    },
+    {
+      "id": "postpartum",
+      "answer": "Non, je n’ai pas accouché récemment.",
+      "teaching": "Le post-partum est un facteur de risque thromboembolique.",
+      "variants": [
+        "accouché récemment",
+        "post partum",
+        "après un accouchement",
+        "naissance récente"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not given birth recently.",
+      "teaching_en": "Postpartum status is a thromboembolic risk factor."
+    },
+    {
+      "id": "voyage",
+      "answer": "Non, je n’ai pas fait de long trajet récemment.",
+      "teaching": "Long voyage peut contribuer à un contexte d’immobilité.",
+      "variants": [
+        "voyage en avion",
+        "pris l avion",
+        "long vol",
+        "long trajet",
+        "voyagé récemment",
+        "voyage récent",
+        "heures en voiture"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not taken a long trip recently.",
+      "teaching_en": "Long travel may contribute to immobility."
+    },
+    {
+      "id": "tabac",
+      "answer": "Non, je ne fume pas.",
+      "teaching": "Tabagisme : contexte de santé, non spécifique.",
+      "variants": [
+        "fumez",
+        "fumer",
+        "tabac",
+        "cigarettes",
+        "vapotez"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I do not smoke.",
+      "teaching_en": "Smoking is background health information, not a specific diagnostic sign."
+    },
+    {
+      "id": "alcool",
+      "answer": "Je bois rarement de l’alcool.",
+      "teaching": "Antécédent de mode de vie ; peu discriminant pour ce scénario.",
+      "variants": [
+        "buvez de l alcool",
+        "consommation d alcool",
+        "alcool régulièrement"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I rarely drink alcohol.",
+      "teaching_en": "Alcohol intake is lifestyle history, of limited value in this scenario."
+    },
+    {
+      "id": "cancer",
+      "answer": "Je n’ai pas de cancer connu.",
+      "teaching": "Le cancer actif modifie le risque thromboembolique.",
+      "variants": [
+        "cancer",
+        "tumeur",
+        "chimiothérapie",
+        "néoplasie"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I am not aware of having cancer.",
+      "teaching_en": "Active cancer changes thromboembolic risk."
+    },
+    {
+      "id": "maladie_coeur",
+      "answer": "Je n’ai pas de maladie cardiaque connue.",
+      "teaching": "Diagnostic différentiel cardiaque.",
+      "variants": [
+        "insuffisance cardiaque",
+        "maladie cardiaque",
+        "infarctus",
+        "cardiopathie",
+        "problème de cœur"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I do not have a known heart condition.",
+      "teaching_en": "Consider cardiac differential diagnoses."
+    },
+    {
+      "id": "asthme_bpco",
+      "answer": "Je n’ai pas d’asthme ni de maladie respiratoire chronique connue.",
+      "teaching": "Rechercher bronchospasme et comorbidités respiratoires.",
+      "variants": [
+        "asthme",
+        "bpco",
+        "bronchopneumopathie",
+        "maladie pulmonaire chronique",
+        "maladie respiratoire chronique"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I am not aware of having asthma or any chronic respiratory disease.",
+      "teaching_en": "Assess bronchospasm and underlying respiratory conditions."
+    },
+    {
+      "id": "operation_anterieure",
+      "answer": "À part cette intervention du genou, je ne me souviens pas d’autres opérations importantes.",
+      "teaching": "Antécédents chirurgicaux fictifs.",
+      "variants": [
+        "autres opérations",
+        "déjà été opérée avant",
+        "chirurgies précédentes",
+        "antécédents chirurgicaux"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "Apart from this knee operation, I cannot recall any other major operations.",
+      "teaching_en": "Surgical history is fictional here."
+    },
+    {
+      "id": "antecedents_generaux",
+      "answer": "Je n’ai pas de maladie chronique importante connue.",
+      "teaching": "Une question large doit rester distincte des risques ciblés.",
+      "variants": [
+        "antécédents médicaux",
+        "maladies chroniques",
+        "autres maladies",
+        "maladies habituelles",
+        "problèmes de santé avant",
+        "quelles maladies vous avez déjà eu",
+        "vous avez eu quelles maladies"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I have no known significant chronic illness.",
+      "teaching_en": "Keep broad medical history separate from targeted risk-factor questions."
+    },
+    {
+      "id": "traumatisme",
+      "answer": "Je me suis fracturé le plateau tibial, ce qui a nécessité l’opération.",
+      "teaching": "Nature du traumatisme original conservée.",
+      "variants": [
+        "quel traumatisme",
+        "comment vous êtes vous blessée",
+        "quel os cassé",
+        "quelle fracture",
+        "blessure à la jambe"
+      ],
+      "provenance": "cas_source",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I fractured my tibial plateau, which required surgery.",
+      "teaching_en": "The original nature of the injury is retained."
+    },
+    {
+      "id": "poids_appetit",
+      "answer": "Mon appétit a un peu diminué depuis l’opération, mais je n’ai pas noté de changement de poids important.",
+      "teaching": "Élément secondaire fictif qui peut explorer le contexte général.",
+      "variants": [
+        "appétit",
+        "perte de poids",
+        "maigri",
+        "pris du poids",
+        "mangez vous normalement"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "My appetite has decreased a little since the operation, but I have not noticed any major weight change.",
+      "teaching_en": "This secondary fictional detail provides general context."
+    },
+    {
+      "id": "anxiete",
+      "answer": "Je suis inquiète parce que je ne comprends pas pourquoi je respire moins bien.",
+      "teaching": "Le vécu émotionnel importe, sans attribuer les symptômes uniquement à l’anxiété.",
+      "variants": [
+        "angoissée",
+        "anxieuse",
+        "peur",
+        "inquiète",
+        "stressée",
+        "vous sentez vous stressée"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I am worried because I do not understand why my breathing has become worse.",
+      "teaching_en": "Emotional distress matters; do not assume anxiety explains the breathing difficulty."
+    },
+    {
+      "id": "douleur_abdominale",
+      "answer": "Non, je n’ai pas de douleur abdominale particulière.",
+      "teaching": "Diagnostic différentiel en cas de symptômes associés.",
+      "variants": [
+        "douleur abdominale",
+        "mal au ventre",
+        "douleur au ventre",
+        "douleurs abdominales",
+        "douleurs au ventre",
+        "mal au bide",
+        "le ventre vous fait mal"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I do not have any particular abdominal pain.",
+      "teaching_en": "Consider alternatives when associated symptoms are present."
+    },
+    {
+      "id": "digestif",
+      "answer": "Non, je n’ai pas eu de vomissements ni de diarrhée.",
+      "teaching": "Symptômes associés, pertinence secondaire.",
+      "variants": [
+        "nausées",
+        "vomissements",
+        "diarrhée",
+        "troubles digestifs"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not had vomiting or diarrhoea.",
+      "teaching_en": "Associated gastrointestinal symptoms have secondary relevance."
+    },
+    {
+      "id": "urinaire",
+      "answer": "Non, je n’ai pas remarqué de brûlures urinaires ou de difficultés à uriner.",
+      "teaching": "Élément secondaire fictif.",
+      "variants": [
+        "brûlures urinaires",
+        "en urinant",
+        "urines",
+        "miction douloureuse"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "No, I have not noticed burning or difficulty when urinating.",
+      "teaching_en": "Secondary fictional background information."
+    },
+    {
+      "id": "sante_mentale",
+      "answer": "Je suis inquiète à cause de mes difficultés à respirer, mais je n’ai pas d’autre information à vous donner sur ce sujet.",
+      "teaching": "Question psychosociale pertinente ; éviter d’en tirer une conclusion diagnostique.",
+      "variants": [
+        "moral",
+        "déprimée",
+        "dépression",
+        "état psychologique"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I am worried about my breathing difficulties, but I have nothing further to add about my mental health.",
+      "teaching_en": "A psychosocial question may be relevant; do not infer a diagnosis from it."
+    },
+    {
+      "id": "profession",
+      "answer": "Je travaille dans un bureau ; je suis en arrêt depuis ma fracture.",
+      "teaching": "Situation sociale fictive, sans portée diagnostique directe.",
+      "variants": [
+        "votre métier",
+        "profession",
+        "travaillez vous",
+        "quel travail",
+        "emploi"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I work in an office; I have been on sick leave since my fracture.",
+      "teaching_en": "Fictional employment background; no direct diagnostic significance."
+    },
+    {
+      "id": "entourage",
+      "answer": "J’ai des proches qui peuvent m’aider depuis l’opération.",
+      "teaching": "Autonomie et ressources sociales.",
+      "variants": [
+        "vivez vous seule",
+        "vous aide à la maison",
+        "famille à domicile",
+        "proches pour aider"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I have relatives who can help me since the operation.",
+      "teaching_en": "Assess independence and available social support."
+    },
+    {
+      "id": "autonomie",
+      "answer": "Depuis ma fracture j’ai besoin d’un peu d’aide pour certaines activités.",
+      "teaching": "Impact fonctionnel postopératoire.",
+      "variants": [
+        "autonomie",
+        "toilette seule",
+        "s habiller seule",
+        "tâches quotidiennes",
+        "besoin d aide"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "Since my fracture, I need a little help with some activities.",
+      "teaching_en": "Assess functional impact after surgery."
+    },
+    {
+      "id": "contagion",
+      "answer": "Je n’ai pas connaissance d’un contact récent avec une personne malade.",
+      "teaching": "Rechercher exposition infectieuse dans les diagnostics différentiels.",
+      "variants": [
+        "contact malade",
+        "malades autour de vous",
+        "personne contagieuse"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I do not know of any recent contact with someone who was ill.",
+      "teaching_en": "Ask about infectious contacts when exploring alternative diagnoses."
+    },
+    {
+      "id": "question_inconnue",
+      "answer": "Je préfère que vous précisiez ce que vous voulez savoir.",
+      "teaching": "La question doit être clarifiée avant d’inférer un symptôme.",
+      "variants": [
+        "quelque chose d étrange",
+        "changement quelque part",
+        "tout a changé"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "Could you clarify what you would like to know?",
+      "teaching_en": "Clarify the question before inferring any symptom."
+    },
+    {
+      "id": "accueil",
+      "answer": "Bonjour docteur. Je suis un peu inquiète à cause de mon essoufflement.",
+      "teaching": "Question d’accueil utile pour installer une relation de confiance. Elle ne remplace pas l’interrogatoire clinique.",
+      "variants": [
+        "ça va",
+        "vous allez bien",
+        "comment allez vous",
+        "comment vous sentez vous",
+        "ca va vous allez bien",
+        "vous vous sentez comment"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "Hello, doctor. I am a little worried about my shortness of breath.",
+      "teaching_en": "A welcoming opening builds trust but does not replace clinical history taking."
+    },
+    {
+      "id": "famille_deces_soudain",
+      "answer": "Je ne sais pas s’il y a eu des décès soudains inexpliqués dans ma famille.",
+      "teaching": "Question pertinente sur les antécédents familiaux cardiovasculaires ; ne pas assimiler automatiquement un décès soudain à une thrombophilie.",
+      "variants": [
+        "deces soudains dans votre famille",
+        "décès soudain dans la famille",
+        "des morts subites dans la famille",
+        "famille y a t il eu des décès soudains",
+        "mort subite familiale",
+        "quelqu un est mort subitement dans votre famille"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "I do not know whether there have been any unexplained sudden deaths in my family.",
+      "teaching_en": "Ask about family cardiovascular history; do not assume sudden death implies thrombophilia."
+    },
+    {
+      "id": "fatigue_effort",
+      "answer": "Oui, je me fatigue plus vite depuis que j’ai du mal à respirer, notamment quand je me déplace.",
+      "teaching": "Distinguer fatigabilité à l’effort, dyspnée et limitation mécanique due à la fracture.",
+      "variants": [
+        "fatiguez rapidement quand vous marchez",
+        "fatiguée en marchant",
+        "vous fatiguez vite en marchant",
+        "fatigue à l effort",
+        "vous vous fatiguez rapidement",
+        "êtes vous fatiguée quand vous marchez"
+      ],
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "followUp": null,
+      "answer_en": "Yes, I get tired more quickly since my breathing became difficult, especially when moving around.",
+      "teaching_en": "Distinguish fatigue on exertion from breathlessness and mechanical limitation after the fracture."
+    },
+    {
+      "id": "diabete",
+      "answer": "Non, je n’ai pas de diabète connu.",
+      "teaching": "Antécédent métabolique utile au contexte médical, sans supposer qu’il explique cette dyspnée.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "etes vous diabetique",
+        "avez vous du diabete",
+        "vous souffrez de diabete",
+        "diabete",
+        "votre glycemie est elle elevee"
+      ],
+      "answer_en": "No, I am not aware of having diabetes.",
+      "teaching_en": "Metabolic history can be useful, without assuming it explains this breathlessness."
+    },
+    {
+      "id": "activite_physique",
+      "answer": "Avant ma fracture, je marchais régulièrement, mais je ne pratiquais pas de sport intensif. Depuis l’opération, mes déplacements sont limités.",
+      "teaching": "Distinguer activité habituelle et limitation postopératoire.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "vous faites du sport",
+        "pratiquez vous un sport",
+        "faites vous une activite physique",
+        "quel sport pratiquez vous",
+        "vous etes sportive"
+      ],
+      "answer_en": "Before the fracture, I walked regularly, but did not do intensive sports. Since the operation, my mobility has been limited.",
+      "teaching_en": "Distinguish usual activity levels from postoperative limitation."
+    },
+    {
+      "id": "enfants",
+      "answer": "Oui, j’ai deux enfants.",
+      "teaching": "Question de contexte familial ; ce détail est fictif et ne constitue pas un facteur diagnostique direct.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "vous avez des enfants",
+        "avez vous des enfants",
+        "combien d enfants avez vous",
+        "etes vous maman",
+        "vous etes mere"
+      ],
+      "answer_en": "Yes, I have two children.",
+      "teaching_en": "This is fictional family context, not a direct diagnostic risk factor."
+    },
+    {
+      "id": "stress_recent",
+      "answer": "Je suis très inquiète depuis le début de mon essoufflement, mais je n’ai pas eu d’autre choc émotionnel particulier récemment.",
+      "teaching": "Distinguer anxiété réactionnelle et cause organique ; ne pas attribuer automatiquement la dyspnée au stress.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "vous avez subi des chocs emotionnels",
+        "avez vous subi un choc emotionnel",
+        "avez vous vecu un evenement stressant",
+        "etes vous stressee",
+        "avez vous eu une grosse frayeur"
+      ],
+      "answer_en": "I have been very worried since my breathing problems began, but I have not experienced another particular emotional shock recently.",
+      "teaching_en": "Distinguish reactive anxiety from organic disease; do not attribute dyspnoea to stress automatically."
+    },
+    {
+      "id": "douleur_epaule",
+      "answer": "Je n’ai pas de douleur localisée à l’épaule. J’ai parfois une gêne dans le haut du dos à droite en inspirant.",
+      "teaching": "L’épaule et le dos sont deux sites distincts ; rechercher une irradiation sans les confondre.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "vous avez des douleurs aux epaules",
+        "avez vous mal a l epaule",
+        "votre epaule vous fait mal",
+        "douleur a l epaule",
+        "mal aux epaules"
+      ],
+      "answer_en": "I do not have pain specifically in my shoulder. I sometimes feel discomfort in the upper right side of my back when breathing in.",
+      "teaching_en": "The shoulder and back are distinct sites; clarify possible radiation."
+    },
+    {
+      "id": "pied_douleur_suivi",
+      "answer": "Je n’ai pas de douleur particulière aux pieds.",
+      "teaching": "Précision après une question sur une douleur des jambes ; ne pas assimiler aux mollets.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "aux pieds",
+        "au pied",
+        "les pieds"
+      ],
+      "answer_en": "I do not have any particular foot pain.",
+      "teaching_en": "A follow-up clarifies leg pain without equating foot pain with calf pain."
+    },
+    {
+      "id": "mollet_douleur_suivi",
+      "answer": "Je ressens parfois une gêne dans la jambe opérée, mais je ne sais pas la distinguer d’une douleur du mollet.",
+      "teaching": "Séparer douleur postopératoire et douleur évocatrice de thrombose veineuse.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "aux mollets",
+        "au mollet",
+        "dans les mollets"
+      ],
+      "answer_en": "I sometimes feel discomfort in my operated leg, but I cannot tell whether it is calf pain.",
+      "teaching_en": "Distinguish postoperative discomfort from pain suggesting DVT."
+    },
+    {
+      "id": "douleur_duree_precision",
+      "answer": "La gêne est apparue depuis que mon essoufflement a commencé, il y a environ trois jours.",
+      "teaching": "La durée dépend du symptôme précédent : ne pas appliquer cette réponse à une douleur inconnue.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "depuis quand",
+        "ca fait combien de temps"
+      ],
+      "answer_en": "The discomfort started around the time I became breathless, about three days ago.",
+      "teaching_en": "Duration depends on the previous symptom; do not apply it to an unknown complaint."
+    },
+    {
+      "id": "famille_heredite",
+      "answer": "Je ne connais pas de maladie héréditaire particulière dans ma famille, mais je ne peux pas vous le garantir.",
+      "teaching": "Question pertinente : distinguer les maladies héréditaires des antécédents personnels ; rechercher des événements thromboemboliques chez les proches.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "avez vous des maladies hereditaires dans votre famille",
+        "maladies hereditaires dans votre famille",
+        "dans votre famille des maladies hereditaires"
+      ],
+      "answer_en": "I do not know of any particular hereditary disease in my family, but I cannot be certain.",
+      "teaching_en": "Distinguish hereditary conditions from personal history; ask about thromboembolic events among relatives."
+    },
+    {
+      "id": "famille_antecedents",
+      "answer": "À ma connaissance, il n’y a pas de problème médical familial majeur identifié, mais je ne connais pas tous les antécédents de mes proches.",
+      "teaching": "Question sur les antécédents familiaux, distincte des maladies personnelles.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "un de vos parents a t il eu cette maladie",
+        "antecedents de vos parents",
+        "maladie dans votre famille"
+      ],
+      "answer_en": "As far as I know, no major family medical problem has been identified, but I do not know all my relatives’ medical histories.",
+      "teaching_en": "Family history must be distinguished from personal medical history."
+    },
+    {
+      "id": "douleur_cou",
+      "answer": "Je n’ai pas de douleur particulière au cou.",
+      "teaching": "Explorer une douleur cervicale sans la confondre avec une douleur du dos ou de l’épaule.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "avez vous mal au cou",
+        "douleur au cou",
+        "mal a la nuque"
+      ],
+      "answer_en": "I do not have any particular neck pain.",
+      "teaching_en": "Assess cervical pain separately from shoulder or back pain."
+    },
+    {
+      "id": "douleur_nuque",
+      "answer": "Je n’ai pas de douleur particulière à la nuque.",
+      "teaching": "Préciser la région cervicale postérieure et distinguer de la douleur dorsale.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "douleur a la nuque",
+        "mal a la nuque"
+      ],
+      "answer_en": "I do not have any particular pain at the back of my neck.",
+      "teaching_en": "Distinguish posterior neck pain from upper back pain."
+    },
+    {
+      "id": "douleur_bas_dos",
+      "answer": "Je n’ai pas de douleur particulière dans le bas du dos ; ma gêne se situe plutôt en haut à droite.",
+      "teaching": "Distinguer la région lombaire du haut du dos ; donnée fictive pédagogique.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "mal dans le bas du dos",
+        "douleurs lombaires",
+        "mal aux lombaires"
+      ],
+      "answer_en": "I do not have particular lower back pain; my discomfort is mainly in the upper right side of my back.",
+      "teaching_en": "Distinguish lower back from upper back; this information is fictional."
+    },
+    {
+      "id": "douleur_bassin",
+      "answer": "Je n’ai pas de douleur particulière au bassin.",
+      "teaching": "Distinguer bassin, hanche et région lombaire ; information fictive pédagogique.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "douleur au bassin",
+        "mal au bassin",
+        "douleur aux hanches"
+      ],
+      "answer_en": "I do not have any particular pelvic pain.",
+      "teaching_en": "Distinguish pelvic, hip and lumbar pain; this information is fictional."
+    },
+    {
+      "id": "sommeil_insomnie",
+      "answer": "Je dors moins bien depuis que je suis essoufflée, surtout parce que cela m’inquiète. Je ne sais pas si l’on peut appeler cela des insomnies.",
+      "teaching": "Le sommeil perturbé n’équivaut pas nécessairement à une insomnie chronique ; préciser les réveils et la position allongée.",
+      "provenance": "fiction_pedagogique",
+      "scoringId": null,
+      "variants": [
+        "avez vous des insomnies la nuit",
+        "souffrez vous d insomnie",
+        "insomnies"
+      ],
+      "answer_en": "I have been sleeping less well since I became breathless, mostly because I am worried. I do not know whether you would call that insomnia.",
+      "teaching_en": "Disturbed sleep does not automatically imply chronic insomnia; clarify awakenings and breathing when lying flat."
+    }
+  ],
+  "disclaimer_en": "Fictional enrichment for teaching. Added findings were not taken from the published case and must not be confused with source facts."
+}

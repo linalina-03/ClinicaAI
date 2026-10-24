@@ -1,0 +1,188 @@
+{
+  "id": "ep-intermediaire",
+  "version": "1.5",
+  "title": "EP normotensive avec dysfonction ventriculaire droite (simulation 2026)",
+  "source": "Scénario entièrement fictif élaboré pour ClinicaAI à partir de Medscape Pulmonary Embolism (PE), mise à jour 27 août 2026. Aucun résultat chiffré individuel n’est tiré d’un cas publié.",
+  "clinical_reference_2026": {
+    "title": "Medscape Pulmonary Embolism (PE), updated 27 Aug 2026",
+    "url": "https://emedicine.medscape.com/article/300901-overview",
+    "role": "Classification catégorie C2/C3, biomarqueurs, stratification et parcours diagnostic"
+  },
+  "opening": "Un homme fictif de 62 ans se présente pour une dyspnée brutale et une douleur thoracique latérale, majorée à l’inspiration. Il est conscient, sans hypotension.",
+  "vitals": {
+    "ta": "128/78 mmHg",
+    "fc": "112/min",
+    "fr": "26/min",
+    "spo2": "92 % à l’air ambiant",
+    "temperature": "37,1 °C"
+  },
+  "qa": [
+    {
+      "id": "debut",
+      "patterns": [
+        "depuis quand",
+        "debut",
+        "commenc",
+        "apparition"
+      ],
+      "answer": "Depuis ce matin, tout à coup, alors que je me levais.",
+      "points": 3,
+      "answer_en": "Since this morning, suddenly, as I was getting up."
+    },
+    {
+      "id": "douleur",
+      "patterns": [
+        "douleur",
+        "thorac",
+        "poitrine",
+        "respiration"
+      ],
+      "answer": "J’ai un point dans le côté droit, qui augmente lorsque je respire profondément.",
+      "points": 3,
+      "answer_en": "I have a sharp pain in my right side, which worsens when I breathe deeply."
+    },
+    {
+      "id": "jambe",
+      "patterns": [
+        "mollet",
+        "jambe",
+        "phlebite",
+        "thrombose"
+      ],
+      "answer": "Depuis hier, mon mollet gauche me semble gonflé et sensible.",
+      "points": 4,
+      "answer_en": "Since yesterday my left calf has seemed swollen and tender."
+    },
+    {
+      "id": "chirurgie",
+      "patterns": [
+        "operation",
+        "chirurgie",
+        "fracture"
+      ],
+      "answer": "Je n’ai pas été opéré récemment.",
+      "points": 2,
+      "answer_en": "I have not had recent surgery."
+    },
+    {
+      "id": "immobilisation",
+      "patterns": [
+        "immobilisation",
+        "alitement",
+        "mobilite",
+        "voyage"
+      ],
+      "answer": "J’ai fait un trajet en voiture d’environ sept heures la semaine dernière.",
+      "points": 3,
+      "answer_en": "I took a car journey lasting about seven hours last week."
+    },
+    {
+      "id": "antecedents",
+      "patterns": [
+        "antecedents",
+        "maladie",
+        "cancer"
+      ],
+      "answer": "Je suis hypertendu ; je ne connais pas d’antécédent de cancer ni de phlébite.",
+      "points": 3,
+      "answer_en": "I have high blood pressure; I know of no history of cancer or DVT."
+    },
+    {
+      "id": "traitement",
+      "patterns": [
+        "medicaments",
+        "traitement",
+        "comprime"
+      ],
+      "answer": "Je prends un médicament pour ma tension, mais le nom n’est pas précisé dans cette simulation.",
+      "points": 2,
+      "answer_en": "I take medicine for my blood pressure, but its name is not specified in this simulation."
+    }
+  ],
+  "exams": [
+    {
+      "id": "ecg",
+      "label": "ECG 12 dérivations",
+      "result": "Tachycardie sinusale à 112/min ; aucune anomalie spécifique diagnostique.",
+      "points": 3,
+      "label_en": "12-lead ECG",
+      "result_en": "Sinus tachycardia at 112/min; no specific diagnostic ECG abnormality."
+    },
+    {
+      "id": "labs",
+      "label": "NFS, coagulation et créatinine",
+      "result": "Hb 14,1 g/dL, plaquettes 228 G/L ; créatinine 84 µmol/L ; bilan de coagulation sans anomalie signalée (valeurs simulées).",
+      "points": 3,
+      "label_en": "CBC, coagulation and creatinine",
+      "result_en": "Haemoglobin 14.1 g/dL, platelets 228 G/L; creatinine 84 µmol/L; no reported coagulation abnormality (simulated values)."
+    },
+    {
+      "id": "ddimer",
+      "label": "D-dimères",
+      "result": "1 900 ng/mL FEU (valeur simulée). Attention : l’interprétation dépend de la probabilité prétest ; un résultat positif ne confirme pas l’EP.",
+      "points": 3,
+      "label_en": "D-dimers",
+      "result_en": "1900 ng/mL FEU (simulated). Interpretation depends on pretest probability; a positive test alone does not confirm pulmonary embolism."
+    },
+    {
+      "id": "cta",
+      "label": "Angioscanner pulmonaire",
+      "result": "Défaut de remplissage artériel pulmonaire segmentaire droit ; rapport VD/VG augmenté à 1,1 (résultat simulé).",
+      "points": 10,
+      "label_en": "CT pulmonary angiography",
+      "result_en": "Right segmental pulmonary arterial filling defect; elevated RV/LV ratio of 1.1 (simulated result)."
+    },
+    {
+      "id": "echo",
+      "label": "Échocardiographie transthoracique",
+      "result": "Dilatation modérée du VD, fonction systolique VD diminuée ; VG sans anomalie majeure documentée (simulation).",
+      "points": 4,
+      "label_en": "Transthoracic echocardiography",
+      "result_en": "Moderate RV enlargement and reduced RV systolic function; no major LV abnormality documented (simulation)."
+    },
+    {
+      "id": "troponin",
+      "label": "Troponine et BNP",
+      "result": "Troponine hs au-dessus du 99e percentile du laboratoire ; BNP élevé (données simulées, sans seuil universel).",
+      "points": 5,
+      "label_en": "Troponin and BNP",
+      "result_en": "High-sensitivity troponin above the laboratory 99th percentile; elevated BNP (simulated values, no universal cutoff)."
+    },
+    {
+      "id": "venous",
+      "label": "Échographie veineuse de compression",
+      "result": "TVP proximale poplitée gauche (résultat simulé).",
+      "points": 3,
+      "label_en": "Venous compression ultrasound",
+      "result_en": "Left proximal popliteal DVT (simulated result)."
+    }
+  ],
+  "diagnosis": "Embolie pulmonaire aiguë confirmée avec retentissement ventriculaire droit et biomarqueurs élevés",
+  "risk": "Normotension avec dysfonction VD ET biomarqueurs anormaux : catégorie C3 de la classification AHA/ACC 2026 ; pas catégorie E.",
+  "rule": {
+    "triage": [
+      "evaluer_hemodynamique",
+      "calculer_wells"
+    ],
+    "actions": [
+      "anticoagulation",
+      "surveillance"
+    ]
+  },
+  "goals": [
+    "Distinguer EP avec surcharge VD mais sans choc des EP à haut risque",
+    "Raisonner par probabilité clinique et examens",
+    "Ne pas proposer de thrombolyse systématique en l’absence de décompensation"
+  ],
+  "notes": "Tous les éléments du patient sont fictifs et cohérents pour l’enseignement ; valeurs simulées.",
+  "title_en": "Normotensive pulmonary embolism with right ventricular dysfunction (2026 simulation)",
+  "opening_en": "A fictional 62-year-old man presents with sudden breathlessness and pleuritic lateral chest pain. He is alert, without hypotension.",
+  "diagnosis_en": "Acute pulmonary embolism with right ventricular involvement",
+  "risk_en": "Normotension with right ventricular dysfunction and elevated cardiac biomarkers.",
+  "goals_en": [
+    "Distinguish RV strain without shock from high-risk pulmonary embolism",
+    "Reason from clinical probability and investigations",
+    "Avoid routine thrombolysis without decompensation"
+  ],
+  "notes_en": "All patient details and test results are fictional and designed for teaching."
+}

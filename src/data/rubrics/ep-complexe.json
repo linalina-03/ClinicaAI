@@ -1,0 +1,162 @@
+{
+  "triage": [
+    {
+      "id": "stability",
+      "label": "Évaluer la stabilité hémodynamique",
+      "points": 10,
+      "groups": [
+        [
+          "hemodynam"
+        ],
+        [
+          "pression",
+          "arterielle"
+        ],
+        [
+          "tension"
+        ],
+        [
+          "saturation"
+        ],
+        [
+          "signes",
+          "de",
+          "choc"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Assess haemodynamic stability"
+    },
+    {
+      "id": "multiple",
+      "label": "Envisager une origine multifactorielle de la dyspnée",
+      "points": 10,
+      "groups": [
+        [
+          "insuffisance",
+          "cardiaque"
+        ],
+        [
+          "decompensation",
+          "cardiaque"
+        ],
+        [
+          "pathologies",
+          "intriquees"
+        ],
+        [
+          "plusieurs",
+          "diagnostics"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Consider multiple contributing causes of dyspnoea"
+    }
+  ],
+  "diagnosis": [
+    {
+      "id": "pe",
+      "label": "Évoquer l’embolie pulmonaire",
+      "points": 10,
+      "groups": [
+        [
+          "embolie",
+          "pulmonaire"
+        ],
+        [
+          "thromboembolie",
+          "pulmonaire"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Consider pulmonary embolism"
+    },
+    {
+      "id": "ic",
+      "label": "Évoquer l’insuffisance cardiaque associée",
+      "points": 5,
+      "groups": [
+        [
+          "insuffisance",
+          "cardiaque"
+        ],
+        [
+          "decompensation",
+          "cardiaque"
+        ],
+        [
+          "pathologies",
+          "intriquees"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Consider concurrent heart failure"
+    }
+  ],
+  "management": [
+    {
+      "id": "anti",
+      "label": "Considérer l’anticoagulation dans le contexte de TVP documentée",
+      "points": 12,
+      "groups": [
+        [
+          "anticoagulation"
+        ],
+        [
+          "anticoagulant"
+        ],
+        [
+          "heparine"
+        ],
+        [
+          "hbpm"
+        ],
+        [
+          "aod"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Consider anticoagulation given documented DVT"
+    },
+    {
+      "id": "reassess",
+      "label": "Stratifier et surveiller / prendre en charge la pathologie cardiaque",
+      "points": 8,
+      "groups": [
+        [
+          "surveillance"
+        ],
+        [
+          "stratification"
+        ],
+        [
+          "reevaluation"
+        ],
+        [
+          "insuffisance",
+          "cardiaque"
+        ],
+        [
+          "cardiologie"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Risk stratification, monitoring and management of coexisting cardiac disease"
+    }
+  ],
+  "id": "ep-complexe",
+  "warnings": {
+    "unjustified_lysis": {
+      "points": 15,
+      "patterns": [
+        "thrombolyse",
+        "fibrinolyse",
+        "thrombolyser",
+        "reperfusion systematique"
+      ],
+      "message": "Sans choc documenté, ne pas proposer une thrombolyse systématique."
+    }
+  },
+  "reference_2026": "Medscape Pulmonary Embolism (PE), 27 Aug 2026 (classification A-E, raisonnement diagnostic).",
+  "validation_status": "Grille de démonstration non validée par jury clinique; sensibilité aux formulations."
+}

@@ -1,0 +1,169 @@
+{
+  "id": "ep-complexe",
+  "title": "Dyspnée avec insuffisance cardiaque et TVP",
+  "source": "cas-clinique-embolie-pulmonaire.pdf, p. 1–14",
+  "opening": "M. B., 74 ans, présente une dyspnée et une gêne thoracique depuis deux heures.",
+  "vitals": {
+    "ta": "110/60 mmHg",
+    "fc": "80/min",
+    "fr": "Polypnée (valeur non donnée)",
+    "spo2": "95 % sous 3 L/min",
+    "temperature": "37,9 °C"
+  },
+  "qa": [
+    {
+      "id": "debut",
+      "patterns": [
+        "depuis quand",
+        "debut",
+        "commenc",
+        "duree"
+      ],
+      "answer": "Depuis environ deux heures.",
+      "points": 4,
+      "answer_en": "For about two hours."
+    },
+    {
+      "id": "antecedents",
+      "patterns": [
+        "antecedent",
+        "maladie",
+        "coeur",
+        "cardiaque"
+      ],
+      "answer": "J’ai de l’hypertension, une artériopathie et une cardiomyopathie avec fraction d’éjection connue à 30 %.",
+      "points": 6,
+      "answer_en": "I have hypertension, peripheral arterial disease and cardiomyopathy with a known ejection fraction of 30%."
+    },
+    {
+      "id": "tabac",
+      "patterns": [
+        "tabac",
+        "fum",
+        "cigarette"
+      ],
+      "answer": "Je fume encore.",
+      "points": 3,
+      "answer_en": "I still smoke."
+    },
+    {
+      "id": "traitement",
+      "patterns": [
+        "traitement",
+        "medicament"
+      ],
+      "answer": "Je prends du bisoprolol, du périndopril et du Kardégic.",
+      "points": 3,
+      "answer_en": "I take bisoprolol, perindopril and Kardegic (aspirin)."
+    },
+    {
+      "id": "douleur",
+      "patterns": [
+        "douleur",
+        "thorax",
+        "poitrine"
+      ],
+      "answer": "J’ai une gêne thoracique associée à l’essoufflement.",
+      "points": 2,
+      "answer_en": "I have chest discomfort along with breathlessness."
+    },
+    {
+      "id": "jambe",
+      "patterns": [
+        "mollet",
+        "jambe",
+        "phlebite",
+        "thrombose"
+      ],
+      "answer": "Je n’ai pas d’information à vous donner sur une douleur de jambe ; une TVP est découverte à l’échodoppler.",
+      "points": 2,
+      "answer_en": "I have no information to give about leg pain; a DVT is discovered on ultrasound."
+    }
+  ],
+  "exams": [
+    {
+      "id": "gds",
+      "label": "Gaz du sang",
+      "result": "pH 7,34 ; PaCO₂ 32 mmHg ; PaO₂ 60 mmHg.",
+      "points": 3,
+      "label_en": "Arterial blood gas",
+      "result_en": "pH 7.34; PaCO₂ 32 mmHg; PaO₂ 60 mmHg."
+    },
+    {
+      "id": "ecg",
+      "label": "ECG",
+      "result": "ECG illustré dans le PDF original, interprétation non transcrite dans le texte ; image non incluse dans ce MVP.",
+      "points": 1,
+      "label_en": "ECG",
+      "result_en": "An ECG is shown in the original PDF, but its interpretation is not transcribed; the image is not included in this MVP."
+    },
+    {
+      "id": "labs",
+      "label": "Bilan biologique",
+      "result": "Hb 11,8 g/dL ; plaquettes 233 G/L ; créatinine 89 µmol/L ; D-dimères 3697 (unité non précisée dans la source) ; BNP 593 pg/mL ; troponine pic 1,05 ng/mL.",
+      "points": 4,
+      "label_en": "Laboratory panel",
+      "result_en": "Haemoglobin 11.8 g/dL; platelets 233 G/L; creatinine 89 µmol/L; D-dimers 3697 (source does not specify units); BNP 593 pg/mL; peak troponin 1.05 ng/mL."
+    },
+    {
+      "id": "echo",
+      "label": "Échographie cardiaque",
+      "result": "VG dilaté, FEVG 30 %, pas de dilatation droite, pression pulmonaire estimée 45 mmHg.",
+      "points": 5,
+      "label_en": "Echocardiography",
+      "result_en": "Dilated left ventricle, LVEF 30%, no right ventricular dilatation, estimated pulmonary artery pressure 45 mmHg."
+    },
+    {
+      "id": "doppler",
+      "label": "Échodoppler veineux",
+      "result": "Thrombose veineuse suro-poplitée droite.",
+      "points": 7,
+      "label_en": "Venous Doppler ultrasound",
+      "result_en": "Right suprapopliteal venous thrombosis."
+    },
+    {
+      "id": "cta",
+      "label": "Angioscanner thoracique",
+      "result": "Des coupes d’angioTDM figurent dans le support, sans compte rendu textuel complet exploitable pour ce cas.",
+      "points": 5,
+      "label_en": "CT pulmonary angiography",
+      "result_en": "CT angiography images are included in the teaching material, but no full text report is available for this case."
+    }
+  ],
+  "diagnosis": "Embolie pulmonaire possible avec pathologies intriquées",
+  "risk": "Pas de choc documenté (110/60 mmHg), insuffisance cardiaque préexistante et TVP : stratification à compléter, ne pas classer haut risque sur le seul caillot.",
+  "rule": {
+    "triage": [
+      "evaluer_hemodynamique",
+      "diagnostics_differentiels"
+    ],
+    "actions": [
+      "anticoagulation",
+      "surveillance"
+    ]
+  },
+  "goals": [
+    "Importance des diagnostics intriqués (insuffisance cardiaque, SCA, EP)",
+    "TVP proximale droite documentée",
+    "Ne pas forcer un unique diagnostic exclusif"
+  ],
+  "notes": "Source montrant également des investigations coronaires et des comorbidités ; le score récompense un raisonnement différentiel.",
+  "source_guideline": "https://professional.heart.org/en/science-news/2026-guideline-for-the-evaluation-and-management-of-acute-pulmonary-embolism-in-adults",
+  "clinical_reference_2026": {
+    "title": "Ouellette DR et al. Pulmonary Embolism (PE), Medscape, updated 27 Aug 2026",
+    "url": "https://emedicine.medscape.com/article/300901-overview",
+    "role": "Référentiel général pour démarche diagnostique et risque; ne remplace pas données du cas source."
+  },
+  "version": "1.5",
+  "educational_disclaimer": "Simulation pédagogique. Informations non documentées non inventées. Cas historiques conservés; stratégie revue en 2026.",
+  "title_en": "Breathlessness with heart failure and deep vein thrombosis",
+  "opening_en": "Mr B., 74, presents with breathlessness and chest discomfort for two hours.",
+  "diagnosis_en": "Possible pulmonary embolism with coexisting cardiac disease",
+  "risk_en": "No documented shock; known heart failure complicates the assessment.",
+  "goals_en": [
+    "Consider coexisting heart failure, acute coronary syndrome and pulmonary embolism",
+    "Right proximal DVT is documented",
+    "Avoid forcing one exclusive diagnosis"
+  ],
+  "notes_en": "The source also discusses coronary investigations and comorbidities; the teaching rubric rewards differential reasoning."
+}

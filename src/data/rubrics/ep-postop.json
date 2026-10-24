@@ -1,0 +1,139 @@
+{
+  "triage": [
+    {
+      "id": "stability",
+      "label": "Évaluer stabilité hémodynamique et constantes",
+      "points": 10,
+      "groups": [
+        [
+          "pression",
+          "arterielle"
+        ],
+        [
+          "tension"
+        ],
+        [
+          "hemodynam"
+        ],
+        [
+          "saturation"
+        ],
+        [
+          "frequence",
+          "cardiaque"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Assess haemodynamic stability and vital signs"
+    },
+    {
+      "id": "risk",
+      "label": "Évaluer probabilité clinique prétest (Wells/Genève)",
+      "points": 10,
+      "groups": [
+        [
+          "wells"
+        ],
+        [
+          "geneve"
+        ],
+        [
+          "probabilite",
+          "clinique"
+        ],
+        [
+          "probabilite",
+          "pretest"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Assess clinical pretest probability (Wells / Geneva)"
+    }
+  ],
+  "diagnosis": [
+    {
+      "id": "pe",
+      "label": "Évoquer une embolie pulmonaire",
+      "points": 15,
+      "groups": [
+        [
+          "embolie",
+          "pulmonaire"
+        ],
+        [
+          "thromboembolie",
+          "pulmonaire"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Consider pulmonary embolism"
+    }
+  ],
+  "management": [
+    {
+      "id": "anticoag",
+      "label": "Envisager une anticoagulation après vérification des contre-indications",
+      "points": 12,
+      "groups": [
+        [
+          "anticoagulation"
+        ],
+        [
+          "anticoagulant"
+        ],
+        [
+          "heparine"
+        ],
+        [
+          "hbpm"
+        ],
+        [
+          "apixaban"
+        ],
+        [
+          "rivaroxaban"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Consider anticoagulation after checking contraindications"
+    },
+    {
+      "id": "contra",
+      "label": "Vérifier le risque hémorragique / les contre-indications",
+      "points": 8,
+      "groups": [
+        [
+          "contre",
+          "indication"
+        ],
+        [
+          "risque",
+          "hemorragique"
+        ],
+        [
+          "saignement"
+        ],
+        [
+          "hemorragie"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Check bleeding risk and contraindications"
+    }
+  ],
+  "id": "ep-postop",
+  "warnings": {
+    "unjustified_lysis": {
+      "points": 15,
+      "patterns": [
+        "thrombolyse",
+        "fibrinolyse",
+        "thrombolyser",
+        "reperfusion systematique"
+      ],
+      "message": "Sans choc documenté, ne pas proposer une thrombolyse systématique."
+    }
+  },
+  "reference_2026": "Medscape Pulmonary Embolism (PE), 27 Aug 2026 (classification A-E, raisonnement diagnostic).",
+  "validation_status": "Grille de démonstration non validée par jury clinique; sensibilité aux formulations."
+}

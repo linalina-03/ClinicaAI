@@ -1,0 +1,517 @@
+{
+  "version": "3.2",
+  "caseId": "ep-postop",
+  "methodology": "Réponses de référence issues des entrées du dossier pédagogique enrichi (incluant des ajouts fictifs). À contrôler par un clinicien avant toute conclusion. Questions de suivi à poser après preQuestion.",
+  "items": [
+    {
+      "id": "Q01",
+      "category": "simple",
+      "question": "Qu’est-ce qui vous amène aujourd’hui ?",
+      "expectedIds": [
+        "motif"
+      ],
+      "reference": "Je suis essoufflée depuis trois jours, c’est ce qui m’a amenée aux urgences.",
+      "provenance": "cas_source"
+    },
+    {
+      "id": "Q02",
+      "category": "simple",
+      "question": "Depuis quand êtes-vous essoufflée ?",
+      "expectedIds": [
+        "debut"
+      ],
+      "reference": "Cela a commencé il y a trois jours.",
+      "provenance": "cas_source"
+    },
+    {
+      "id": "Q03",
+      "category": "simple",
+      "question": "Votre essoufflement s’aggrave-t-il ?",
+      "expectedIds": [
+        "dyspnee_evolution"
+      ],
+      "reference": "Au début c’était léger, mais mon essoufflement est devenu plus gênant progressivement.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q04",
+      "category": "simple",
+      "question": "Êtes-vous essoufflée au repos ?",
+      "expectedIds": [
+        "dyspnee_repos"
+      ],
+      "reference": "Même assise sans bouger, je peux me sentir un peu essoufflée.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q05",
+      "category": "simple",
+      "question": "Êtes-vous gênée pour respirer quand vous marchez ?",
+      "expectedIds": [
+        "dyspnee_effort"
+      ],
+      "reference": "C’est plus difficile lorsque je marche avec les béquilles.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q06",
+      "category": "simple",
+      "question": "Comment dormez-vous depuis le début de la gêne ?",
+      "expectedIds": [
+        "sommeil"
+      ],
+      "reference": "Je dors moins bien depuis que je suis essoufflée, surtout parce que cela m’inquiète.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q07",
+      "category": "simple",
+      "question": "Respirez-vous moins bien en position allongée ?",
+      "expectedIds": [
+        "orthopnee"
+      ],
+      "reference": "Non, je ne me sens pas plus essoufflée lorsque je m’allonge.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q08",
+      "category": "simple",
+      "question": "Avez-vous une douleur dans la poitrine ?",
+      "expectedIds": [
+        "douleur_thoracique"
+      ],
+      "reference": "J’ai parfois un point sur le côté droit de la poitrine lorsque j’inspire profondément.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q09",
+      "category": "simple",
+      "question": "Avez-vous mal en haut du dos ?",
+      "expectedIds": [
+        "douleur_dorsale"
+      ],
+      "reference": "J’ai parfois une gêne dans le haut du dos à droite, surtout lorsque je prends une grande inspiration.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q10",
+      "category": "simple",
+      "question": "Avez-vous des douleurs au ventre ?",
+      "expectedIds": [
+        "douleur_abdominale"
+      ],
+      "reference": "Non, je n’ai pas de douleur abdominale particulière.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q11",
+      "category": "simple",
+      "question": "Avez-vous mal au bas du dos ?",
+      "expectedIds": [
+        "douleur_bas_dos"
+      ],
+      "reference": "Je n’ai pas de douleur particulière dans le bas du dos ; ma gêne se situe plutôt en haut à droite.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q12",
+      "category": "simple",
+      "question": "Avez-vous mal au cou ?",
+      "expectedIds": [
+        "douleur_cou"
+      ],
+      "reference": "Je n’ai pas de douleur particulière au cou.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q13",
+      "category": "simple",
+      "question": "Avez-vous mal à l’épaule ?",
+      "expectedIds": [
+        "douleur_epaule"
+      ],
+      "reference": "Je n’ai pas de douleur localisée à l’épaule. J’ai parfois une gêne dans le haut du dos à droite en inspirant.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q14",
+      "category": "simple",
+      "question": "Votre douleur augmente-t-elle à l’inspiration ?",
+      "expectedIds": [
+        "douleur_pleuretique"
+      ],
+      "reference": "Oui, la gêne sur le côté droit est plus sensible quand je respire profondément.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q15",
+      "category": "simple",
+      "question": "Toussez-vous ?",
+      "expectedIds": [
+        "toux"
+      ],
+      "reference": "Je tousse un peu, mais rarement, sans beaucoup de glaires.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q16",
+      "category": "simple",
+      "question": "Avez-vous craché du sang ?",
+      "expectedIds": [
+        "hemoptysie"
+      ],
+      "reference": "Non, je n’ai pas craché de sang.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q17",
+      "category": "simple",
+      "question": "Avez-vous de la fièvre ?",
+      "expectedIds": [
+        "fievre"
+      ],
+      "reference": "Non, je n’ai pas eu de fièvre ni de frissons.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q18",
+      "category": "simple",
+      "question": "Avez-vous perdu connaissance ?",
+      "expectedIds": [
+        "syncope"
+      ],
+      "reference": "Non, je n’ai pas perdu connaissance.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q19",
+      "category": "simple",
+      "question": "Votre cœur bat-il plus vite ?",
+      "expectedIds": [
+        "palpitations"
+      ],
+      "reference": "J’ai parfois l’impression que mon cœur bat plus vite.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q20",
+      "category": "simple",
+      "question": "Avez-vous une douleur au mollet ?",
+      "expectedIds": [
+        "mollet_douleur"
+      ],
+      "reference": "Je n’ai pas remarqué de douleur inhabituelle dans un mollet ; mon genou opéré reste sensible.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q21",
+      "category": "simple",
+      "question": "Avez-vous remarqué un gonflement d’un mollet ?",
+      "expectedIds": [
+        "mollet_oedeme"
+      ],
+      "reference": "Non, je n’ai pas remarqué de nouveau gonflement d’un seul mollet.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q22",
+      "category": "simple",
+      "question": "Avez-vous des douleurs aux pieds ?",
+      "expectedIds": [
+        "pied_douleur"
+      ],
+      "reference": "Non, je n’ai pas de douleur particulière aux pieds.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q23",
+      "category": "simple",
+      "question": "Avez-vous été opérée récemment ?",
+      "expectedIds": [
+        "chirurgie"
+      ],
+      "reference": "On m’a opérée d’une fracture du plateau tibial il y a une semaine.",
+      "provenance": "cas_source"
+    },
+    {
+      "id": "Q24",
+      "category": "simple",
+      "question": "Avez-vous pu marcher depuis votre opération ?",
+      "expectedIds": [
+        "mobilite"
+      ],
+      "reference": "Depuis l’opération, je marche peu et j’utilise des béquilles ; je ne reste pas couchée toute la journée.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q25",
+      "category": "simple",
+      "question": "Prenez-vous un anticoagulant ?",
+      "expectedIds": [
+        "anticoagulant"
+      ],
+      "reference": "Je ne connais pas précisément tous les traitements reçus après l’opération ; je n’ai pas mon ordonnance.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q26",
+      "category": "simple",
+      "question": "Quels médicaments prenez-vous ?",
+      "expectedIds": [
+        "medicaments"
+      ],
+      "reference": "Je prends les médicaments prescrits après l’opération, mais je n’ai pas mon ordonnance sur moi.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q27",
+      "category": "simple",
+      "question": "Avez-vous des allergies médicamenteuses ?",
+      "expectedIds": [
+        "allergies"
+      ],
+      "reference": "Je n’ai pas d’allergie médicamenteuse connue.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q28",
+      "category": "simple",
+      "question": "Avez-vous déjà eu une phlébite ?",
+      "expectedIds": [
+        "antecedent_thrombose"
+      ],
+      "reference": "Non, je n’ai jamais eu de phlébite ni d’embolie pulmonaire auparavant.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q29",
+      "category": "simple",
+      "question": "Y a-t-il eu une thrombose dans votre famille ?",
+      "expectedIds": [
+        "famille_thrombose"
+      ],
+      "reference": "À ma connaissance, mes proches n’ont pas eu de phlébite ou d’embolie pulmonaire.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q30",
+      "category": "simple",
+      "question": "Connaissez-vous des maladies héréditaires dans votre famille ?",
+      "expectedIds": [
+        "famille_heredite"
+      ],
+      "reference": "Je ne connais pas de maladie héréditaire particulière dans ma famille, mais je ne peux pas vous le garantir.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q31",
+      "category": "simple",
+      "question": "Êtes-vous diabétique ?",
+      "expectedIds": [
+        "diabete"
+      ],
+      "reference": "Non, je n’ai pas de diabète connu.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q32",
+      "category": "simple",
+      "question": "Avez-vous de l’asthme ?",
+      "expectedIds": [
+        "asthme_bpco"
+      ],
+      "reference": "Je n’ai pas d’asthme ni de maladie respiratoire chronique connue.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q33",
+      "category": "simple",
+      "question": "Fumez-vous ?",
+      "expectedIds": [
+        "tabac"
+      ],
+      "reference": "Non, je ne fume pas.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q34",
+      "category": "simple",
+      "question": "Buvez-vous de l’alcool ?",
+      "expectedIds": [
+        "alcool"
+      ],
+      "reference": "Je bois rarement de l’alcool.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q35",
+      "category": "simple",
+      "question": "Avez-vous un cancer connu ?",
+      "expectedIds": [
+        "cancer"
+      ],
+      "reference": "Je n’ai pas de cancer connu.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q36",
+      "category": "simple",
+      "question": "Prenez-vous la pilule ?",
+      "expectedIds": [
+        "contraception"
+      ],
+      "reference": "Non, je ne prends pas de contraception hormonale en ce moment.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q37",
+      "category": "simple",
+      "question": "Êtes-vous enceinte ?",
+      "expectedIds": [
+        "grossesse"
+      ],
+      "reference": "Non, je ne suis pas enceinte à ma connaissance.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q38",
+      "category": "simple",
+      "question": "Avez-vous accouché récemment ?",
+      "expectedIds": [
+        "postpartum"
+      ],
+      "reference": "Non, je n’ai pas accouché récemment.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q39",
+      "category": "simple",
+      "question": "Avez-vous fait un voyage prolongé récemment ?",
+      "expectedIds": [
+        "voyage"
+      ],
+      "reference": "Non, je n’ai pas fait de long trajet récemment.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q40",
+      "category": "simple",
+      "question": "Faites-vous du sport ?",
+      "expectedIds": [
+        "activite_physique"
+      ],
+      "reference": "Avant ma fracture, je marchais régulièrement, mais je ne pratiquais pas de sport intensif. Depuis l’opération, mes déplacements sont limités.",
+      "provenance": "fiction_pedagogique"
+    },
+    {
+      "id": "Q41",
+      "category": "composee",
+      "question": "Avez-vous de la fièvre ou de la toux ?",
+      "expectedIds": [
+        "fievre",
+        "toux"
+      ],
+      "reference": "Non, je n’ai pas eu de fièvre ni de frissons. | Je tousse un peu, mais rarement, sans beaucoup de glaires.",
+      "provenance": "mixte"
+    },
+    {
+      "id": "Q42",
+      "category": "composee",
+      "question": "Avez-vous du diabète ou de l’asthme ?",
+      "expectedIds": [
+        "diabete",
+        "asthme_bpco"
+      ],
+      "reference": "Non, je n’ai pas de diabète connu. | Je n’ai pas d’asthme ni de maladie respiratoire chronique connue.",
+      "provenance": "mixte"
+    },
+    {
+      "id": "Q43",
+      "category": "composee",
+      "question": "Avez-vous mal au dos ou au ventre ?",
+      "expectedIds": [
+        "douleur_dorsale",
+        "douleur_abdominale"
+      ],
+      "reference": "J’ai parfois une gêne dans le haut du dos à droite, surtout lorsque je prends une grande inspiration. | Non, je n’ai pas de douleur abdominale particulière.",
+      "provenance": "mixte"
+    },
+    {
+      "id": "Q44",
+      "category": "composee",
+      "question": "Fumez-vous et buvez-vous de l’alcool ?",
+      "expectedIds": [
+        "tabac",
+        "alcool"
+      ],
+      "reference": "Non, je ne fume pas. | Je bois rarement de l’alcool.",
+      "provenance": "mixte"
+    },
+    {
+      "id": "Q45",
+      "category": "composee",
+      "question": "Avez-vous des allergies et prenez-vous des médicaments ?",
+      "expectedIds": [
+        "allergies",
+        "medicaments"
+      ],
+      "reference": "Je n’ai pas d’allergie médicamenteuse connue. | Je prends les médicaments prescrits après l’opération, mais je n’ai pas mon ordonnance sur moi.",
+      "provenance": "mixte"
+    },
+    {
+      "id": "Q46",
+      "category": "composee",
+      "question": "Avez-vous déjà fait une phlébite et quelqu’un de votre famille en a-t-il eu ?",
+      "expectedIds": [
+        "antecedent_thrombose",
+        "famille_thrombose"
+      ],
+      "reference": "Non, je n’ai jamais eu de phlébite ni d’embolie pulmonaire auparavant. | À ma connaissance, mes proches n’ont pas eu de phlébite ou d’embolie pulmonaire.",
+      "provenance": "mixte"
+    },
+    {
+      "id": "Q47",
+      "category": "composee",
+      "question": "Êtes-vous enceinte ou avez-vous accouché récemment ?",
+      "expectedIds": [
+        "grossesse",
+        "postpartum"
+      ],
+      "reference": "Non, je ne suis pas enceinte à ma connaissance. | Non, je n’ai pas accouché récemment.",
+      "provenance": "mixte"
+    },
+    {
+      "id": "Q48",
+      "category": "suivi",
+      "question": "Et au bas du dos ?",
+      "preQuestion": "Avez-vous des douleurs dans le dos ?",
+      "expectedIds": [
+        "douleur_bas_dos"
+      ],
+      "reference": "Je n’ai pas de douleur particulière dans le bas du dos ; ma gêne se situe plutôt en haut à droite.",
+      "provenance": "fictif"
+    },
+    {
+      "id": "Q49",
+      "category": "suivi",
+      "question": "Et aux pieds ?",
+      "preQuestion": "Avez-vous des douleurs aux jambes ?",
+      "expectedIds": [
+        "pied_douleur"
+      ],
+      "reference": "Non, je n’ai pas de douleur particulière aux pieds.",
+      "provenance": "fictif"
+    },
+    {
+      "id": "Q50",
+      "category": "suivi",
+      "question": "Est-ce plus fort quand vous inspirez ?",
+      "preQuestion": "Avez-vous une douleur thoracique ?",
+      "expectedIds": [
+        "douleur_pleuretique"
+      ],
+      "reference": "Oui, la gêne sur le côté droit est plus sensible quand je respire profondément.",
+      "provenance": "fictif"
+    }
+  ]
+}

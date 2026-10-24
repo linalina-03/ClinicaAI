@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* AI Comparison Lab: stable two-column desktop layout (no Tailwind arbitrary breakpoint dependency). */
+.clinicaai-lab-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+.clinicaai-lab-layout > * { min-width: 0; }
+@media (min-width: 700px) {
+  .clinicaai-lab-layout {
+    grid-template-columns: minmax(270px, 36%) minmax(0, 1fr);
+  }
+  .clinicaai-lab-left { padding-left: 0.75rem; }
+}

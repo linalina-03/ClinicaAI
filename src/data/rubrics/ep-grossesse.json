@@ -1,0 +1,177 @@
+{
+  "id": "ep-grossesse",
+  "triage": [
+    {
+      "id": "shock",
+      "label": "Reconnaître immédiatement le choc / l’instabilité hémodynamique",
+      "points": 12,
+      "groups": [
+        [
+          "choc"
+        ],
+        [
+          "hypotension"
+        ],
+        [
+          "instabilite",
+          "hemodynamique"
+        ],
+        [
+          "hypoperfusion"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Immediately recognise shock or haemodynamic instability"
+    },
+    {
+      "id": "critical",
+      "label": "Alerter l’équipe de soins critiques et organiser une surveillance rapprochée",
+      "points": 8,
+      "groups": [
+        [
+          "reanimation"
+        ],
+        [
+          "soins",
+          "intensifs"
+        ],
+        [
+          "monitorage"
+        ],
+        [
+          "equipe",
+          "multidisciplinaire"
+        ],
+        [
+          "surveillance",
+          "rapprochee"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Alert critical care staff and arrange close monitoring"
+    }
+  ],
+  "diagnosis": [
+    {
+      "id": "pe",
+      "label": "Suspecter une embolie pulmonaire",
+      "points": 9,
+      "groups": [
+        [
+          "embolie",
+          "pulmonaire"
+        ],
+        [
+          "thromboembolie",
+          "pulmonaire"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Suspect pulmonary embolism"
+    },
+    {
+      "id": "high",
+      "label": "Identifier l’EP à haut risque sur instabilité, sans fonder la gravité sur la seule taille du caillot",
+      "points": 6,
+      "groups": [
+        [
+          "haut",
+          "risque"
+        ],
+        [
+          "grave"
+        ],
+        [
+          "instabilite",
+          "hemodynamique"
+        ],
+        [
+          "choc"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Identify high-risk PE from instability rather than clot size alone"
+    }
+  ],
+  "management": [
+    {
+      "id": "anticoag",
+      "label": "Envisager une anticoagulation par héparine adaptée à la grossesse",
+      "points": 6,
+      "groups": [
+        [
+          "heparine"
+        ],
+        [
+          "hnf"
+        ],
+        [
+          "hbpm"
+        ],
+        [
+          "enoxaparine"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Consider pregnancy-appropriate heparin anticoagulation"
+    },
+    {
+      "id": "reperfusion",
+      "label": "Évaluer sans retard une stratégie de reperfusion si choc persistant",
+      "points": 9,
+      "groups": [
+        [
+          "thrombolyse"
+        ],
+        [
+          "fibrinolyse"
+        ],
+        [
+          "reperfusion"
+        ],
+        [
+          "embolectomie"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Urgently assess reperfusion when shock persists"
+    },
+    {
+      "id": "pregnancy",
+      "label": "Prendre en compte le risque maternel et fœtal / équipe obstétricale",
+      "points": 5,
+      "groups": [
+        [
+          "obstetric"
+        ],
+        [
+          "foet"
+        ],
+        [
+          "maternel"
+        ],
+        [
+          "grossesse"
+        ],
+        [
+          "hemorragique"
+        ]
+      ],
+      "require": 1,
+      "label_en": "Consider maternal and fetal risks with the obstetric team"
+    }
+  ],
+  "warnings": {
+    "delay": {
+      "points": 10,
+      "patterns": [
+        "attendre les d dimeres",
+        "attendre les resultats des d dimeres",
+        "attendre le dosage des d dimeres"
+      ],
+      "message": "Le choc impose une évaluation et une prise en charge immédiates, sans attendre les D-dimères."
+    }
+  },
+  "reference_2026": "Medscape Pulmonary Embolism (PE), 27 Aug 2026 (classification A-E, raisonnement diagnostic).",
+  "validation_status": "Grille de démonstration non validée par jury clinique; sensibilité aux formulations."
+}

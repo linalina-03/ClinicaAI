@@ -1,0 +1,169 @@
+{
+  "id": "ep-choc",
+  "title": "Dyspnée et choc obstructif",
+  "source": "evaluations.pdf, p. 2–4",
+  "opening": "Mme V., 68 ans, est amenée pour un étouffement majeur. Elle est très dyspnéique.",
+  "vitals": {
+    "ta": "80/40 mmHg",
+    "fc": "108/min",
+    "fr": "Très dyspnéique (valeur non documentée)",
+    "spo2": "88 % sous 9 L/min O₂",
+    "temperature": "Non fournie"
+  },
+  "qa": [
+    {
+      "id": "debut",
+      "patterns": [
+        "depuis quand",
+        "debut",
+        "commenc",
+        "duree"
+      ],
+      "answer": "Depuis quelques jours je suis épuisée et de plus en plus essoufflée ; cette nuit, même au lit, je n’arrivais plus à respirer.",
+      "points": 4,
+      "answer_en": "I have been exhausted and increasingly short of breath for several days; last night I could barely breathe even in bed."
+    },
+    {
+      "id": "jambe",
+      "patterns": [
+        "mollet",
+        "jambe",
+        "phlebite",
+        "thrombose"
+      ],
+      "answer": "Mon mollet gauche est douloureux.",
+      "points": 6,
+      "answer_en": "My left calf is painful."
+    },
+    {
+      "id": "antecedents",
+      "patterns": [
+        "antecedent",
+        "maladie",
+        "hypertension",
+        "obesit"
+      ],
+      "answer": "J’ai de l’hypertension, un problème de cholestérol, des genoux très arthrosiques et je suis en surpoids.",
+      "points": 4,
+      "answer_en": "I have hypertension, high cholesterol, severe knee osteoarthritis, and I am overweight."
+    },
+    {
+      "id": "immobilisation",
+      "patterns": [
+        "immobilis",
+        "marche",
+        "mobilit",
+        "operation",
+        "chirurgie"
+      ],
+      "answer": "Je marche difficilement à cause de mes genoux ; une immobilisation de trois jours ou plus n’est pas établie.",
+      "points": 4,
+      "answer_en": "Walking is difficult because of my knees; being immobilised for at least three days is not established."
+    },
+    {
+      "id": "douleur",
+      "patterns": [
+        "douleur",
+        "thorax",
+        "poitrine"
+      ],
+      "answer": "Le document ne décrit pas de douleur thoracique.",
+      "points": 2,
+      "answer_en": "The source document does not describe chest pain."
+    }
+  ],
+  "exams": [
+    {
+      "id": "cta",
+      "label": "Angioscanner thoracique",
+      "result": "Caillots visibles dans les deux artères pulmonaires : embolie pulmonaire confirmée.",
+      "points": 10,
+      "label_en": "CT pulmonary angiography",
+      "result_en": "Thrombi are visible in both pulmonary arteries: pulmonary embolism confirmed."
+    },
+    {
+      "id": "ecg",
+      "label": "ECG",
+      "result": "Résultat non précisé dans le support.",
+      "points": 1,
+      "label_en": "ECG",
+      "result_en": "ECG result is not specified in the source."
+    },
+    {
+      "id": "echo",
+      "label": "Échocardiographie",
+      "result": "Résultat non documenté ; utile si instabilité majeure, selon faisabilité.",
+      "points": 3,
+      "label_en": "Echocardiography",
+      "result_en": "Echocardiography result not documented; may be useful in major haemodynamic instability, if feasible."
+    },
+    {
+      "id": "labs",
+      "label": "Hémostase, groupe/Rh/RAI, créatinine",
+      "result": "Résultats non fournis ; bilan requis pour anticiper anticoagulation, saignement et fonction rénale.",
+      "points": 5,
+      "label_en": "Coagulation, blood group and antibody screen, creatinine",
+      "result_en": "Results not supplied; haemostasis, blood group/screen and renal function should be considered in planning anticoagulation and managing bleeding risk."
+    },
+    {
+      "id": "ddimer",
+      "label": "D-dimères",
+      "result": "Non documentés ; ne pas retarder la prise en charge d’une EP à haut risque pour leur dosage.",
+      "points": 0,
+      "label_en": "D-dimers",
+      "result_en": "Not documented. Do not delay management of high-risk pulmonary embolism to await D-dimers."
+    },
+    {
+      "id": "gds",
+      "label": "Gaz du sang",
+      "result": "Non documentés ; hypoxémie sévère connue par SpO₂.",
+      "points": 1,
+      "label_en": "Arterial blood gas",
+      "result_en": "Not documented; severe hypoxaemia is already suggested by the reported oxygen saturation."
+    },
+    {
+      "id": "doppler",
+      "label": "Échodoppler veineux",
+      "result": "Résultat non documenté ; suspicion clinique au mollet gauche.",
+      "points": 2,
+      "label_en": "Venous Doppler ultrasound",
+      "result_en": "Result not documented; left calf symptoms raise clinical concern."
+    }
+  ],
+  "diagnosis": "Embolie pulmonaire",
+  "risk": "EP avec choc/hypotension persistante : profil de défaillance cardiopulmonaire (catégorie E dans la classification 2026 si choc cardiogénique confirmé).",
+  "rule": {
+    "triage": [
+      "reconnaitre_choc",
+      "surveillance_urgence"
+    ],
+    "actions": [
+      "anticoagulation",
+      "reperfusion"
+    ]
+  },
+  "goals": [
+    "Hypotension et marbrures : haut risque",
+    "Le scanner est déjà positif dans le corrigé original",
+    "Les posologies thérapeutiques historiques ne sont pas intégrées"
+  ],
+  "notes": "La source de 2011–2012 mentionne HNF + thrombolyse. Les indications doivent être actualisées et discutées avec un superviseur.",
+  "source_guideline": "https://professional.heart.org/en/science-news/2026-guideline-for-the-evaluation-and-management-of-acute-pulmonary-embolism-in-adults",
+  "clinical_reference_2026": {
+    "title": "Ouellette DR et al. Pulmonary Embolism (PE), Medscape, updated 27 Aug 2026",
+    "url": "https://emedicine.medscape.com/article/300901-overview",
+    "role": "Référentiel général pour démarche diagnostique et risque; ne remplace pas données du cas source."
+  },
+  "version": "1.5",
+  "educational_disclaimer": "Simulation pédagogique. Informations non documentées non inventées. Cas historiques conservés; stratégie revue en 2026.",
+  "title_en": "Breathlessness and obstructive shock",
+  "opening_en": "Ms V., 68, is brought in with severe breathing difficulties and marked shortness of breath.",
+  "diagnosis_en": "Pulmonary embolism",
+  "risk_en": "Pulmonary embolism with shock or persistent hypotension: high-risk presentation.",
+  "goals_en": [
+    "Hypotension and mottling indicate high risk",
+    "CT pulmonary angiography is already positive in the original answer key",
+    "Historical drug doses are not incorporated"
+  ],
+  "notes_en": "The historical 2011–2012 source mentions unfractionated heparin and thrombolysis. Indications require up-to-date clinical review."
+}
