@@ -24,3 +24,7 @@ Ne saisissez aucune donnée personnelle réelle. L'API gratuite peut avoir des r
 ## Tests
 
 `npm run build` et `npm test`. Vérifier la route `/lab`, comparer « Qu’est-ce qui vous amène ? », « Avez-vous mal au dos ? », « Vous avez une douleur aux mollets ? » et « Prenez-vous des médicaments ? ». Vérifier aussi la réponse d'erreur lorsque GEMINI_API_KEY est absente.
+
+## Cohérence du dossier postopératoire (V4.6)
+
+La première page et le Lab transmettent maintenant **la même banque enrichie** et les **mêmes instructions de dossier à Gemini** pour `ep-postop`, via `src/lib/commonPostopGemini.js`. Les moteurs locaux français de la première page et du Lab utilisent aussi le même moteur de règles et le même moteur sémantique du Lab pour ce cas. Les réponses peuvent néanmoins varier selon l'historique et la méthode ; l'identité des textes ne constitue pas l'objectif scientifique. Les ajouts du dossier sont fictifs, destinés à la pédagogie et à valider par un médecin. La comparaison n'est pas une validation clinique achevée.

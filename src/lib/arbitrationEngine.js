@@ -14,7 +14,7 @@ export function questionGuard(question) {
   if (!q) return 'Question vide.';
   if (/\b(anesthes\w*|endormi\w*|endormie\w*|sedation)\b/.test(q)) return 'Les modalités de l’anesthésie ne sont pas précisées dans le dossier.';
   // Les interrogations négatives sont admises à condition que les moteurs soient sûrs ; ici clarification.
-  if (/\b(ne|pas|jamais|aucun|sans)\b/.test(q)) return 'Pouvez-vous reformuler votre question de façon affirmative et précise ?';
+  // Do not reject every negative question: clinical negation is often legitimate.
   if (/\bet\b/.test(q) && q.includes('?')) return 'Pouvez-vous poser une seule question à la fois ?';
   return null;
 }

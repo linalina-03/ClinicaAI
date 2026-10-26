@@ -1,6 +1,7 @@
 // V3.1: les deux méthodes locales utilisent exactement la même banque de faits que Gemini.
 import dossier from '../data/enrichment/ep-postop-enriched.json';
 import { normalize } from './patientEngine';
+import { misleadingFeverPEAnswer } from './leadingQuestion.js';
 import { loadSemanticModel } from './semanticEngine';
 export const labFacts = dossier.entries.filter(e => e && typeof e.answer === 'string' && e.provenance !== 'clarification' && e.id !== 'question_inconnue');
 const variants = labFacts.flatMap(e => (e.variants || []).filter(v => typeof v === 'string' && v.trim()).map(v => ({id:e.id, text:v, norm:normalize(v)})));
@@ -16,6 +17,8 @@ function interpret(q, history=[]){
  return q;
 }
 export function rulesLabAnswer(question,history=[]){
+ const special=misleadingFeverPEAnswer('ep-postop',question);
+ if(special)return {answer:special.answer,matchedId:'fievre',confidence:100};
  const q=interpret(question,history), n=normalize(q);
  // Le score ne dépend que des variantes documentées dans la banque commune.
  const ranking=labFacts.map(f=>({f, s: Math.max(0,...(f.variants||[]).map(v=>{
@@ -45,6 +48,8 @@ async function buildEmbeddings(){
  return cachePromise;
 }
 export async function semanticLabAnswer(question,history=[]){
+ const special=misleadingFeverPEAnswer('ep-postop',question);
+ if(special)return {answer:special.answer,matchedId:'fievre',similarity:1};
  const {extractor,embeddings}=await buildEmbeddings();
  const q=interpret(question,history);
  const res=await extractor([q],{pooling:'mean',normalize:true});

@@ -5,7 +5,7 @@ La consultation et le laboratoire comparatif démarrent en anglais pour les nouv
 
 ## Données traduites et travail hors API
 - 5 cas : titre, introduction, diagnostic, gravité, **29 réponses cliniques** et **34 résultats d'examens** prétraduits en anglais, reliés aux identifiants français.
-- Mme N. : **87 réponses d'enrichissement** et 87 conseils pédagogiques anglais. Les faits ajoutés restent **fictifs**, non issus du cas publié.
+- Mme N. : **87 réponses complémentaires du scénario clinique** et 87 conseils pédagogiques anglais. Les faits ajoutés restent **fictifs**, non issus du cas publié.
 - 100 questions de benchmark et leurs références prétraduites.
 - 112 traductions d'interface supplémentaires, et aides cliniques en anglais.
 - Les textes prétraduits ne nécessitent plus Gemini pour être affichés. Les fichiers d'origine française sont conservés avec les champs *_en.

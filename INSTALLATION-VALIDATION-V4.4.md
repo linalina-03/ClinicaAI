@@ -20,8 +20,8 @@ Ouvrir http://localhost:3000/validation
 ## Changements
 
 - Une seule langue visible pour la proposition à valider (EN ou FR) ; la décision de traduction est masquée car elle ne peut pas être évaluée à partir d'une seule langue.
-- Dossier de référence intégré à la page, accessible sans navigation et organisé en quatre onglets : résumé, interrogatoire, examens, enrichissement fictif.
-- Cinq cas ; seul le cas postopératoire contient 87 réponses supplémentaires enrichies.
+- Dossier de référence intégré à la page, accessible sans navigation et organisé en quatre onglets : résumé, interrogatoire, examens, données du scénario.
+- Cinq cas ; seul le cas postopératoire contient 87 réponses complémentaires du scénario.
 - Contrôles gratuits et Gemini toujours sur demande ; Gemini affiche sa correction uniquement dans la langue choisie. Les données historiques et les décisions locales restent préservées.
 
 ## Limites

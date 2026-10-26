@@ -1,6 +1,7 @@
 // ClinicaAI V1.6 — embeddings exécutés côté navigateur, sans API commerciale.
 // Les réponses sont extraites des JSON, jamais générées par le modèle.
 import { normalize, patientAnswer } from './patientEngine';
+import { misleadingFeverPEAnswer } from './leadingQuestion.js';
 import { arbitrateAnswer } from './arbitrationEngine';
 
 export const MODEL_ID = 'Xenova/paraphrase-multilingual-MiniLM-L12-v2';
@@ -78,6 +79,8 @@ export async function prepareSemanticCase(clinicalCase) {
 }
 export async function semanticPatientAnswer(clinicalCase, question, language = 'fr') {
   const isEnglish = language === 'en';
+  const special=misleadingFeverPEAnswer(clinicalCase.id,question,language);
+  if(special)return {...special,semanticIntent:'fievre',confidence:1};
   const rule = isEnglish ? null : patientAnswer(clinicalCase, question);
   const q = String(question || '').trim();
   if (!q || q.length > 350) return isEnglish ? {answer:EN_CLARIFY,id:null,engine:'semantique',decision:'invalid input'} : { ...rule, engine: 'regles', decision: 'question vide ou trop longue' };

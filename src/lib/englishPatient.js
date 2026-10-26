@@ -63,8 +63,11 @@ const terms = {
  accueil:/hello|how are you|are you okay/i
 };
 const aliases={start:'debut',antecedents:'antecedents_generaux',douleur:'douleur_localisation',jambe:'mollet_douleur',grossesse:'grossesse'};
+import { misleadingFeverPEAnswer } from './leadingQuestion.js';
 export function englishPatientAnswer(clinicalCase, question){
  const q=(question||'').trim();
+ const special=misleadingFeverPEAnswer(clinicalCase.id, q, 'en');
+ if (special) return special;
  if(!q)return {answer:'Could you repeat your question?',id:null,engine:'offline-en'};
  const enrich=clinicalCase.id==='ep-postop';
  if(enrich){
@@ -72,7 +75,7 @@ export function englishPatientAnswer(clinicalCase, question){
   const priority=['douleur_bas_dos','douleur_cou','douleur_nuque','douleur_epaule','douleur_abdominale','pied_douleur','pied_oedeme','mollet_douleur','mollet_oedeme','douleur_pleuretique','antecedent_thrombose','famille_thrombose','famille_heredite','famille_antecedents','famille_deces_soudain'];
   const match=priority.find(id=>terms[id]?.test(q))||Object.keys(terms).find(id=>terms[id].test(q));
   const fact=enriched.entries.find(f=>f.id===match);
-  if(fact)return {answer:fact.answer_en,id:fact.scoringId||fact.id,engine:'offline-en',intent:fact.id,tutor:{label:'Relevant question · enriched scenario',explanation:fact.teaching_en,documented:true}};
+  if(fact)return {answer:fact.answer_en,id:fact.scoringId||fact.id,engine:'offline-en',intent:fact.id,tutor:{label:'Relevant question · clinical scenario',explanation:fact.teaching_en,documented:true}};
  }
  for(const item of clinicalCase.qa||[]){
   const id=aliases[item.id]||item.id;

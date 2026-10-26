@@ -9,7 +9,7 @@ Source : `file2.zip`, fourni par l'utilisateur.
 - Les explications du parcours hybride et certains champs de justification sont affichés dans la langue choisie.
 - Catégories du benchmark en anglais : `multi-part`, `follow-up`, `rephrasing`, `contextual`, `ambiguous`, `safety`.
 - Pré-question de suivi traduite lorsqu'elle correspond à une question prétraduite.
-- Tous les fichiers JSON du dossier, les cinq cas, les données enrichies, les trois moteurs et le benchmark sont conservés.
+- Tous les fichiers JSON du dossier, les cinq cas, les données du scénario, les trois moteurs et le benchmark sont conservés.
 - Aucun appel Gemini ajouté pour ces traductions.
 
 ## Installation

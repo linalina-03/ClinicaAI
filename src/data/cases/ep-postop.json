@@ -69,6 +69,18 @@
       "answer": "Les informations disponibles ne précisent pas de symptômes de phlébite.",
       "points": 4,
       "answer_en": "The available information does not specify symptoms of deep vein thrombosis."
+    },
+    {
+      "id": "fievre",
+      "patterns": [
+        "fievre",
+        "frissons",
+        "temperature elevee",
+        "syndrome febrile"
+      ],
+      "answer": "Non, je n’ai pas eu de fièvre ni de frissons.",
+      "answer_en": "No, I have not had fever or chills.",
+      "points": 0
     }
   ],
   "exams": [

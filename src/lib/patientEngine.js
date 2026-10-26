@@ -1,4 +1,5 @@
 // ClinicaAI V1.2 — dialogue local sans API, fondé uniquement sur les fiches JSON.
+import { misleadingFeverPEAnswer } from './leadingQuestion.js';
 export function normalize(text = '') {
   return String(text).normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .toLowerCase().replace(/[’']/g, ' ').replace(/[^a-z0-9\s]/g, ' ')
@@ -73,6 +74,8 @@ function intentScore(q, id, patterns) {
 export function patientAnswer(clinicalCase, question) {
   const raw=String(question||'').trim().slice(0,350);
   if(!raw)return {answer:'Pouvez-vous reformuler votre question ?',id:null,status:'empty'};
+  const special=misleadingFeverPEAnswer(clinicalCase.id, raw);
+  if (special) return special;
   const q=normalize(raw);
   // Le cas confirme une opération, mais pas nécessairement le mode d'anesthésie.
   // Ne pas prétendre savoir si la patiente a été endormie.

@@ -27,18 +27,20 @@ const enUI = {
   back: 'Back to consultation',
   subtitle: 'Experimental benchmark · Ms N. · Identical clinical record for all three engines',
   benchmark: 'Benchmark V3.3 · 100 educational questions',
-  intro: 'Q01–Q50: development set. Q51–Q100: new evaluation questions. Have the fictional reference facts reviewed by a physician. Grey means tested, not medically validated.',
-  tested: 'questions tested',
+  intro: 'Q01–Q50: development set. Q51–Q100: new evaluation questions. Have the fictional reference facts reviewed by a physician. Grey means at least one answer has been saved, not medically validated.',
+  tested: 'questions saved',
   remaining: 'remaining',
   all: 'All questions',
-  pending: 'Not yet tested',
-  done: 'Already tested',
+  pending: 'Not yet saved',
+  done: 'Saved',
   evaluation: 'New Q51–Q100',
   clearMarks: 'Reset grey question marks',
+  resetAll: 'Reset entire Lab',
+  resetAllConfirm: 'Delete ALL local trial results, grey indicators and conversation histories? Export your CSV files first. This cannot be undone.',
   resetMarksConfirm: 'Clear tested-question marks? Saved results will be kept.',
   selection: 'Selected:',
   preQuestion: 'Ask this first:',
-  standalone: 'Standalone question; reset the conversation to avoid context bias.',
+  standalone: 'Independent question: no preceding question is required.',
   show: 'Show',
   hide: 'Hide',
   reference: 'reference answer (after rating)',
@@ -78,7 +80,7 @@ const enUI = {
   stored: 'recorded responses',
   trials: 'trials',
   about: 'About this comparison',
-  aboutText: 'All three engines use the same enriched fictional record and keep separate dialogue histories. This is not yet a clinically validated comparative study. Use blinded evaluation on novel questions and track fabricated facts. Responses are saved only after clicking Save responses; physician ratings belong in the validation portal.',
+  aboutText: 'All three engines use the same clinical reference record and keep separate dialogue histories. This is not yet a clinically validated comparative study. Use blinded evaluation on novel questions and track fabricated facts. Responses are saved only after clicking Save responses; physician ratings belong in the validation portal.',
   histories: 'Show separate histories',
   notAvailable: 'Response unavailable',
   semanticError: 'Semantic model unavailable; check browser and model download.',
@@ -124,7 +126,6 @@ export default function Lab() {
   const [selected, setSelected] = useState('Q01');
   const [records, setRecords] = useState([]);
   const [reveal, setReveal] = useState(false);
-  const [tested, setTested] = useState([]);
   const [filter, setFilter] = useState('all');
   
   
@@ -148,10 +149,6 @@ export default function Lab() {
       const old = JSON.parse(localStorage.getItem('clinicaai-v32-benchmark') || '[]');
       if (Array.isArray(old)) setRecords(old);
     } catch {}
-    try {
-      const oldMarks = JSON.parse(localStorage.getItem('clinicaai-v33-tested') || '[]');
-      if (Array.isArray(oldMarks)) setTested(oldMarks);
-    } catch {}
   }, []);
 
   function persist(next) {
@@ -161,19 +158,23 @@ export default function Lab() {
     } catch {}
   }
 
-  function markTested(id) {
-    setTested((prev) => {
-      if (prev.includes(id)) return prev;
-      const next = [...prev, id];
-      try {
-        localStorage.setItem('clinicaai-v33-tested', JSON.stringify(next));
-      } catch {}
-      return next;
-    });
-  }
-
-  const doneIds = new Set([...tested, ...records.map((r) => r.questionId)]);
+  // Grey only when at least one answer was explicitly saved. Comparing never marks a question.
+  const doneIds = new Set(records.filter((r) => r && typeof r.questionId === 'string' && r.answer).map((r) => r.questionId));
   const totalDone = benchmark.items.filter((item) => doneIds.has(item.id)).length;
+
+  function resetEntireLab() {
+    // Supprime aussi les notes grises et l'historique : la réinitialisation du dialogue seule ne suffit pas.
+    localStorage.removeItem('clinicaai-v32-benchmark');
+    setRecords([]);
+    setResults(initial);
+    setHistory({rules: [], semantic: [], generative: []});
+    setErrors({});
+    setLoading(false);
+    setReveal(false);
+    setFilter('all');
+    setSelected('Q01');
+    setQuestion(language === 'en' ? offlineQuestions.Q01 : benchmark.items.find(x=>x.id==='Q01')?.question || '');
+  }
 
   function choose(item) {
     setSelected(item.id);
@@ -260,7 +261,6 @@ export default function Lab() {
   }
 
   function saveTrial() {
-    markTested(selectedItem.id);
     const engines = engineOrder.filter((k) => results[k]?.answer);
     if (!engines.length) return;
     const timestamp = new Date().toISOString();
@@ -362,7 +362,6 @@ export default function Lab() {
     
     
     setLoading(false);
-    if (rule.answer || semantic || generative) markTested(selectedItem.id);
   }
 
   const box = 'bg-white border border-slate-200 rounded-2xl p-5 shadow-sm';
@@ -388,9 +387,9 @@ export default function Lab() {
           <div className="clinicaai-lab-left min-w-0 space-y-5">
             <div className={box}>
               <h2 className="text-lg font-bold mb-2">{tr('benchmark', 'Benchmark V3.3 · 100 questions pédagogiques')}</h2>
-              <p className="text-sm text-slate-600 mb-2">{tr('intro', 'Q01–Q50 : développement déjà effectué. Q51–Q100 : nouvelles questions pour l’évaluation. Faites valider les références fictives par un médecin. Le gris signifie « question déjà testée », pas « médicalement validée ».')}</p>
+              <p className="text-sm text-slate-600 mb-2">{tr('intro', 'Q01–Q50 : développement déjà effectué. Q51–Q100 : nouvelles questions pour l’évaluation. Faites valider les références fictives par un médecin. Le gris signifie « réponse enregistrée », pas « médicalement validée ».')}</p>
               <div className="flex items-center justify-between gap-2 flex-wrap text-sm mb-2">
-                <strong>{totalDone} / 100 {tr('tested', 'questions testées')}</strong>
+                <strong>{totalDone} / 100 {tr('tested', 'questions sauvegardées')}</strong>
                 <span>{100 - totalDone} {tr('remaining', 'restantes')}</span>
               </div>
               <div className="h-2 rounded bg-slate-200 overflow-hidden mb-3">
@@ -399,27 +398,16 @@ export default function Lab() {
               <div className="flex flex-wrap gap-2 mb-2">
                 <select aria-label="Filtrer les questions" className="border rounded-lg p-2 text-sm" value={filter} onChange={(e) => setFilter(e.target.value)}>
                   <option value="all">{tr('all', 'Toutes les questions')}</option>
-                  <option value="pending">{tr('pending', 'Non testées')}</option>
-                  <option value="done">{tr('done', 'Déjà testées')}</option>
+                  <option value="pending">{tr('pending', 'Non sauvegardées')}</option>
+                  <option value="done">{tr('done', 'Sauvegardées')}</option>
                   <option value="evaluation">{tr('evaluation', 'Nouvelles Q51–Q100')}</option>
                 </select>
-                <button
-                  type="button"
-                  className="text-xs underline"
-                  onClick={() => {
-                    if (confirm(tr('resetMarksConfirm', 'Effacer seulement les marques grises des questions testées ? (les résultats exportables restent conservés)'))) {
-                      setTested([]);
-                      localStorage.removeItem('clinicaai-v33-tested');
-                    }
-                  }}
-                >
-                  {tr('clearMarks', 'Réinitialiser les marques grises')}
-                </button>
+                <button type="button" className="rounded-lg border border-red-300 px-3 py-2 text-xs text-red-700 hover:bg-red-50" onClick={() => {if (confirm(tr('resetAllConfirm', 'Supprimer tous les résultats locaux, les indicateurs gris et les historiques des conversations ? Exportez vos fichiers CSV avant : cette opération est irréversible.'))) resetEntireLab();}}>{tr('resetAll', 'Tout réinitialiser (Lab)')}</button>
               </div>
               <p className="text-xs text-slate-600 mb-2">
                 {language === 'en'
-                  ? 'Pedagogical order: follow-up questions are displayed next to their related question. Original question IDs are retained for exported results.'
-                  : 'Ordre pédagogique : les questions de suivi sont rapprochées des questions associées. Les identifiants d’origine sont conservés pour les résultats exportés.'}
+                  ? 'All questions are self-contained. They are grouped by clinical theme; IDs now follow clinical order from Q01 to Q100.'
+                  : 'Chaque question est autonome. Les questions sont regroupées par thème clinique ; les identifiants d’origine sont conservés pour les exports.'}
               </p>
               <div role="list" aria-label="Questions du benchmark" className="max-h-[28rem] overflow-y-auto overscroll-contain rounded-xl border border-slate-200 p-2 space-y-1">
                 {benchmark.items
@@ -448,14 +436,7 @@ export default function Lab() {
               </div>
               <p className="text-xs text-slate-600 mt-2">
                 {tr('selection', 'Sélection :')} {selectedItem.id}.{' '}
-                {(selectedItem.category === 'suivi' || selectedItem.category === 'contextuelle') && selectedItem.preQuestion
-                  ? tr('preQuestion', 'Pré-question à poser d’abord : ') +
-                    (language === 'en'
-                      ? benchmark.items.find((x) => x.question === selectedItem.preQuestion)?.id
-                        ? offlineQuestions[benchmark.items.find((x) => x.question === selectedItem.preQuestion).id]
-                        : selectedItem.preQuestion
-                      : selectedItem.preQuestion)
-                  : tr('standalone', 'Question autonome ; réinitialisez la conversation pour éviter les biais de contexte.')}
+                {tr('standalone', 'Question autonome : aucune question préalable nécessaire.')}
               </p>
               <button className="text-sm underline mt-2" type="button" onClick={() => setReveal((x) => !x)}>
                 {reveal ? tr('hide', 'Masquer') : tr('show', 'Afficher')} {tr('reference', 'la réponse de référence (après notation)')}
@@ -555,7 +536,7 @@ export default function Lab() {
 
             <div className={box}>
               <h2 className="font-semibold">{tr('about', 'À propos de cette comparaison')}</h2>
-              <p className="text-sm mt-2">{tr('aboutText', 'Les trois moteurs utilisent désormais le même dossier enrichi fictif et chaque moteur conserve son propre historique. Ce n’est pas encore une étude comparative validée : les jugements doivent être faits à l’aveugle sur des questions inédites, en surveillant les faits inventés. Les réponses sont enregistrées ici ; leur évaluation médicale se fait dans le portail dédié.')}</p>
+              <p className="text-sm mt-2">{tr('aboutText', 'Les trois moteurs utilisent le même dossier clinique de référence et chaque moteur conserve son propre historique. Ce n’est pas encore une étude comparative validée : les jugements doivent être faits à l’aveugle sur des questions inédites, en surveillant les faits inventés. Les réponses sont enregistrées ici ; leur évaluation médicale se fait dans le portail dédié.')}</p>
               <label className="text-sm flex gap-2 items-center mt-3">
                 <input type="checkbox" checked={showHistory} onChange={(e) => setShowHistory(e.target.checked)} />
                 {tr('histories', 'Voir les historiques séparés')}

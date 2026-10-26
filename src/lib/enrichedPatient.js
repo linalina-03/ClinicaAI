@@ -1,6 +1,7 @@
 // ClinicaAI V2.3.1 : banque de réponses CLINIQUES SYNTHÉTIQUES pour Mme N.
 // Aucun fait clinique n'est généré par le modèle IA ; les réponses sont prédéfinies.
 import bank from '../data/enrichment/ep-postop-enriched.json';
+import { misleadingFeverPEAnswer } from './leadingQuestion.js';
 
 export function normalizeClinical(text) {
   return String(text ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -123,6 +124,8 @@ function localContinuation(q,context){
 export function enrichedAnswer(clinicalCase,question,previousIntent=null){
  const context=previousIntent&&typeof previousIntent==='object'?previousIntent:{previousIntent};
  if(clinicalCase?.id!=='ep-postop')return null;
+ const special=misleadingFeverPEAnswer(clinicalCase.id,question);
+ if(special)return {...special,teaching:'Une absence de fièvre ne permet pas d’éliminer une embolie pulmonaire.',provenance:'fiction_pedagogique',intent:'fievre'};
  const q=normalizeClinical(question);
  if(!q)return null;
  let hit=localContinuation(q,context),how='mémoire conversationnelle';
@@ -136,9 +139,9 @@ export function enrichedAnswer(clinicalCase,question,previousIntent=null){
 }
 export function enrichedTutor(ans){
  if(!ans)return null;
- return {type:'enriched',label:ans.provenance==='clarification' || ans.intent==='pied_modification'?'Question à préciser':ans.intent==='accueil'?'Accueil de consultation':'Question pertinente · scénario enrichi',
+ return {type:'enriched',label:ans.provenance==='clarification' || ans.intent==='pied_modification'?'Question à préciser':ans.intent==='accueil'?'Accueil de consultation':'Question pertinente · scénario clinique',
    documented:ans.provenance!=='clarification',undocumented:ans.provenance==='clarification',
-   explanation:ans.teaching + (ans.provenance==='fiction_pedagogique'?' (Donnée fictive pédagogique, non issue du cas publié.)':''),
+   explanation:ans.teaching + (ans.provenance==='fiction_pedagogique'?' (Donnée de simulation à vérifier par rapport à la source initiale.)':''),
    followUp:ans.intent==='pied_modification'?'Parlez-vous d’un gonflement, d’une douleur ou d’une couleur anormale ?':null};
 }
 export const enrichmentStatistics = {intents:bank.entries.length,formulations:bank.entries.reduce((n,x)=>n+x.variants.length,0)};
