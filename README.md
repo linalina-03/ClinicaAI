@@ -7,7 +7,7 @@
 > **Sans clé API et sans abonnement à un service d'IA.**
 
 **Code source :** https://github.com/linalina-03/clinicaai  
-**Démonstration en ligne :**https://clinicai-iuklsprl8-lina-ecee.vercel.app/lab)
+**Démonstration en ligne :** https://clinicaai-m2lg58wau-lina-ecee.vercel.app/
 
 ---
 
