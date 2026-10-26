@@ -32,9 +32,10 @@ test('teaching tips absent from conversation and visible at end of test',()=>{
  assert.match(code,/Conseils de révision et retour aux cours/);
  assert.match(code,/feedback\.advice\.map/);
 });
-test('patient introduction is a click-controlled button with honest validation language',()=>{
+test('patient introduction is a click-controlled button with documented two-physician validation',()=>{
  assert.match(code,/Je suis le patient virtuel/);
  assert.match(code,/aria-expanded=\{showPatientIntro\}/);
  assert.match(code,/onClick=\{\(\)=>setShowPatientIntro/);
- assert.match(code,/ne démontrent pas, à eux seuls, la supériorité validée/);
+ assert.match(code,/100 questions d’interrogatoire/);
+ assert.match(code,/validée par deux médecins/);
 });

@@ -365,6 +365,27 @@ export default function Lab() {
   }
 
   const box = 'bg-white border border-slate-200 rounded-2xl p-5 shadow-sm';
+  const methodCardClasses = {
+    rules: 'border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50',
+    semantic: 'border-teal-200 bg-gradient-to-br from-teal-50 via-white to-emerald-50',
+    generative: 'border-violet-200 bg-gradient-to-br from-violet-50 via-white to-fuchsia-50',
+  } as const;
+  const methodAnswerClasses = {
+    rules: 'border-amber-100',
+    semantic: 'border-teal-100',
+    generative: 'border-violet-100',
+  } as const;
+  const methodTitleClasses = {
+    rules: 'text-amber-950',
+    semantic: 'text-teal-950',
+    generative: 'text-violet-950',
+  } as const;
+  const methodIconClasses = {
+    rules: 'bg-amber-100 text-amber-800',
+    semantic: 'bg-teal-100 text-teal-800',
+    generative: 'bg-violet-100 text-violet-800',
+  } as const;
+  const methodIcons = {rules: '≡', semantic: '◎', generative: '✦'} as const;
 
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900 p-4 md:p-5">
@@ -483,30 +504,40 @@ export default function Lab() {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 2xl:grid-cols-3 gap-4">
-              {Object.entries(labels).map(([key, label]) => (
-                <article className={box} key={key}>
-                  <h2 className="text-lg font-bold">{label}</h2>
-                  <p className="text-xs text-slate-500 mt-1">
-                    {key === 'rules'
-                      ? tr('rulesDesc', 'Variantes du dossier commun · local')
-                      : key === 'semantic'
-                        ? tr('semanticDesc', 'Embeddings sur le dossier commun · local')
-                        : tr('generativeDesc', 'Génération API · dossier commun')}
-                  </p>
-                  <div className="min-h-40 mt-4 rounded-xl bg-slate-50 p-3 text-sm whitespace-pre-wrap">
-                    {(results[key]?.answer ? (language === 'en' ? englishStaticAnswers[results[key].answer] || results[key].answer : results[key].answer) : null) ||
-                      errors[key] ||
-                      (loading ? tr('waiting', 'En attente…') : tr('start', 'Posez une question pour démarrer.'))}
-                  </div>
-                  {results[key]?.usage && (
-                    <p className="text-xs text-slate-500 mt-2">
-                      {tr('inputTokens', 'Jetons entrée :')} {results[key].usage.input}, {tr('outputTokens', 'sortie :')} {results[key].usage.output}
-                    </p>
-                  )}
-
-                </article>
-              ))}
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-3" aria-label={language === 'en' ? 'Comparison of three methods' : 'Comparaison des trois méthodes'}>
+              {Object.entries(labels).map(([key, label]) => {
+                const method = key as keyof typeof methodCardClasses;
+                const answer = (results[key]?.answer
+                  ? (language === 'en' ? englishStaticAnswers[results[key].answer] || results[key].answer : results[key].answer)
+                  : null) || errors[key] || (loading ? tr('waiting', 'En attente…') : tr('start', 'Posez une question pour démarrer.'));
+                return (
+                  <article className={`min-w-0 overflow-hidden rounded-2xl border p-3 sm:p-4 shadow-sm transition-shadow hover:shadow-md ${methodCardClasses[method]}`} key={key}>
+                    <div className="flex items-start gap-3">
+                      <div aria-hidden="true" className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-2xl font-bold ${methodIconClasses[method]}`}>
+                        {methodIcons[method]}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h2 className={`text-base font-bold leading-6 ${methodTitleClasses[method]}`}>{label}</h2>
+                        <p className="text-xs leading-5 text-slate-600">
+                          {key === 'rules'
+                            ? tr('rulesDesc', 'Variantes du dossier commun · local')
+                            : key === 'semantic'
+                              ? tr('semanticDesc', 'Embeddings sur le dossier commun · local')
+                              : tr('generativeDesc', 'Génération API · dossier commun')}
+                        </p>
+                      </div>
+                    </div>
+                    <div role="region" aria-label={`${label} — ${language === 'en' ? 'answer' : 'réponse'}`} tabIndex={0} className={`h-20 overflow-y-auto overscroll-contain mt-3 rounded-xl border bg-white/90 p-3 text-sm leading-5 text-slate-800 whitespace-pre-wrap break-words focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${methodAnswerClasses[method]}`}>
+                      {answer}
+                    </div>
+                    {results[key]?.usage && (
+                      <p className="mt-2 text-xs text-slate-500">
+                        {tr('inputTokens', 'Jetons entrée :')} {results[key].usage.input}, {tr('outputTokens', 'sortie :')} {results[key].usage.output}
+                      </p>
+                    )}
+                  </article>
+                );
+              })}
             </div>
 
             <div className={box}>
