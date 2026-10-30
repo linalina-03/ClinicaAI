@@ -7,7 +7,7 @@ const guide:Record<HelpTopic,{intro:string;steps:[string,string,string]}>= {
  triage:{intro:'Évalue d’abord la stabilité hémodynamique et respiratoire du patient. Recherche les signes de gravité et hiérarchise les priorités, sans attendre les examens pour reconnaître une urgence.',steps:[
  'Rédige spontanément ton évaluation initiale : ABCDE, constantes, signes de choc et probabilité clinique, selon les données disponibles. Ne te préoccupe pas encore des propositions.',
  'Coche uniquement les évaluations et décisions que tu juges adaptées à ce patient. Certaines options sont volontairement inappropriées.',
- 'Explique quelles actions sont prioritaires, dans quel ordre et pourquoi. Valide ensuite tes décisions. La correction Gemini sera proposée après la fin du cas.'
+ 'Explique quelles actions sont prioritaires, dans quel ordre et pourquoi. Valide ensuite tes décisions. La correction Generative AI sera proposée après la fin du cas.'
  ]},
  diagnosis:{intro:'Propose des hypothèses à partir de l’interrogatoire et des examens, distingue les diagnostics différentiels puis choisis celui que tu estimes le plus probable.',steps:[
  'Écris tes hypothèses et tes arguments POUR et CONTRE sans regarder les réponses proposées. Cette première réflexion sert à évaluer ton raisonnement spontané.',
@@ -24,7 +24,7 @@ const guideEn:typeof guide={
  triage:{intro:'Assess airway, breathing, circulation, clinical stability and urgent warning signs before planning investigations.',steps:[
  'Describe your initial ABCDE assessment, vital signs, signs of shock and estimated clinical probability without seeing the options.',
  'Select only the assessments and actions you consider appropriate. Some options are deliberately unsuitable.',
- 'Explain your priorities and sequence of actions, then confirm. Gemini feedback is available after completing the case.'
+ 'Explain your priorities and sequence of actions, then confirm. Generative AI feedback is available after completing the case.'
  ]},
  diagnosis:{intro:'Build a differential diagnosis using the history and investigations, then identify the most likely diagnosis.',steps:[
  'Write your hypotheses and evidence for and against each diagnosis before seeing the options.',

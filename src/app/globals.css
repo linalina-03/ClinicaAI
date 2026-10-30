@@ -87,3 +87,7 @@ body {
   line-height: 1.6;
   overflow-wrap: anywhere;
 }
+
+/* High-contrast document links in both light and dark themes. */
+a.clinicaai-doc-link, a.clinicaai-doc-link:visited { background-color:#1e3a8a !important; color:#ffffff !important; border:2px solid #1e3a8a !important; text-decoration:none !important; opacity:1 !important; visibility:visible !important; }
+a.clinicaai-doc-link:hover, a.clinicaai-doc-link:focus-visible { background-color:#172554 !important; color:#ffffff !important; outline:3px solid #f59e0b; outline-offset:2px; }

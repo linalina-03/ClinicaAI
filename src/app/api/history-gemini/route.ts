@@ -30,9 +30,9 @@ export async function POST(req:NextRequest){
  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),20000);
  try{
   const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':key},signal:ctrl.signal,body:JSON.stringify({contents:[{role:'user',parts:[{text:sharedPrompt}]}],generationConfig:{temperature:0,maxOutputTokens:200}})});
-  if(!r.ok)return NextResponse.json({error:`Gemini indisponible (HTTP ${r.status}).`},{status:502});
+  if(!r.ok)return NextResponse.json({error:`Generative AI indisponible (HTTP ${r.status}).`},{status:502});
   const data=await r.json(),answer=data?.candidates?.[0]?.content?.parts?.map((p:any)=>p.text||'').join('').trim();
-  if(!answer)return NextResponse.json({error:'Gemini n’a pas répondu.'},{status:502});
+  if(!answer)return NextResponse.json({error:'Generative AI n’a pas répondu.'},{status:502});
   return NextResponse.json({answer:answer.slice(0,1000)},{headers:{'Cache-Control':'no-store'}});
- }catch{return NextResponse.json({error:'Gemini inaccessible ou délai dépassé.'},{status:502})}finally{clearTimeout(timer)}
+ }catch{return NextResponse.json({error:'Generative AI inaccessible ou délai dépassé.'},{status:502})}finally{clearTimeout(timer)}
 }

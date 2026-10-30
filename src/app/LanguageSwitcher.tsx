@@ -30,7 +30,7 @@ const dictionary:Record<string,string>={
  'Rédigez votre réponse':'Write your answer','Question clinique':'Clinical question',
  'Sélectionnez les éléments pertinents':'Select the relevant items',
  'Valider':'Confirm','Suivant':'Next','Précédent':'Previous',
- 'Lancer la correction IA':'Run AI feedback','Correction par Gemini':'Gemini feedback',
+ 'Lancer la correction IA':'Run AI feedback','Correction par Generative AI':'Generative AI feedback',
  'Réponse du patient':'Patient response','Question de l’étudiant':'Student question',
  'Résultat':'Result','Motif de consultation':'Reason for consultation',
  'Examens sélectionnés':'Selected investigations',
@@ -41,7 +41,7 @@ const dictionary:Record<string,string>={
  'Interprétation indicative, sans points supplémentaires.':'Illustrative interpretation; no additional points.',
  'Aide pédagogique':'Learning guidance', 'Comment ça marche ?':'How does it work?',
  'Hypothèses diagnostiques':'Diagnostic hypotheses', 'Arguments cliniques':'Clinical arguments',
- 'Corriger avec Gemini':'Grade with Gemini'
+ 'Corriger avec Generative AI':'Grade with Generative AI'
 };
 function eligible(t:string){const s=t.trim();return !!s&&s.length>=3&&s.length<=1500&&/[a-zA-ZÀ-ÿ]/.test(s)&&!/^\d[\d\s,./:-]*$/.test(s)}
 // Clinical source texts have pretranslated equivalents; no translation request is sent for UI rendering.

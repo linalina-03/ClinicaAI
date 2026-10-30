@@ -39,16 +39,16 @@ export async function POST(request: NextRequest) {
   const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),20000);
   try {
     const model=process.env.GEMINI_MODEL||'gemini-2.5-flash-lite';
-    if(!/^[a-zA-Z0-9._-]+$/.test(model))return NextResponse.json({error:'Invalid Gemini model setting.'},{status:500});
+    if(!/^[a-zA-Z0-9._-]+$/.test(model))return NextResponse.json({error:'Invalid Generative AI model setting.'},{status:500});
     const upstream=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{
       method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':apiKey},signal:controller.signal,
       body:JSON.stringify({system_instruction:{parts:[{text:system}]},contents:[{role:'user',parts:[{text:JSON.stringify({selected_fact:fact,case_context:related})}]}],generationConfig:{temperature:0.1,maxOutputTokens:650,responseMimeType:'application/json'}})
     });
     const raw=await upstream.json().catch(()=>({}));
-    if(!upstream.ok)return NextResponse.json({error:upstream.status===429?'Gemini quota reached.':`Gemini service unavailable (HTTP ${upstream.status}).`},{status:502,headers:noStore});
+    if(!upstream.ok)return NextResponse.json({error:upstream.status===429?'Generative AI quota reached.':`Generative AI service unavailable (HTTP ${upstream.status}).`},{status:502,headers:noStore});
     const responseText=raw?.candidates?.[0]?.content?.parts?.map((p:{text?:string})=>p.text||'').join('')||'';
     let parsed: Record<string,unknown>;
-    try {parsed=JSON.parse(responseText)}catch{return NextResponse.json({error:'Gemini did not return a valid structured review.'},{status:502,headers:noStore})}
+    try {parsed=JSON.parse(responseText)}catch{return NextResponse.json({error:'Generative AI did not return a valid structured review.'},{status:502,headers:noStore})}
     const allowedIds=new Set([fact.id,...related.map(r=>r.id)]);
     const short=(value:unknown,len=700)=>typeof value==='string'?value.slice(0,len):'';
     return NextResponse.json({review:{
@@ -58,6 +58,6 @@ export async function POST(request: NextRequest) {
       suggested_fr:short(parsed.suggested_fr,500),suggested_en:short(parsed.suggested_en,500),
       evidence_ids:Array.isArray(parsed.evidence_ids)?parsed.evidence_ids.filter((x:unknown)=>typeof x==='string'&&allowedIds.has(x)).slice(0,10):[]
     },model,disclaimer:lang==='fr'?'Suggestion IA uniquement. La fidélité aux publications nécessite la vérification des sources et l’approbation médicale.':'AI suggestion only. Publication fidelity requires direct source verification and physician approval.'},{headers:noStore});
-  } catch {return NextResponse.json({error:'Gemini request failed or timed out.'},{status:502,headers:noStore})}
+  } catch {return NextResponse.json({error:'Generative AI request failed or timed out.'},{status:502,headers:noStore})}
   finally {clearTimeout(timer)}
 }

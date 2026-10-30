@@ -1,0 +1,4 @@
+﻿lot;questionId;category;question;codeReponse;answer;comprehension;fidelite;naturel;hallucination;comment
+"1";"Q10";"simple";"Do you have abdominal pain?";"A";"No, I do not have any particular abdominal pain.";"";"";"";"";""
+"1";"Q10";"simple";"Do you have abdominal pain?";"B";"No, I do not have any particular abdominal pain.";"";"";"";"";""
+"1";"Q10";"simple";"Do you have abdominal pain?";"C";"No, I do not have any particular abdominal pain.";"";"";"";"";""

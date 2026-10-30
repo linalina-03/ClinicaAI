@@ -14,12 +14,12 @@ const engineLabels = {
   fr: {
     rules: 'Règles seules',
     semantic: 'Sémantique seule',
-    generative: 'IA générative (Gemini)',
+    generative: 'IA générative',
   },
   en: {
     rules: 'Rules only',
     semantic: 'Semantic only',
-    generative: 'Generative AI (Gemini)',
+    generative: 'Generative AI',
   },
 };
 
@@ -260,6 +260,15 @@ export default function Lab() {
     setTimeout(() => URL.revokeObjectURL(url), 500);
   }
 
+  // Use the same localized answer for display, storage and blinded CSV export.
+  function visibleAnswer(engine, answer, lang = language) {
+    if (!answer) return '';
+    if (lang === 'en' && (engine === 'rules' || engine === 'semantic')) {
+      return englishStaticAnswers[answer] || answer;
+    }
+    return answer;
+  }
+
   function saveTrial() {
     const engines = engineOrder.filter((k) => results[k]?.answer);
     if (!engines.length) return;
@@ -273,7 +282,8 @@ export default function Lab() {
         category: selectedItem.category,
         question: question.trim(),
         engine,
-        answer: results[engine]?.answer || '',
+        answer: visibleAnswer(engine, results[engine]?.answer),
+        language,
         expectedIds: selectedItem.expectedIds.join('|'),
         reference: selectedItem.reference,
         comprehension: '',
@@ -508,7 +518,7 @@ export default function Lab() {
               {Object.entries(labels).map(([key, label]) => {
                 const method = key as keyof typeof methodCardClasses;
                 const answer = (results[key]?.answer
-                  ? (language === 'en' ? englishStaticAnswers[results[key].answer] || results[key].answer : results[key].answer)
+                  ? visibleAnswer(key, results[key].answer)
                   : null) || errors[key] || (loading ? tr('waiting', 'En attente…') : tr('start', 'Posez une question pour démarrer.'));
                 return (
                   <article className={`min-w-0 overflow-hidden rounded-2xl border p-3 sm:p-4 shadow-sm transition-shadow hover:shadow-md ${methodCardClasses[method]}`} key={key}>

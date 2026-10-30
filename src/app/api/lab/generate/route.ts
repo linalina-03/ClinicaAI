@@ -9,7 +9,7 @@ const windows = new Map<string,{start:number,count:number}>();
 const LIMIT = 12;
 export async function POST(request: NextRequest) {
   const key=process.env.GEMINI_API_KEY;
-  if (!key) return NextResponse.json({error:'Clé Gemini non configurée sur le serveur. Consultez README-LAB.md.'},{status:503});
+  if (!key) return NextResponse.json({error:'Clé Generative AI non configurée sur le serveur. Consultez README-LAB.md.'},{status:503});
   const ip=(request.headers.get('x-forwarded-for')||'local').split(',')[0].trim().slice(0,80);
   const now=Date.now(); const prev=windows.get(ip);
   if (!prev||now-prev.start>60000) windows.set(ip,{start:now,count:1});
@@ -35,10 +35,10 @@ export async function POST(request: NextRequest) {
       body:JSON.stringify({system_instruction:{parts:[{text:system}]},contents:[{role:'user',parts:[{text:`Historique :\n${dialogue}\n\nQuestion de l'étudiant : ${input.question}\n\nRéponse de la patiente :` }]}],generationConfig:{temperature:0.2,maxOutputTokens:240}})
     });
     const raw=await resp.json().catch(()=>({}));
-    if(!resp.ok)return NextResponse.json({error:resp.status===429?'Quota gratuit Gemini atteint.':resp.status===400?'Vérifiez le modèle Gemini et la configuration API.':'Service Gemini indisponible.',providerStatus:resp.status},{status:502});
+    if(!resp.ok)return NextResponse.json({error:resp.status===429?'Quota gratuit Generative AI atteint.':resp.status===400?'Vérifiez le modèle Generative AI et la configuration API.':'Service Generative AI indisponible.',providerStatus:resp.status},{status:502});
     const answer=raw?.candidates?.[0]?.content?.parts?.map((p:{text?:string})=>p.text||'').join(' ').trim();
     if(!answer)return NextResponse.json({error:'Aucune réponse générée.'},{status:502});
     return NextResponse.json({answer:answer.slice(0,1200),model,usage:raw.usageMetadata?{input:raw.usageMetadata.promptTokenCount||0,output:raw.usageMetadata.candidatesTokenCount||0}:null},{headers:{'Cache-Control':'no-store'}});
-  }catch{return NextResponse.json({error:'Échec de communication avec Gemini ou délai dépassé.'},{status:502});}
+  }catch{return NextResponse.json({error:'Échec de communication avec Generative AI ou délai dépassé.'},{status:502});}
   finally{clearTimeout(timer);}
 }

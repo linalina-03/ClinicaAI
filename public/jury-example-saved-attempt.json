@@ -1,0 +1,256 @@
+{
+  "format": "clinicaai-saved-attempt",
+  "version": 1,
+  "attempt": {
+    "id": "session-1793367264511-d0fq7",
+    "name": "Dyspnée après chirurgie orthopédique — 30/10/2026 14:34:20",
+    "data": {
+      "version": 1,
+      "finished": true,
+      "caseIndex": 0,
+      "language": "en",
+      "chat": [
+        {
+          "role": "student",
+          "text": "What brought you to the emergency department today?"
+        },
+        {
+          "role": "patient",
+          "text": "I have been short of breath for three days; that is why I came to the emergency department."
+        },
+        {
+          "role": "student",
+          "text": "When did your shortness of breath start?"
+        },
+        {
+          "role": "patient",
+          "text": "It started three days ago."
+        },
+        {
+          "role": "student",
+          "text": "Did it start suddenly or gradually?"
+        },
+        {
+          "role": "patient",
+          "text": "It developed over the last few days, not all at once."
+        },
+        {
+          "role": "student",
+          "text": "Do you have chest pain when breathing deeply?"
+        },
+        {
+          "role": "patient",
+          "text": "Yes, I sometimes feel a sharp pain on the right side of my chest when I take a deep breath."
+        },
+        {
+          "role": "student",
+          "text": "Have you had a cough or fever?"
+        },
+        {
+          "role": "patient",
+          "text": "I cough a little, but rarely, and do not bring up much mucus. No, I have not had fever or chills."
+        },
+        {
+          "role": "student",
+          "text": "Have you noticed swelling or pain in either leg?"
+        },
+        {
+          "role": "patient",
+          "text": "I have not noticed unusual pain in either calf, though my operated knee is still tender, and my operated leg sometimes feels uncomfortable. I have not noticed any new swelling in just one calf."
+        },
+        {
+          "role": "student",
+          "text": "Have you undergone surgery recently?"
+        },
+        {
+          "role": "patient",
+          "text": "Yes, I had surgery for a tibial plateau fracture one week ago."
+        },
+        {
+          "role": "student",
+          "text": "Have you been able to walk normally since the operation?"
+        },
+        {
+          "role": "patient",
+          "text": "Since the operation, I have been walking very little and use crutches; I am not in bed all day. I was told to limit weight-bearing on my operated leg."
+        },
+        {
+          "role": "student",
+          "text": "Are you currently taking any medication?"
+        },
+        {
+          "role": "patient",
+          "text": "I take medications prescribed after the operation, but I do not have the prescription with me."
+        },
+        {
+          "role": "student",
+          "text": "Have you ever had a pulmonary embolism or deep vein thrombosis?"
+        },
+        {
+          "role": "patient",
+          "text": "No, I have never had deep vein thrombosis or pulmonary embolism before."
+        }
+      ],
+      "visited": [
+        "debut",
+        "douleur",
+        "fievre",
+        "jambe",
+        "chirurgie"
+      ],
+      "tests": [
+        "ecg",
+        "ddimer",
+        "creatinine",
+        "nfs",
+        "troponine",
+        "irm_thoracique"
+      ],
+      "examsValidated": true,
+      "historyValidated": true,
+      "clinicalAnswers": {
+        "triage": "Réflexion spontanée : The patient is a 45-year-old woman presenting with shortness of breath, tachycardia and tachypnea after recent orthopedic surgery.\n\nMy first concern is a possible pulmonary embolism, although pneumonia is another possibility.\n\nI would assess her general condition, check her vital signs and oxygen saturation, and look for signs of respiratory distress.\n\nShe appears hemodynamically stable because her blood pressure is normal, but I would continue monitoring her closely.\n\nI would also assess the clinical probability of pulmonary embolism using the Wells score.\nActions sélectionnées : Évaluer conscience, voies aériennes et respiration (ABCDE) ; Rechercher signes de choc et d’hypoperfusion ; Estimer la probabilité clinique prétest (Wells/Genève selon contexte) ; Rechercher facteurs de risque hémorragique et contre-indications\nJustification finale : ",
+        "diagnosis": "Hypothèses spontanées : My main diagnosis is pulmonary embolism because the patient has shortness of breath, tachycardia, pleuritic chest pain and recent orthopedic surgery with reduced mobility.\n\nI would also consider pneumonia, although the absence of fever makes it less likely.\n\nAnother possibility is an acute cardiac condition, but the postoperative context strongly suggests a thromboembolic event.\n\nI would assess the probability of pulmonary embolism and use appropriate imaging to confirm the diagnosis.\nHypothèses retenues : Embolie pulmonaire\nDiagnostic principal : ",
+        "management": "Réflexion spontanée : Rédaction\n\n\n\n\n\nI would keep the patient under close clinical monitoring and regularly reassess her respiratory and hemodynamic status.\n\nI would establish intravenous access and arrange a CT pulmonary angiogram if appropriate.\n\nI would administer oxygen if she develops hypoxemia.\n\nBecause pulmonary embolism is strongly suspected, I would discuss early anticoagulation while carefully evaluating her recent surgery, bleeding risk and contraindications.\n\nI would seek senior medical advice and monitor for any signs of clinical deterioration.\nActions sélectionnées : Surveiller et réévaluer l’état hémodynamique et respiratoire ; Oxygène si hypoxémie, selon besoins cliniques ; Rechercher les facteurs déclenchants et les risques de récidive sans bilan indiscriminé ; Organiser suivi clinique, surveillance des saignements et réévaluation respiratoire ; Envisager une reperfusion uniquement si les indications sont réunies ; Réaliser une thrombolyse systématique chez tout patient stable\nJustification finale : "
+      },
+      "diagnosticStep": 2,
+      "hypothesisText": "My main diagnosis is pulmonary embolism because the patient has shortness of breath, tachycardia, pleuritic chest pain and recent orthopedic surgery with reduced mobility.\n\nI would also consider pneumonia, although the absence of fever makes it less likely.\n\nAnother possibility is an acute cardiac condition, but the postoperative context strongly suggests a thromboembolic event.\n\nI would assess the probability of pulmonary embolism and use appropriate imaging to confirm the diagnosis.",
+      "hypothesisSelections": [
+        "ep"
+      ],
+      "primaryDiagnosis": "",
+      "diagnosticLocked": true,
+      "aiDiagnosticGrade": {
+        "scores": {
+          "spontane": 5,
+          "differentiel": 0,
+          "principal": 0,
+          "arguments": 2
+        },
+        "total": 7,
+        "pointsForts": [
+          "The student spontaneously identified pulmonary embolism and provided relevant supporting clinical features from the case.",
+          "The student correctly recognized the importance of recent orthopedic surgery and reduced mobility as risk factors.",
+          "The student appropriately mentioned assessing pretest probability and confirming the diagnosis with imaging."
+        ],
+        "ameliorations": [
+          "Ensure the final diagnostic selection is explicitly filled out in the designated primary diagnosis field.",
+          "Include structured differential considerations within the selected options rather than solely in the free text."
+        ],
+        "vigilance": [
+          "Leaving the primary diagnosis field empty results in a zero score for that section despite correct free-text reasoning.",
+          "Failure to check the corresponding hypothesis box impacts the score for selected propositions."
+        ],
+        "incertitude": "The score is indicative and must be reviewed by a physician.",
+        "method": "gemini_indicatif"
+      },
+      "geminiHistoryGrade": {
+        "total": 18,
+        "max": 20,
+        "pointsForts": [
+          "Thorough exploration of the onset and temporal characteristics of the dyspnea",
+          "Good identification of associated symptoms such as pleuritic chest pain and cough",
+          "Excellent elicitation of major risk factors including recent orthopedic surgery and reduced mobility"
+        ],
+        "ameliorations": [
+          "Could have explored red flags for massive pulmonary embolism more comprehensively (e.g., syncope, signs of right heart strain)",
+          "Could have clarified the exact postoperative thromboprophylaxis regimen"
+        ],
+        "method": "Gemini, non certifiant"
+      },
+      "geminiExamsGrade": {
+        "total": 14,
+        "max": 25,
+        "pointsForts": [
+          "Appropriate selection of baseline diagnostic workup including ECG and D-dimers for a stable patient with suspected pulmonary embolism",
+          "Inclusion of renal function (creatinine and eGFR) and cardiac biomarkers (troponin)"
+        ],
+        "ameliorations": [
+          "Ordering chest MRI is inappropriate and clinically unjustified for suspected pulmonary embolism in an emergency setting; chest CT angiography or V/Q scan should have been selected instead",
+          "Redundant or missing standard initial imaging (e.g., chest X-ray or CT pulmonary angiography)"
+        ],
+        "method": "Gemini, non certifiant"
+      },
+      "message": "",
+      "sections": {
+        "triage": {
+          "step": 1,
+          "free": "The patient is a 45-year-old woman presenting with shortness of breath, tachycardia and tachypnea after recent orthopedic surgery.\n\nMy first concern is a possible pulmonary embolism, although pneumonia is another possibility.\n\nI would assess her general condition, check her vital signs and oxygen saturation, and look for signs of respiratory distress.\n\nShe appears hemodynamically stable because her blood pressure is normal, but I would continue monitoring her closely.\n\nI would also assess the clinical probability of pulmonary embolism using the Wells score.",
+          "selected": [
+            "airway",
+            "perfusion",
+            "pretest",
+            "bleed"
+          ],
+          "justification": "",
+          "locked": true,
+          "grade": {
+            "total": 10,
+            "scores": {
+              "spontane": 6,
+              "choix": 4,
+              "priorites": 0,
+              "justification": 0
+            },
+            "pointsForts": [
+              "Good spontaneous recognition of the need to check vital signs, oxygen saturation, and assess for respiratory distress.",
+              "Correctly identified tachycardia and tachypnea after recent orthopedic surgery as key features raising suspicion for pulmonary embolism.",
+              "Appropriate selection of the Wells or Geneva score to estimate clinical pretest probability."
+            ],
+            "ameliorations": [
+              "Ensure priorities and justifications are explicitly written out in the designated text fields rather than relying on spontaneous thoughts.",
+              "Pay closer attention to checking bleeding risks and contraindications if anticoagulation is being considered for suspected pulmonary embolism."
+            ],
+            "vigilance": [
+              "The student selected 'Check bleeding risks and contraindications', which is a relevant safety check for PE management, though not fully elaborated in the text.",
+              "Failure to provide explicit written priorities and justifications results in a score of zero for those sections, despite good underlying clinical intuition."
+            ],
+            "commentaireSpontane": "The spontaneous text demonstrates a solid clinical approach by immediately identifying key vital sign abnormalities (tachycardia, tachypnea), recognizing the high-risk context of recent orthopedic surgery, and considering appropriate differential diagnoses and scoring systems like Wells.",
+            "commentaireChoix": "The selected choices correctly included assessing ABCDE, looking for shock, and estimating clinical pretest probability using Wells/Geneva. However, because the priorities and justification fields were left completely blank, no points could be awarded for hierarchization or justification.",
+            "method": "IA indicative, distincte de la note officielle"
+          }
+        },
+        "management": {
+          "step": 2,
+          "free": "Rédaction\n\n\n\n\n\nI would keep the patient under close clinical monitoring and regularly reassess her respiratory and hemodynamic status.\n\nI would establish intravenous access and arrange a CT pulmonary angiogram if appropriate.\n\nI would administer oxygen if she develops hypoxemia.\n\nBecause pulmonary embolism is strongly suspected, I would discuss early anticoagulation while carefully evaluating her recent surgery, bleeding risk and contraindications.\n\nI would seek senior medical advice and monitor for any signs of clinical deterioration.",
+          "selected": [
+            "reassess",
+            "oxygen",
+            "etiology",
+            "followup",
+            "reperfusion",
+            "thrombolysis_all"
+          ],
+          "justification": "",
+          "locked": true,
+          "grade": {
+            "total": 6,
+            "scores": {
+              "spontane": 5,
+              "choix": 1,
+              "priorites": 0,
+              "justification": 0
+            },
+            "pointsForts": [
+              "Spontaneous text correctly identifies the need for close monitoring, intravenous access, and diagnostic imaging such as CT pulmonary angiogram.",
+              "Spontaneous text appropriately mentions discussing early anticoagulation while evaluating the recent surgery and bleeding risks."
+            ],
+            "ameliorations": [
+              "Avoid selecting dangerous or inappropriate management options from the checklist.",
+              "Ensure critical interventions like timely anticoagulation and bleeding risk assessment are prioritized in the final choices."
+            ],
+            "vigilance": [
+              "Severe penalty applied for selecting 'Give routine thrombolysis to every stable patient', which is medically dangerous and inappropriate for a hemodynamically stable patient with recent orthopedic surgery."
+            ],
+            "commentaireSpontane": "The spontaneous text demonstrates good clinical reasoning by suggesting close monitoring, assessing for contraindications to anticoagulation, arranging for a CT pulmonary angiogram, and seeking senior advice.",
+            "commentaireChoix": "The selected choices contain a critical and dangerous error by including routine thrombolysis for a stable patient. Furthermore, the priorities and justifications section was left blank, resulting in zero points for the corresponding rubrics.",
+            "method": "IA indicative, distincte de la note officielle"
+          }
+        }
+      },
+      "smartResult": null,
+      "updatedAt": 1793367264512
+    },
+    "updatedAt": 1793367264512
+  }
+}
