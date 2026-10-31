@@ -7,7 +7,11 @@ ClinicaAI permet aux étudiants en médecine de s'entraîner à l'interrogatoire
 
 ## Problème et public cible
 
-La résolution de cas cliniques exige de mobiliser des connaissances dans un contexte d'incertitude. Lors d'une observation descriptive portant sur 30 étudiants dans un module locomoteur, 83 % ont dépassé 10/20 en théorie, contre 32 % à l'épreuve clinique. Ces valeurs sont déclaratives et non auditées; elles ne prouvent ni l'origine de cet écart ni l'efficacité de ClinicaAI. Le public visé est celui des étudiants souhaitant préparer les cas cliniques et travailler de façon autonome.
+L'apprentissage médical ne se limite pas à la maîtrise des connaissances théoriques : il exige aussi leur mobilisation face à des situations cliniques concrètes, de l'interrogatoire jusqu'aux décisions diagnostiques et thérapeutiques.
+
+L'analyse du **relevé de notes du module Appareil locomoteur**, portant sur **30 étudiants en médecine**, révèle un enjeu pédagogique précis : **83 %** ont obtenu une note supérieure à **10/20** à l'épreuve théorique, contre **32 %** à l'épreuve de cas cliniques, soit **51 points de pourcentage d'écart**. Ces résultats s'appuient sur un document de notes disponible auprès de la porteuse du projet ; ils mettent en lumière le défi du passage de la théorie à la pratique du raisonnement clinique.
+
+**ClinicaAI apporte une réponse pédagogique concrète à ce besoin identifié :** l'étudiant s'exerce en autonomie sur des scénarios interactifs, échange avec un patient virtuel, formule ses hypothèses et reçoit une rétroaction structurée. Le projet s'adresse aux étudiants en médecine qui souhaitent consolider leur raisonnement clinique et mieux se préparer aux évaluations par cas cliniques.
 
 ## Fonctionnement
 

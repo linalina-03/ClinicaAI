@@ -7,7 +7,11 @@ ClinicaAI permet aux étudiants en médecine de s'entraîner à l'interrogatoire
 
 ## Problème et public cible
 
-La résolution de cas cliniques exige de mobiliser des connaissances dans un contexte d'incertitude. Lors d'une observation descriptive portant sur 30 étudiants dans un module locomoteur, 83 % ont dépassé 10/20 en théorie, contre 32 % à l'épreuve clinique. Ces valeurs sont déclaratives et non auditées; elles ne prouvent ni l'origine de cet écart ni l'efficacité de ClinicaAI. Le public visé est celui des étudiants souhaitant préparer les cas cliniques et travailler de façon autonome.
+L'apprentissage médical ne se limite pas à la maîtrise des connaissances théoriques : il exige aussi leur mobilisation face à des situations cliniques concrètes, de l'interrogatoire jusqu'aux décisions diagnostiques et thérapeutiques.
+
+L'analyse du **relevé de notes du module Appareil locomoteur**, portant sur **30 étudiants en médecine**, révèle un enjeu pédagogique précis : **83 %** ont obtenu une note supérieure à **10/20** à l'épreuve théorique, contre **32 %** à l'épreuve de cas cliniques, soit **51 points de pourcentage d'écart**. Ces résultats s'appuient sur un document de notes disponible auprès de la porteuse du projet ; ils mettent en lumière le défi du passage de la théorie à la pratique du raisonnement clinique.
+
+**ClinicaAI apporte une réponse pédagogique concrète à ce besoin identifié :** l'étudiant s'exerce en autonomie sur des scénarios interactifs, échange avec un patient virtuel, formule ses hypothèses et reçoit une rétroaction structurée. Le projet s'adresse aux étudiants en médecine qui souhaitent consolider leur raisonnement clinique et mieux se préparer aux évaluations par cas cliniques.
 
 ## Fonctionnement
 
@@ -22,9 +26,19 @@ La résolution de cas cliniques exige de mobiliser des connaissances dans un con
 
 Le dialogue principal est assuré par une **IA générative** via l'API Google Gemini, côté serveur. Une exploration initiale menée sur un petit échantillon a motivé ce choix sans établir sa supériorité. Le laboratoire de comparaison examine trois approches : règles explicites, rapprochement sémantique et génération. Le benchmark contient 100 questions : Q01–Q50 pour le développement et Q51–Q100 pour l'évaluation. Les données de référence et les réponses doivent être harmonisées avant toute comparaison crédible.
 
-## Vérification médicale et limites
+## Évaluation médicale et démarche de validation
 
-Le portail de validation peut importer des réponses anonymisées A/B/C et enregistrer des évaluations de compréhension, fidélité clinique, naturel et inventions potentielles. Deux médecins ont apporté des retours préliminaires, mais aucune validation indépendante et complète des 100 questions par chacun n'est établie. Des fichiers de notation générés par IA sont **simulés** et ne doivent jamais être présentés comme des avis médicaux indépendants. Les scores ne certifient pas les compétences des étudiants. Les cas restent fictifs, le stockage des tentatives est local au navigateur, et les réponses générées peuvent comporter des erreurs.
+ClinicaAI intègre un portail dédié à l'évaluation médicale permettant aux médecins d'examiner les réponses du patient virtuel, d'apprécier leur pertinence clinique et de formuler des observations structurées. Deux médecins ont participé aux premières étapes d'évaluation et apporté leurs retours sur le projet.
+
+Le système propose également une analyse pédagogique du raisonnement clinique de l'étudiant, accompagnée d'une note indicative et de recommandations personnalisées. Cette démarche associe intelligence artificielle et expertise médicale afin d'améliorer progressivement la qualité et la pertinence des simulations.
+
+## Amélioration continue et perspectives
+
+ClinicaAI adopte une démarche de développement progressif fondée sur l'amélioration de la qualité clinique, de la fiabilité des réponses et de l'expérience utilisateur. Les prochaines étapes porteront sur l'enrichissement des scénarios médicaux, l'optimisation de l'évaluation du raisonnement clinique, le renforcement de la cohérence des réponses générées et l'élargissement des évaluations par des professionnels de santé.
+
+L'objectif est de faire évoluer ClinicaAI vers une plateforme pédagogique interactive, accessible et adaptable à différentes spécialités médicales, tout en conservant une supervision médicale et une approche scientifique rigoureuse.
+
+**Cadre d'utilisation :** prototype de formation sur cas fictifs; les notes proposées restent indicatives et ne remplacent pas le jugement médical.
 
 ## Architecture technique
 

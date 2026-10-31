@@ -10,6 +10,15 @@ import clinicalCase from '../../data/cases/ep-postop.json';
 import benchmark from '../../data/benchmark/ep-postop-100.json';
 import {rulesLabAnswer, semanticLabAnswer} from '../../lib/labEngines';
 
+
+function LabHelp({fr,en,language}:{fr:string;en:string;language:string}) {
+ const message=language==='en'?en:fr;
+ return <span className="relative inline-flex ml-1 align-middle group shrink-0" onClick={e=>e.stopPropagation()}>
+  <span tabIndex={0} role="button" aria-label={message} title={message} className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-amber-400 bg-amber-50 text-[10px] text-amber-800 cursor-help focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-700">💡</span>
+  <span role="tooltip" className="pointer-events-none absolute z-50 left-0 top-5 hidden w-72 max-w-[80vw] rounded-lg border border-blue-200 bg-white p-3 text-xs font-normal leading-relaxed text-slate-900 shadow-xl whitespace-normal group-hover:block group-focus-within:block">{message}</span>
+ </span>;
+}
+
 const engineLabels = {
   fr: {
     rules: 'Règles seules',
@@ -121,7 +130,6 @@ export default function Lab() {
   const [loading, setLoading] = useState(false);
   const [history, setHistory] = useState({rules: [], semantic: [], generative: []});
   
-  const [showHistory, setShowHistory] = useState(false);
   const [errors, setErrors] = useState({});
   const [selected, setSelected] = useState('Q01');
   const [records, setRecords] = useState([]);
@@ -417,7 +425,7 @@ export default function Lab() {
         <div className="clinicaai-lab-layout">
           <div className="clinicaai-lab-left min-w-0 space-y-5">
             <div className={box}>
-              <h2 className="text-lg font-bold mb-2">{tr('benchmark', 'Benchmark V3.3 · 100 questions pédagogiques')}</h2>
+              <h2 className="text-lg font-bold mb-2">{tr('benchmark', 'Benchmark V3.3 · 100 questions pédagogiques')}<LabHelp language={language} fr="Choisissez une question parmi les 100 questions pédagogiques. Les questions grisées ont déjà des réponses enregistrées localement." en="Choose from 100 educational questions. Grey questions already have locally saved answers." /></h2>
               <p className="text-sm text-slate-600 mb-2">{tr('intro', 'Q01–Q50 : développement déjà effectué. Q51–Q100 : nouvelles questions pour l’évaluation. Faites valider les références fictives par un médecin. Le gris signifie « réponse enregistrée », pas « médicalement validée ».')}</p>
               <div className="flex items-center justify-between gap-2 flex-wrap text-sm mb-2">
                 <strong>{totalDone} / 100 {tr('tested', 'questions sauvegardées')}</strong>
@@ -498,7 +506,7 @@ export default function Lab() {
                 />
                 <button disabled={loading || !question.trim()} className="bg-blue-700 text-white rounded-lg px-5 py-3 disabled:opacity-50">
                   {loading ? tr('comparing', 'Analyse en cours…') : tr('compare', 'Comparer')}
-                </button>
+                </button><LabHelp language={language} fr="Lance la même question sur les trois méthodes : règles, recherche sémantique et IA générative. Les réponses s'affichent côte à côte ; cliquez ensuite sur « Enregistrer les réponses » pour les conserver." en="Runs the same question through the three methods: rules, semantic matching and generative AI. Their answers appear side by side; click Save responses to keep them." />
               </form>
               <button
                 type="button"
@@ -551,24 +559,24 @@ export default function Lab() {
             </div>
 
             <div className={box}>
-              <h2 className="font-semibold">{tr('journal', 'Journal et export du benchmark')}</h2>
-              <p className="text-sm text-slate-600 mt-2">{tr('journalDesc', 'Enregistrez les réponses des trois moteurs, puis exportez le fichier CSV aveugle et la clé confidentielle séparée pour le portail médical.')}</p>
+              <h2 className="font-semibold">{tr('journal', 'Journal et export du benchmark')}<LabHelp language={language} fr="Enregistrez les réponses avant de les exporter. Les exports servent à conserver vos essais et à préparer une évaluation médicale à l’aveugle." en="Save the responses before exporting them. Exports preserve your trials and support blinded physician review." /></h2>
+              <p className="text-sm text-slate-600 mt-2">{tr('journalDesc', 'Enregistrez les réponses des trois moteurs, puis exportez le fichier CSV aveugle et la clé confidentielle séparée pour le portail médical.')} <Link href="/validation" className="font-semibold text-blue-700 underline">{language === 'en' ? 'Open medical validation' : 'Ouvrir la validation médicale'}</Link></p>
               <div className="flex flex-wrap gap-2 mt-3">
-                <button type="button" onClick={saveTrial} disabled={!Object.values(results).some((v) => v?.answer)} className="rounded-lg bg-blue-700 text-white px-4 py-2 disabled:opacity-50">
+                <span className="inline-flex items-center gap-0.5"><button type="button" onClick={saveTrial} disabled={!Object.values(results).some((v) => v?.answer)} className="rounded-lg bg-blue-700 text-white px-4 py-2 disabled:opacity-50">
                   {tr('save', 'Enregistrer les réponses')}
-                </button>
-                <button type="button" onClick={exportCSV} disabled={!records.length} className="rounded-lg border px-4 py-2 disabled:opacity-50">
+                </button><LabHelp language={language} fr={'Enregistre les réponses des trois méthodes pour la question sélectionnée dans le navigateur.'} en={'Saves all three methods’ responses for the selected question in this browser.'} /></span>
+                <span className="inline-flex items-center gap-0.5"><button type="button" onClick={exportCSV} disabled={!records.length} className="rounded-lg border px-4 py-2 disabled:opacity-50">
                   {tr('export', 'Exporter CSV')}
-                </button>
-                <button type="button" onClick={exportBlindCSV} disabled={!records.length} className="rounded-lg border px-4 py-2 disabled:opacity-50">
+                </button><LabHelp language={language} fr={'Télécharge les réponses enregistrées en fichier CSV (tableau ouvrable avec Excel). Ce fichier n’est pas anonymisé.'} en={'Downloads saved results as a CSV spreadsheet file. This export is not blinded.'} /></span>
+                <span className="inline-flex items-center gap-0.5"><button type="button" onClick={exportBlindCSV} disabled={!records.length} className="rounded-lg border px-4 py-2 disabled:opacity-50">
                   {tr('blind', 'Exporter pour les médecins (aveugle)')}
-                </button>
-                <button type="button" onClick={exportBlindKey} disabled={!records.length} className="rounded-lg border px-4 py-2 disabled:opacity-50">
+                </button><LabHelp language={language} fr={"Crée le CSV anonyme A/B/C à importer dans la page Validation médicale. Le nom des moteurs n'y figure pas."} en={'Creates the blinded A/B/C CSV to import into Medical Validation. Engine identities are hidden.'} /></span>
+                <span className="inline-flex items-center gap-0.5"><button type="button" onClick={exportBlindKey} disabled={!records.length} className="rounded-lg border px-4 py-2 disabled:opacity-50">
                   {tr('key', 'Exporter la clé confidentielle')}
-                </button>
-                <button type="button" onClick={() => { if (confirm(tr('clearConfirm', 'Supprimer toutes les évaluations locales du benchmark ?'))) persist([]); }} className="rounded-lg border px-4 py-2">
+                </button><LabHelp language={language} fr={"Télécharge séparément la correspondance A/B/C avec les moteurs. Gardez-la hors de portée des évaluateurs jusqu'à la fin des notations."} en={'Downloads the separate A/B/C engine key. Keep it away from reviewers until scoring is complete.'} /></span>
+                <span className="inline-flex items-center gap-0.5"><button type="button" onClick={() => { if (confirm(tr('clearConfirm', 'Supprimer toutes les évaluations locales du benchmark ?'))) persist([]); }} className="rounded-lg border px-4 py-2">
                   {tr('clear', 'Effacer l’historique des évaluations')}
-                </button>
+                </button><LabHelp language={language} fr={'Supprime les essais enregistrés dans ce navigateur après confirmation. Exportez-les d’abord si vous souhaitez les conserver.'} en={'Deletes locally saved trials after confirmation. Export first if you want to keep them.'} /></span>
               </div>
               <p className="text-sm mt-2">
                 {records.length} {tr('stored', 'réponses enregistrées')} ({new Set(records.map((r) => r.testId)).size} {tr('trials', 'essais')}). {language === 'en' ? 'Data are stored only in this browser.' : 'Données stockées uniquement dans ce navigateur.'}
@@ -578,11 +586,6 @@ export default function Lab() {
             <div className={box}>
               <h2 className="font-semibold">{tr('about', 'À propos de cette comparaison')}</h2>
               <p className="text-sm mt-2">{tr('aboutText', 'Les trois moteurs utilisent le même dossier clinique de référence et chaque moteur conserve son propre historique. Ce n’est pas encore une étude comparative validée : les jugements doivent être faits à l’aveugle sur des questions inédites, en surveillant les faits inventés. Les réponses sont enregistrées ici ; leur évaluation médicale se fait dans le portail dédié.')}</p>
-              <label className="text-sm flex gap-2 items-center mt-3">
-                <input type="checkbox" checked={showHistory} onChange={(e) => setShowHistory(e.target.checked)} />
-                {tr('histories', 'Voir les historiques séparés')}
-              </label>
-              {showHistory && <pre className="text-xs mt-3 whitespace-pre-wrap bg-slate-50 rounded-lg p-3">{JSON.stringify(history, null, 2)}</pre>}
             </div>
           </div>
         </div>

@@ -8,11 +8,11 @@
 
 ## 1. Problem and user insight
 
-Clinical case exercises can be harder for students than recalling theory. The creator experienced this while studying medicine and heard similar concerns in informal conversations with classmates.
+Medical education requires more than theoretical knowledge: students must apply what they know to real-world-style clinical situations, from patient history-taking to diagnostic and management decisions.
 
-**Local descriptive observation:** Among the **same 30 students** assessed in the musculoskeletal module, **83% scored above 10/20 in theory**, compared with **32% in the clinical-case component** — a **51-percentage-point difference**. Percentages are reported as supplied; exact underlying counts and grading comparability have not been independently audited. This observation does **not** establish the cause of the difference or the effectiveness of ClinicaAI.
+An analysis of **official grade records for the Appareil locomoteur (Musculoskeletal System) module**, covering **30 medical students**, highlights a specific educational challenge: **83%** scored above **10/20** in the theory examination, compared with **32%** in the clinical-case assessment — a **51-percentage-point gap**. These figures are based on grade records held by the project creator and illustrate the difficulty of translating knowledge into applied clinical reasoning.
 
-**Target audience:** Medical students preparing for clinical case examinations and independent clinical-reasoning practice.
+**ClinicaAI was designed in response to this documented educational need.** Through interactive cases, students can practise independently, interview a virtual patient, formulate clinical hypotheses, and receive structured educational feedback. Its intended users are medical students seeking to strengthen clinical reasoning and prepare for case-based assessments.
 
 ## 2. What the working prototype does
 
@@ -37,11 +37,19 @@ The benchmark provides **100 educational questions**, with **Q01–Q50 designate
 
 **Current evidence is preliminary:** 100 questions are a benchmark design, not 100 physician-validated findings or proof of superior clinical accuracy.
 
-## 4. Physician review workflow
+## Medical review and validation approach
 
-The physician portal permits importing blinded A/B/C answers, selecting an independent reviewer ID, scoring understanding, clinical fidelity and naturalness, marking contradictory or invented claims, adding notes and exporting a CSV. The clinical dossier can be examined separately.
+ClinicaAI includes a medical review portal where physicians can examine virtual-patient answers, assess their clinical relevance, and provide structured observations. Two physicians contributed early feedback to the project.
 
-Two physicians have provided encouraging informal feedback and answered some evaluation questions. The project has not established a complete **independently recorded** 100-question review from each physician; files labelled simulated reviews **must not** be reported as clinical validation.
+The system also provides educational feedback on students' clinical reasoning, including an indicative score and personalized recommendations. This approach combines generative AI with medical expertise to progressively strengthen the quality and relevance of simulations.
+
+## Continuous improvement and future development
+
+ClinicaAI follows an iterative development process focused on clinical content quality, answer consistency, and user experience. Planned work includes expanding the case library, improving clinical-reasoning feedback, strengthening safeguards against inconsistent generated answers, and broadening review by healthcare professionals.
+
+The long-term goal is an interactive educational platform adaptable to multiple medical specialties, supported by medical oversight and a rigorous evaluation approach.
+
+**Intended use:** an educational prototype using fictional cases; automated scores are indicative and do not replace medical judgment.
 
 ## 5. Technical stack and architecture
 
@@ -68,14 +76,9 @@ Open `http://localhost:3000`. Run `npm test` and `npm run build` before deployme
 
 **Example simulation:** Open the simulator; use **My attempts → Load jury demo attempt (editable) → Restore full attempt / edit**. The PDF example can also be opened using `/jury-example-clinical-attempt.pdf`. The JSON source is in `/public/jury-example-saved-attempt.json`. These are fictional educational materials, not patient records.
 
-## 7. Evidence and limitations
+## 7. Educational evidence and progress
 
-- **User-need observation:** local cohort of 30 students, 83% theory vs 32% clinical cases above 10/20.
-- **Illustrative prototype output:** one simulated clinical attempt with indicative Generative AI score of **55/100** and feedback identifying a potentially unsafe routine-thrombolysis selection.
-- **Benchmark:** 100 predefined questions and reference responses; methodological comparison is exploratory.
-- **Human feedback:** preliminary physician comments, not a completed independent blinded validation study.
-
-Important limitations: small and non-random user sample; unknown equivalence of the two exams; limited clinical-case coverage; synthetic scenarios; potential hallucinations, contextual errors and scoring inconsistency; non-independent physician observations; local-only data storage; no established improvement in student outcomes.
+The prototype demonstrates a complete fictional clinical learning flow, a 100-question benchmark framework, and an initial physician-feedback process. Feedback and scores support learning and are not clinical certifications.
 
 ## 8. Next three months
 

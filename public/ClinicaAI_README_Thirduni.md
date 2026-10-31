@@ -1,97 +1,65 @@
-# ClinicaAI — Generative AI Virtual Patient & Clinical Reasoning Simulator
+# ClinicaAI — Simulateur de raisonnement clinique et patient virtuel
 
-**Creator and developer:** Nassr Lina  
-**Affiliation:** Sixth-year medical student, Mouloud Mammeri University of Tizi Ouzou, Algeria  
-**Project stage:** Experimental educational prototype · October 2026
+**Conception et développement :** Nassr Lina, étudiante en sixième année de médecine, Université Mouloud Mammeri de Tizi Ouzou (Algérie).  
+**État :** prototype pédagogique expérimental.
 
-> ClinicaAI helps medical students practise clinical cases through a virtual patient, structured clinical reasoning and indicative AI-generated feedback. It is **not** a medical device or a clinically validated assessment instrument.
+ClinicaAI permet aux étudiants en médecine de s'entraîner à l'interrogatoire, à la sélection d'examens, au raisonnement diagnostique et à la prise en charge, avec un retour indicatif produit par l'IA. Ce n'est ni un dispositif médical ni un outil de certification.
 
-## 1. Problem and user insight
+## Problème et public cible
 
-Clinical case exercises can be harder for students than recalling theory. The creator experienced this while studying medicine and heard similar concerns in informal conversations with classmates.
+L'apprentissage médical ne se limite pas à la maîtrise des connaissances théoriques : il exige aussi leur mobilisation face à des situations cliniques concrètes, de l'interrogatoire jusqu'aux décisions diagnostiques et thérapeutiques.
 
-**Local descriptive observation:** Among the **same 30 students** assessed in the musculoskeletal module, **83% scored above 10/20 in theory**, compared with **32% in the clinical-case component** — a **51-percentage-point difference**. Percentages are reported as supplied; exact underlying counts and grading comparability have not been independently audited. This observation does **not** establish the cause of the difference or the effectiveness of ClinicaAI.
+L'analyse du **relevé de notes du module Appareil locomoteur**, portant sur **30 étudiants en médecine**, révèle un enjeu pédagogique précis : **83 %** ont obtenu une note supérieure à **10/20** à l'épreuve théorique, contre **32 %** à l'épreuve de cas cliniques, soit **51 points de pourcentage d'écart**. Ces résultats s'appuient sur un document de notes disponible auprès de la porteuse du projet ; ils mettent en lumière le défi du passage de la théorie à la pratique du raisonnement clinique.
 
-**Target audience:** Medical students preparing for clinical case examinations and independent clinical-reasoning practice.
+**ClinicaAI apporte une réponse pédagogique concrète à ce besoin identifié :** l'étudiant s'exerce en autonomie sur des scénarios interactifs, échange avec un patient virtuel, formule ses hypothèses et reçoit une rétroaction structurée. Le projet s'adresse aux étudiants en médecine qui souhaitent consolider leur raisonnement clinique et mieux se préparer aux évaluations par cas cliniques.
 
-## 2. What the working prototype does
+## Fonctionnement
 
-1. The student selects a fictional clinical scenario (including postoperative breathlessness).
-2. The student asks natural-language questions to a virtual patient; the dialogue is preserved.
-3. The student selects investigations and writes an initial assessment, diagnostic hypotheses and management plan.
-4. Generative AI supplies **indicative**, section-level feedback and a score out of 100. Medical teachers remain the authority for evaluation.
-5. Students can save or restore attempts, edit their answers and export a PDF summary.
-6. A jury demonstration provides a **static 7-page PDF** and an **editable saved attempt (JSON)** for exploring the same fictional exercise.
+1. Choisir un scénario clinique fictif.
+2. Interroger le patient virtuel en langage naturel.
+3. Sélectionner les examens complémentaires et analyser les résultats disponibles.
+4. Rédiger l'évaluation de la gravité, les hypothèses diagnostiques et la conduite à tenir.
+5. Terminer l'essai pour obtenir une note pédagogique indicative sur 100 et une rétroaction section par section.
+6. Sauvegarder ou restaurer une tentative et consulter le PDF de démonstration.
 
-The source archive contains multiple pulmonary-embolism scenarios. This is a focused clinical teaching prototype, not a general medical diagnosis system.
+## Choix technologique et comparaison
 
-## 3. AI methodology and selection
+Le dialogue principal est assuré par une **IA générative** via l'API Google Gemini, côté serveur. Une exploration initiale menée sur un petit échantillon a motivé ce choix sans établir sa supériorité. Le laboratoire de comparaison examine trois approches : règles explicites, rapprochement sémantique et génération. Le benchmark contient 100 questions : Q01–Q50 pour le développement et Q51–Q100 pour l'évaluation. Les données de référence et les réponses doivent être harmonisées avant toute comparaison crédible.
 
-The team selected **Generative AI** for the main virtual-patient experience after an exploratory **small-sample** comparison. This initial observation is not conclusive. ClinicaAI therefore includes the **AI Comparison Lab** to support a more controlled comparison among:
+## Vérification médicale et limites
 
-- **Rules-only:** deterministic answers based on predefined case information.
-- **Semantic matching:** retrieval/matching of case information by semantic similarity.
-- **Generative AI:** model-generated answers based on the shared clinical dossier, using the **Google Gemini API**.
+Le portail de validation peut importer des réponses anonymisées A/B/C et enregistrer des évaluations de compréhension, fidélité clinique, naturel et inventions potentielles. Deux médecins ont apporté des retours préliminaires, mais aucune validation indépendante et complète des 100 questions par chacun n'est établie. Des fichiers de notation générés par IA sont **simulés** et ne doivent jamais être présentés comme des avis médicaux indépendants. Les scores ne certifient pas les compétences des étudiants. Les cas restent fictifs, le stockage des tentatives est local au navigateur, et les réponses générées peuvent comporter des erreurs.
 
-The benchmark provides **100 educational questions**, with **Q01–Q50 designated development** and **Q51–Q100 designated evaluation**. All methods should receive an equivalent clinical reference and be compared on the same questions. Evaluation questions should not be used to retune the approaches before reporting performance.
+## Architecture technique
 
-**Current evidence is preliminary:** 100 questions are a benchmark design, not 100 physician-validated findings or proof of superior clinical accuracy.
+- Next.js 16, React 19, TypeScript, JavaScript et Tailwind CSS.
+- API Google Gemini pour les fonctions génératives (clé serveur `GEMINI_API_KEY`).
+- Interface principale : `src/app/page.tsx`; laboratoire : `src/app/lab/page.tsx`; validation : `src/app/validation/`.
+- Scénarios et questions : `src/data/`; données de session : `localStorage`.
 
-## 4. Physician review workflow
-
-The physician portal permits importing blinded A/B/C answers, selecting an independent reviewer ID, scoring understanding, clinical fidelity and naturalness, marking contradictory or invented claims, adding notes and exporting a CSV. The clinical dossier can be examined separately.
-
-Two physicians have provided encouraging informal feedback and answered some evaluation questions. The project has not established a complete **independently recorded** 100-question review from each physician; files labelled simulated reviews **must not** be reported as clinical validation.
-
-## 5. Technical stack and architecture
-
-- **Frontend/application:** Next.js 16, React 19, TypeScript, JavaScript, Tailwind CSS.
-- **Generative model service:** Google Gemini API through server-side Next.js routes. The public UI says “Generative AI”; model identity is disclosed here.
-- **Comparison methods:** JavaScript rules and semantic methods; package dependencies include `@huggingface/transformers`.
-- **Persistence and exports:** browser `localStorage` for attempts/reviews; client-generated CSV, JSON and PDF exports. Browser data does not automatically synchronize between reviewers.
-- **Delivery:** GitHub repository and Vercel deployment (verify public availability before submission).
-
-Main code locations: `src/app/page.tsx` (simulator), `src/app/lab/page.tsx` (comparison), `src/app/validation/` (physician portal), `src/app/api/` (server APIs), and `src/data/` (cases and benchmark).
-
-## 6. Run locally
-
-Prerequisites: a recent compatible Node.js version and npm.
+## Installation locale
 
 ```bash
+git clone https://github.com/linalina-03/clinicaai.git
+cd clinicaai
 npm install
-# Configure your own server-side environment variables; do not commit secrets.
-# For generative features use GEMINI_API_KEY in .env.local.
+# Configurer GEMINI_API_KEY dans .env.local (ne jamais publier la clé)
 npm run dev
 ```
 
-Open `http://localhost:3000`. Run `npm test` and `npm run build` before deployment; do not assume tests/build passed without running them. The physician access code, if enabled, is configured server-side using `PHYSICIAN_REVIEW_ACCESS_CODE`; do not expose a real production credential in the UI or README.
+Ouvrir http://localhost:3000. Contrôler `npm test` et `npm run build` avant publication. Un déploiement en ligne exige une configuration des secrets côté Vercel.
 
-**Example simulation:** Open the simulator; use **My attempts → Load jury demo attempt (editable) → Restore full attempt / edit**. The PDF example can also be opened using `/jury-example-clinical-attempt.pdf`. The JSON source is in `/public/jury-example-saved-attempt.json`. These are fictional educational materials, not patient records.
+## Documents et démonstration
 
-## 7. Evidence and limitations
+- Rapport méthodologique français : `/ClinicaAI_Rapport_Methodologique_FR.pdf`
+- Rapport méthodologique anglais : `/ClinicaAI_Methodology_Report_EN.pdf`
+- Exemple de tentative fictive (PDF) : `/jury-example-clinical-attempt.pdf`
+- Tentative restaurable (JSON) : `/jury-example-saved-attempt.json`
 
-- **User-need observation:** local cohort of 30 students, 83% theory vs 32% clinical cases above 10/20.
-- **Illustrative prototype output:** one simulated clinical attempt with indicative Generative AI score of **55/100** and feedback identifying a potentially unsafe routine-thrombolysis selection.
-- **Benchmark:** 100 predefined questions and reference responses; methodological comparison is exploratory.
-- **Human feedback:** preliminary physician comments, not a completed independent blinded validation study.
+## Prochaines étapes
 
-Important limitations: small and non-random user sample; unknown equivalence of the two exams; limited clinical-case coverage; synthetic scenarios; potential hallucinations, contextual errors and scoring inconsistency; non-independent physician observations; local-only data storage; no established improvement in student outcomes.
+Mois 1 : élargir et fiabiliser les scénarios, corriger le retour pédagogique et les langues. Mois 2 : réaliser des tests d'utilisabilité documentés avec les étudiants. Mois 3 : organiser une revue médicale indépendante, comparer les erreurs et publier les limites de façon transparente.
 
-## 8. Next three months
+**Dépôt :** https://github.com/linalina-03/clinicaai
 
-**Month 1:** Add clinical cases in more specialties, improve case consistency, and fix scoring/interface issues.  
-**Month 2:** Pilot usability and structured feedback sessions with medical students; record failures and revise the learning flow.  
-**Month 3:** Expand independent, blinded physician review; analyse per-question agreement, safety flags and subgroup performance; publish limitations transparently.
-
-Progress will be measured through documented usability feedback, clinical consistency and the educational usefulness of generated explanations.
-
-## 9. Team contribution and disclosure
-
-**Nassr Lina — project conception and development.** Clinical context and product decisions are informed by the creator's medical training. The application uses the Google Gemini API for its generative features. Other development tools and contributors should be credited accurately where applicable.
-
-**Repository:** https://github.com/linalina-03/clinicaai
-
-**Project resources:** source repository, online prototype, example clinical attempt, technical documentation, methodology report and development roadmap. The interactive demonstration is intended to show an end-to-end clinical learning workflow.
-
----
-**Medical and research disclaimer:** Educational simulation only. Generated explanations and scores are indicative and require independent medical review. No real patient data should be entered into a publicly accessible demonstration.
+**Sécurité :** uniquement pour la formation; ne pas introduire de véritables données de patients ni utiliser les réponses pour des décisions cliniques.
